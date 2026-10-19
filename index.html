@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SS2 Science BrainBox — Login</title>
-<meta name="description" content="SS2 Science BrainBox — WAEC & 3rd Term study app for Nigerian science students">
+<title>Science BrainBox — Login</title>
+<meta name="description" content="Science BrainBox — study app for Nigerian secondary school students (JSS1 to SS3)">
 <link rel="stylesheet" href="css/style.css">
 <style>
   @keyframes spin { to { transform: rotate(360deg); } }
@@ -13,6 +13,11 @@
   .splash-brand { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; color: var(--primary); margin-bottom: 10px; }
   .splash-by { color: var(--text-secondary); font-size: clamp(.9rem, 2.5vw, 1.05rem); margin-bottom: 18px; }
   .spinner { width: 42px; height: 42px; border: 4px solid var(--border); border-top-color: var(--primary); border-radius: 50%; margin: auto; animation: spin 1s linear infinite; }
+  .splash-loading { margin-top: 18px; color: var(--text-secondary); font-size: .9rem; }
+  .splash-bar { width: min(280px, 70vw); height: 6px; margin: 12px auto 0; background: var(--border); border-radius: 99px; overflow: hidden; }
+  .splash-bar span { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--primary), var(--success)); transition: width .1s linear; }
+  .splash-skip { margin-top: 22px; background: transparent; border: 1.5px solid var(--border); color: var(--text-secondary); padding: 8px 18px; border-radius: 99px; font-weight: 700; cursor: pointer; font-family: inherit; }
+  .splash-skip.hidden { display: none; }
   .login-wrap.hidden { display: none; }
 </style>
 </head>
@@ -20,9 +25,12 @@
 
 <div id="splash">
   <div>
-    <div class="splash-brand">SS2 Science BrainBox</div>
+    <div class="splash-brand">Science BrainBox</div>
     <div class="splash-by">Presented by KOLAWOLE ALABA WISDOM</div>
     <div class="spinner"></div>
+    <div class="splash-loading">Preparing your study workspace…</div>
+    <div class="splash-bar"><span id="splashBar"></span></div>
+    <button id="splashSkip" class="splash-skip hidden">Skip →</button>
   </div>
 </div>
 
@@ -31,7 +39,7 @@
     <div class="brand">
       <div class="icon">🧠</div>
       <h1>Science<span>BrainBox</span></h1>
-      <p>SS2 Science Department — WAEC &amp; 3rd Term Prep</p>
+      <p>Secondary School Learning — JSS1 to SS3</p>
     </div>
 
     <div class="alert" id="loginAlert"></div>
@@ -48,32 +56,58 @@
       </div>
 
       <div class="form-group">
-        <label for="scienceClass">Class</label>
-        <select id="scienceClass">
-          <option value="SS2 Science A">SS2 Science A</option>
-          <option value="SS2 Science B">SS2 Science B</option>
-          <option value="SS2 Science C">SS2 Science C</option>
+        <label for="studentClass">Class</label>
+        <select id="studentClass">
+          <optgroup label="Junior Secondary">
+            <option value="jss1">JSS1</option>
+            <option value="jss2">JSS2</option>
+            <option value="jss3">JSS3</option>
+          </optgroup>
+          <optgroup label="Senior Secondary (Science)">
+            <option value="ss1" selected>SS1</option>
+            <option value="ss2">SS2</option>
+            <option value="ss3">SS3</option>
+          </optgroup>
         </select>
-        <div class="hint">🔬 Science Department (auto-selected)</div>
+        <div class="hint">📚 Choose your class — content adapts to your level</div>
       </div>
 
       <button type="submit" class="btn btn-primary btn-lg">Enter BrainBox →</button>
     </form>
 
     <div class="text-center mt-3" style="color:var(--text-light);font-size:0.82rem">
-      <p>Subjects: Mathematics · Further Maths · English · Physics · Chemistry · Biology · Computer Science · Geography · Civic Education</p>
+      <p>Junior: Mathematics · English · Basic Science · Basic Technology · Computer Studies · Civic Education · Business Studies · Agricultural Science · Social Studies</p>
+      <p class="mt-1">Senior (Science): Mathematics · Further Maths · English · Physics · Chemistry · Biology · Computer Science · Geography · Civic Education</p>
       <p class="mt-1">© 2026 KOLAWOLE ALABA WISDOM. All rights reserved.</p>
     </div>
   </div>
 </div>
 
     <script>
-      setTimeout(() => {
-        const s = document.getElementById('splash');
-        const w = document.getElementById('loginWrap');
-        if (s) s.classList.add('hidden');
-        if (w) w.classList.remove('hidden');
-      }, 1600);
+      (function () {
+        var s = document.getElementById('splash');
+        var w = document.getElementById('loginWrap');
+        var bar = document.getElementById('splashBar');
+        var skip = document.getElementById('splashSkip');
+        var DURATION = 20000;
+        var start = Date.now();
+        var done = false;
+        var tick = setInterval(function () {
+          var pct = Math.min(100, (Date.now() - start) / DURATION * 100);
+          if (bar) bar.style.width = pct + '%';
+        }, 100);
+        function finish() {
+          if (done) return;
+          done = true;
+          clearInterval(tick);
+          if (bar) bar.style.width = '100%';
+          if (s) s.classList.add('hidden');
+          if (w) w.classList.remove('hidden');
+        }
+        setTimeout(function () { if (skip) skip.classList.remove('hidden'); }, 2500);
+        if (skip) skip.addEventListener('click', finish);
+        setTimeout(finish, DURATION);
+      })();
     </script>
 
 <script src="js/app.js"></script>

@@ -29,22 +29,23 @@
   }
 
   function showSubjectPicker() {
+    const subs = App.getSubjects();
     startScreen.innerHTML = `
       <div class="quiz-start">
         <div class="icon">📝</div>
         <h2>Choose a Subject</h2>
-        <p>Select a science subject to start your WAEC-standard CBT quiz</p>
+        <p>Select a subject to start your ${App.getClassLabel()} CBT quiz</p>
         <div class="subject-grid mt-3" style="max-width:600px;margin:20px auto">
-          ${App.subjects.map(s => `
+          ${subs.map(s => `
             <a href="quiz.html?subject=${s.id}" class="subject-card" style="text-decoration:none">
               <div class="card-icon" style="font-size:2rem">${s.icon}</div>
-              <div class="info"><h3>${s.name}</h3><p>25 questions</p></div>
+              <div class="info"><h3>${s.name}</h3><p>Multiple choice</p></div>
             </a>`).join('')}
         </div>
       </div>`;
   }
 
-  async function showStartScreen(subId) {
+  async function showStartScreen(subId, difficulty) {
     const data = await App.loadSubjectData(subId);
     if (!data || !data.questions) {
       startScreen.innerHTML = `<div class="quiz-start"><div class="icon">❌</div><h2>Subject Not Found</h2><p>Questions for this subject could not be loaded.</p><a href="quiz.html" class="btn btn-primary mt-2">Choose Another Subject</a></div>`;
@@ -54,31 +55,46 @@
     const sub = App.getSubject(subId);
     const prog = App.getProgress();
     const p = prog[subId];
+    const diff = difficulty || 'All';
+    const countFor = d => d === 'All' ? data.questions.length : data.questions.filter(q => q.difficulty === d).length;
+    const available = Math.min(25, countFor(diff));
+    const diffs = ['All', 'Easy', 'Medium', 'Hard'];
 
     startScreen.innerHTML = `
       <div class="quiz-start">
         <div class="icon">${sub ? sub.icon : '📝'}</div>
         <h2>${data.subject} Quiz</h2>
-        <p>WAEC Standard — 25 Multiple Choice Questions</p>
+        <p>${App.getClassLabel()} — Multiple Choice Practice</p>
         ${p ? `<p class="mt-1" style="color:var(--primary);font-weight:700">Best Score: ${p.best}% | Attempts: ${p.attempts}</p>` : ''}
+        <p class="mt-1" style="font-weight:700">Select Difficulty</p>
+        <div class="difficulty-tabs">
+          ${diffs.map(d => `<button class="preset-btn ${d === diff ? 'active' : ''}" onclick="window.__showStart('${subId}','${d}')">${d}${d === 'All' ? '' : ' (' + countFor(d) + ')'}</button>`).join('')}
+        </div>
         <ul class="rules">
-          <li>25 questions covering ${data.questions.length} topics</li>
+          <li>${available} question${available === 1 ? '' : 's'} in this session</li>
           <li>Time limit: ${TIME_PER_Q} seconds per question</li>
           <li>Each question has 4 options (A–D)</li>
           <li>Explanations shown after submission</li>
-          <li>Difficulty: Easy, Medium & Hard</li>
         </ul>
-        <button class="btn btn-primary btn-lg mt-2" onclick="window.__startQuiz('${subId}')">
+        <button class="btn btn-primary btn-lg mt-2" onclick="window.__startQuiz('${subId}','${diff}')">
           🚀 Start Quiz
         </button>
         <a href="quiz.html" class="btn btn-secondary mt-2" style="display:inline-flex">← Change Subject</a>
       </div>`;
   }
 
-  window.__startQuiz = async function (subId) {
+  window.__showStart = function (subId, diff) { showStartScreen(subId, diff); };
+
+  window.__startQuiz = async function (subId, diff) {
     const data = await App.loadSubjectData(subId);
     if (!data || !data.questions) return;
-    questions = [...data.questions].sort(() => Math.random() - 0.5).slice(0, 25);
+    let pool = [...data.questions];
+    if (diff && diff !== 'All') {
+      const filtered = pool.filter(q => q.difficulty === diff);
+      if (filtered.length) pool = filtered;
+    }
+    questions = pool.sort(() => Math.random() - 0.5).slice(0, 25);
+    if (questions.length === 0) return;
     currentQ = 0;
     selectedAnswers = new Array(questions.length).fill(null);
     timeLeft = questions.length * TIME_PER_Q;

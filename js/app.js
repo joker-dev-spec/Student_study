@@ -1,6 +1,7 @@
 /* =============================================
-   SS2 Science BrainBox - App Utilities
-   Shared functions: auth, theme, navigation
+   Science BrainBox - App Utilities
+   Shared functions: auth, theme, navigation,
+   classes/levels, timetable, reminders, streaks
    ============================================= */
 
 const App = {
@@ -14,6 +15,60 @@ const App = {
     const u = this.getUser();
     if (!u) { window.location.href = this.basePrefix() + 'index.html'; return null; }
     return u;
+  },
+
+  // ---- CLASSES / LEVELS ----
+  classes: [
+    { id: 'jss1', name: 'JSS1', level: 'junior', dept: 'Junior Secondary' },
+    { id: 'jss2', name: 'JSS2', level: 'junior', dept: 'Junior Secondary' },
+    { id: 'jss3', name: 'JSS3', level: 'junior', dept: 'Junior Secondary' },
+    { id: 'ss1', name: 'SS1', level: 'senior', dept: 'Science' },
+    { id: 'ss2', name: 'SS2', level: 'senior', dept: 'Science' },
+    { id: 'ss3', name: 'SS3', level: 'senior', dept: 'Science' }
+  ],
+  getClass(id) { return this.classes.find(c => c.id === id); },
+  getLevel() { const u = this.getUser(); return (u && u.level) ? u.level : 'senior'; },
+  getClassLabel() {
+    const u = this.getUser();
+    if (!u) return '';
+    const c = this.getClass(u.classId);
+    return u.className || (c ? c.name : '');
+  },
+
+  // ---- SUBJECT CATALOGUES ----
+  seniorSubjects: [
+    { id: 'mathematics', name: 'Mathematics', icon: '📐', color: '#2563eb', path: 'Subjects/mathematics.html' },
+    { id: 'further-mathematics', name: 'Further Mathematics', icon: '📊', color: '#7c3aed', path: 'Subjects/further-mathematics.html' },
+    { id: 'english', name: 'English', icon: '📖', color: '#db2777', path: 'Subjects/english.html' },
+    { id: 'physics', name: 'Physics', icon: '⚛️', color: '#0891b2', path: 'Subjects/physics.html' },
+    { id: 'chemistry', name: 'Chemistry', icon: '🧪', color: '#059669', path: 'Subjects/chemistry.html' },
+    { id: 'biology', name: 'Biology', icon: '🔬', color: '#16a34a', path: 'Subjects/biology.html' },
+    { id: 'computer-science', name: 'Computer Science', icon: '💻', color: '#4f46e5', path: 'Subjects/computer-science.html' },
+    { id: 'geography', name: 'Geography', icon: '🌍', color: '#ca8a04', path: 'Subjects/geography.html' },
+    { id: 'civic-education', name: 'Civic Education', icon: '🏛️', color: '#ea580c', path: 'Subjects/civic-education.html' }
+  ],
+  juniorSubjects: [
+    { id: 'mathematics', name: 'Mathematics', icon: '📐', color: '#2563eb', path: 'Subjects/mathematics.html' },
+    { id: 'english', name: 'English Studies', icon: '📖', color: '#db2777', path: 'Subjects/english.html' },
+    { id: 'basic-science', name: 'Basic Science', icon: '🔬', color: '#059669', path: 'Subjects/basic-science.html' },
+    { id: 'basic-technology', name: 'Basic Technology', icon: '⚙️', color: '#0891b2', path: 'Subjects/basic-technology.html' },
+    { id: 'computer-science', name: 'Computer Studies', icon: '💻', color: '#4f46e5', path: 'Subjects/computer-science.html' },
+    { id: 'civic-education', name: 'Civic Education', icon: '🏛️', color: '#ea580c', path: 'Subjects/civic-education.html' },
+    { id: 'business-studies', name: 'Business Studies', icon: '💼', color: '#ca8a04', path: 'Subjects/business-studies.html' },
+    { id: 'agricultural-science', name: 'Agricultural Science', icon: '🌾', color: '#16a34a', path: 'Subjects/agricultural-science.html' },
+    { id: 'social-studies', name: 'Social Studies', icon: '🌍', color: '#7c3aed', path: 'Subjects/social-studies.html' }
+  ],
+  getSubjects() {
+    return this.getLevel() === 'junior' ? this.juniorSubjects : this.seniorSubjects;
+  },
+  getSubject(id) {
+    return this.seniorSubjects.find(s => s.id === id) ||
+           this.juniorSubjects.find(s => s.id === id);
+  },
+  // First subject for the user's level (used for "Notes" nav link)
+  firstSubject() {
+    const subs = this.getSubjects();
+    return subs.length ? subs[0] : { id: 'physics', path: 'Subjects/physics.html' };
   },
 
   // ---- THEME ----
@@ -52,6 +107,7 @@ const App = {
     p.lastScore = Math.round(score / total * 100);
     p.lastDate = new Date().toISOString();
     this.saveProgress(prog);
+    this.touchStreak();
   },
 
   getSubjectPct(subject) {
@@ -85,6 +141,59 @@ const App = {
     this.saveProgress(p);
   },
 
+  resetProgress() {
+    ['sb_progress', 'sb_quiz_history', 'sb_daily'].forEach(k => localStorage.removeItem(k));
+  },
+
+  // ---- STUDY STREAK ----
+  touchStreak() {
+    const today = new Date().toDateString();
+    const raw = localStorage.getItem('sb_streak');
+    let s = raw ? JSON.parse(raw) : { count: 0, last: null, best: 0 };
+    if (s.last === today) return s.count;
+    const yesterday = new Date(Date.now() - 86400000).toDateString();
+    s.count = (s.last === yesterday) ? s.count + 1 : 1;
+    s.last = today;
+    s.best = Math.max(s.best || 0, s.count);
+    localStorage.setItem('sb_streak', JSON.stringify(s));
+    return s.count;
+  },
+  getStreak() {
+    const raw = localStorage.getItem('sb_streak');
+    if (!raw) return { count: 0, best: 0 };
+    const s = JSON.parse(raw);
+    const today = new Date().toDateString();
+    const yesterday = new Date(Date.now() - 86400000).toDateString();
+    if (s.last !== today && s.last !== yesterday) s.count = 0;
+    return s;
+  },
+
+  // ---- EXAM COUNTDOWN ----
+  getExamDate() { return localStorage.getItem('sb_exam_date') || ''; },
+  setExamDate(d) { d ? localStorage.setItem('sb_exam_date', d) : localStorage.removeItem('sb_exam_date'); },
+  daysToExam() {
+    const d = this.getExamDate();
+    if (!d) return null;
+    const exam = new Date(d + 'T00:00:00');
+    const today = new Date(); today.setHours(0, 0, 0, 0);
+    return Math.ceil((exam - today) / 86400000);
+  },
+
+  // ---- MOTIVATION ----
+  quotes: [
+    'Success is the sum of small efforts repeated day in and day out.',
+    'The secret of getting ahead is getting started.',
+    'Don\u2019t wish it were easier, wish you were better.',
+    'Study hard what interests you the most, in the most undisciplined, irreverent way possible.',
+    'An investment in knowledge pays the best interest.',
+    'The expert in anything was once a beginner.',
+    'Push yourself, because no one else is going to do it for you.',
+    'Great things never come from comfort zones.'
+  ],
+  getDailyQuote() {
+    return this.quotes[Math.floor(Date.now() / 86400000) % this.quotes.length];
+  },
+
   // ---- BOOKMARKS ----
   getBookmarks() {
     try { return JSON.parse(localStorage.getItem('sb_bookmarks')) || []; } catch { return []; }
@@ -103,6 +212,132 @@ const App = {
   },
   hasBookmark(id) { return this.getBookmarks().some(x => x.id === id); },
 
+  // ---- TIMETABLES (level-aware) ----
+  timetables: {
+    senior: {
+      '8:00–9:00':   { Mon: 'Mathematics', Tue: 'Chemistry', Wed: 'Biology', Thu: 'Physics', Fri: 'Mathematics' },
+      '9:00–10:00':  { Mon: 'Physics', Tue: 'Mathematics', Wed: 'English', Thu: 'Chemistry', Fri: 'Biology' },
+      '10:00–11:00': { Mon: 'Chemistry', Tue: 'Biology', Wed: 'Physics', Thu: 'Mathematics', Fri: 'Computer Sci.' },
+      '11:00–12:00': { Mon: 'Biology', Tue: 'Further Maths', Wed: 'Geography', Thu: 'English', Fri: 'Physics' },
+      '12:00–1:00':  { Mon: 'English', Tue: 'Computer Sci.', Wed: 'Civic Education', Thu: 'Further Maths', Fri: 'Chemistry' },
+      '2:00–3:00':   { Mon: 'Geography', Tue: 'English', Wed: 'Mathematics', Thu: 'Computer Sci.', Fri: 'Geography' },
+      '3:00–4:00':   { Mon: 'Civic Education', Tue: 'Geography', Wed: 'Further Maths', Thu: 'Biology', Fri: 'Civic Education' }
+    },
+    junior: {
+      '8:00–9:00':   { Mon: 'Mathematics', Tue: 'Basic Science', Wed: 'English', Thu: 'Basic Technology', Fri: 'Mathematics' },
+      '9:00–10:00':  { Mon: 'English', Tue: 'Mathematics', Wed: 'Basic Science', Thu: 'English', Fri: 'Basic Science' },
+      '10:00–11:00': { Mon: 'Basic Science', Tue: 'Computer Studies', Wed: 'Social Studies', Thu: 'Mathematics', Fri: 'Business Studies' },
+      '11:00–12:00': { Mon: 'Basic Technology', Tue: 'Business Studies', Wed: 'Agricultural Sci.', Thu: 'Civic Education', Fri: 'Computer Studies' },
+      '12:00–1:00':  { Mon: 'Social Studies', Tue: 'English', Wed: 'Computer Studies', Thu: 'Basic Science', Fri: 'Agricultural Sci.' },
+      '2:00–3:00':   { Mon: 'Civic Education', Tue: 'Agricultural Sci.', Wed: 'Business Studies', Thu: 'Social Studies', Fri: 'Civic Education' },
+      '3:00–4:00':   { Mon: 'Business Studies', Tue: 'Social Studies', Wed: 'Civic Education', Thu: 'Business Studies', Fri: 'Social Studies' }
+    }
+  },
+  days: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+  subjectIcons: {
+    'Mathematics': '📐', 'Further Maths': '📊', 'English': '📖', 'Physics': '⚛️',
+    'Chemistry': '🧪', 'Biology': '🔬', 'Computer Sci.': '💻', 'Computer Studies': '💻',
+    'Geography': '🌍', 'Civic Education': '🏛️', 'Basic Science': '🔬', 'Basic Technology': '⚙️',
+    'Business Studies': '💼', 'Agricultural Sci.': '🌾', 'Social Studies': '🌍'
+  },
+  getTimetable() { return this.timetables[this.getLevel()] || this.timetables.senior; },
+  todayIndex() { return (new Date().getDay() + 6) % 7; },
+  todayName() { return this.days[this.todayIndex()] || ''; },
+  slotTo24(slot) {
+    const start = slot.split('–')[0].trim();
+    let h = parseInt(start.split(':')[0], 10);
+    const m = parseInt(start.split(':')[1] || '0', 10);
+    if (h < 8) h += 12; // afternoon slots (2,3)
+    return { h, m };
+  },
+  // Next upcoming class for today (or null)
+  nextClassToday() {
+    const tt = this.getTimetable();
+    const day = this.todayName();
+    if (!day) return null;
+    const nowMin = new Date().getHours() * 60 + new Date().getMinutes();
+    for (const slot of Object.keys(tt)) {
+      const { h, m } = this.slotTo24(slot);
+      const start = h * 60 + m;
+      if (start >= nowMin) return { subject: tt[slot][day], slot: slot, day: day };
+    }
+    return null;
+  },
+
+  // ---- TIMETABLE REMINDERS ----
+  getReminders() {
+    try { return JSON.parse(localStorage.getItem('sb_reminders')) || []; } catch { return []; }
+  },
+  saveReminders(list) { localStorage.setItem('sb_reminders', JSON.stringify(list)); },
+  reminderId(day, slot, subject) { return (day + '-' + slot + '-' + subject).replace(/\s+/g, '_'); },
+  hasReminder(day, slot, subject) {
+    return this.getReminders().some(r => r.id === this.reminderId(day, slot, subject));
+  },
+  addReminder(day, slot, subject) {
+    const list = this.getReminders();
+    const id = this.reminderId(day, slot, subject);
+    if (list.some(r => r.id === id)) return;
+    list.push({ id, day, slot, subject });
+    this.saveReminders(list);
+  },
+  removeReminder(id) {
+    this.saveReminders(this.getReminders().filter(r => r.id !== id));
+  },
+  async requestNotify() {
+    if (!('Notification' in window)) return false;
+    if (Notification.permission === 'granted') return true;
+    try { return (await Notification.requestPermission()) === 'granted'; } catch { return false; }
+  },
+  // Called on every page. Fires due reminders once per day.
+  checkReminders() {
+    const reminders = this.getReminders();
+    if (!reminders.length) return;
+    const day = this.todayName();
+    if (!day) return;
+    const now = new Date();
+    const nowMin = now.getHours() * 60 + now.getMinutes();
+    const today = now.toDateString();
+    const firedKey = 'sb_reminders_fired';
+    let fired = {};
+    try { fired = JSON.parse(localStorage.getItem(firedKey)) || {}; } catch { fired = {}; }
+    let changed = false;
+    reminders.forEach(r => {
+      if (r.day !== day) return;
+      const { h, m } = this.slotTo24(r.slot);
+      const start = h * 60 + m;
+      // fire from 5 min before the class until 10 min after it starts
+      if (nowMin >= start - 5 && nowMin <= start + 10) {
+        const key = r.id + '@' + today;
+        if (!fired[key]) {
+          this.notify('⏰ Class Reminder', (r.subject) + ' starts at ' + r.slot.split('–')[0].trim() + ' (' + r.day + ')');
+          fired[key] = true; changed = true;
+        }
+      }
+    });
+    if (changed) localStorage.setItem(firedKey, JSON.stringify(fired));
+  },
+  notify(title, body) {
+    this.toast('⏰ ' + body);
+    try {
+      if ('Notification' in window && Notification.permission === 'granted') {
+        new Notification(title, { body: body, icon: '' });
+      }
+    } catch (e) { /* ignore */ }
+  },
+  toast(msg) {
+    let el = document.getElementById('appToast');
+    if (!el) {
+      el = document.createElement('div');
+      el.id = 'appToast';
+      el.className = 'app-toast';
+      document.body.appendChild(el);
+    }
+    el.textContent = msg;
+    el.classList.add('show');
+    clearTimeout(el._t);
+    el._t = setTimeout(() => el.classList.remove('show'), 6000);
+  },
+
   // ---- DAILY CHALLENGE ----
   getDailyChallenge() {
     const today = new Date().toDateString();
@@ -111,12 +346,19 @@ const App = {
       const d = JSON.parse(saved);
       if (d.date === today) return d;
     }
-    // Generate new daily challenge
     const allQs = [];
     const data = window.SCIENCE_DATA || {};
+    const myIds = this.getSubjects().map(s => s.id);
     for (const key in data) {
-      if (data[key] && data[key].questions) {
-        data[key].questions.forEach(q => allQs.push({ ...q, subject: data[key].subject || key }));
+      if (!data[key] || !data[key].questions) continue;
+      if (myIds.length && !myIds.includes(key)) continue;
+      data[key].questions.forEach(q => allQs.push({ ...q, subject: data[key].subject || key }));
+    }
+    if (allQs.length === 0) {
+      for (const key in data) {
+        if (data[key] && data[key].questions) {
+          data[key].questions.forEach(q => allQs.push({ ...q, subject: data[key].subject || key }));
+        }
       }
     }
     if (allQs.length === 0) return null;
@@ -126,25 +368,7 @@ const App = {
     return challenge;
   },
 
-  // ---- SUBJECT INFO ----
-  subjects: [
-    { id: 'mathematics', name: 'Mathematics', icon: '📐', color: '#2563eb', path: 'Subjects/mathematics.html' },
-    { id: 'further-mathematics', name: 'Further Mathematics', icon: '📊', color: '#7c3aed', path: 'Subjects/further-mathematics.html' },
-    { id: 'english', name: 'English', icon: '📖', color: '#db2777', path: 'Subjects/english.html' },
-    { id: 'physics', name: 'Physics', icon: '⚛️', color: '#0891b2', path: 'Subjects/physics.html' },
-    { id: 'chemistry', name: 'Chemistry', icon: '🧪', color: '#059669', path: 'Subjects/chemistry.html' },
-    { id: 'biology', name: 'Biology', icon: '🔬', color: '#16a34a', path: 'Subjects/biology.html' },
-    { id: 'computer-science', name: 'Computer Science', icon: '💻', color: '#4f46e5', path: 'Subjects/computer-science.html' },
-    { id: 'geography', name: 'Geography', icon: '🌍', color: '#ca8a04', path: 'Subjects/geography.html' },
-    { id: 'civic-education', name: 'Civic Education', icon: '🏛️', color: '#ea580c', path: 'Subjects/civic-education.html' }
-  ],
-
-  getSubject(id) { return this.subjects.find(s => s.id === id); },
-
   // ---- DATA LOADING ----
-  // Prefer fetching the live /data/*.json files (works on GitHub Pages and
-  // any local HTTP server). Fall back to the embedded copy in js/data.js so
-  // the app also works when opened directly via file://.
   async loadSubjectData(subjectId) {
     try {
       const res = await fetch(this.basePrefix() + 'data/' + subjectId + '.json', { cache: 'no-store' });
@@ -209,6 +433,7 @@ const App = {
     const topbar = document.getElementById('topbar');
     if (!topbar) return;
     const b = this.basePrefix();
+    const notesPath = this.firstSubject().path;
     topbar.innerHTML = `
       <div class="topbar-inner">
         <a href="${b}dashboard.html" class="logo">
@@ -217,10 +442,11 @@ const App = {
         </a>
         <ul class="nav-links" id="navLinks">
           <li><a href="${b}dashboard.html" class="${activePage === 'dashboard' ? 'active' : ''}">Dashboard</a></li>
-          <li><a href="${b}Subjects/physics.html" class="${activePage === 'notes' ? 'active' : ''}">Notes</a></li>
+          <li><a href="${b}${notesPath}" class="${activePage === 'notes' ? 'active' : ''}">Notes</a></li>
           <li><a href="${b}lab/index.html" class="${activePage === 'lab' ? 'active' : ''}">Lab</a></li>
           <li><a href="${b}quiz.html" class="${activePage === 'quiz' ? 'active' : ''}">Quiz</a></li>
           <li><a href="${b}tools/index.html" class="${activePage === 'tools' ? 'active' : ''}">Tools</a></li>
+          <li><a href="${b}profile.html" class="${activePage === 'profile' ? 'active' : ''}">Profile</a></li>
         </ul>
         <div style="display:flex;align-items:center;gap:8px">
           <button class="theme-toggle" id="themeToggle" title="Toggle dark mode">🌙</button>
@@ -236,10 +462,11 @@ const App = {
     const mnav = document.getElementById('mobileNav');
     if (!mnav) return;
     const b = this.basePrefix();
+    const notesPath = this.firstSubject().path;
     mnav.innerHTML = `
       <ul>
         <li><a href="${b}dashboard.html" class="${activePage === 'dashboard' ? 'active' : ''}"><span class="mn-icon">🏠</span>Home</a></li>
-        <li><a href="${b}Subjects/physics.html" class="${activePage === 'notes' ? 'active' : ''}"><span class="mn-icon">📚</span>Notes</a></li>
+        <li><a href="${b}${notesPath}" class="${activePage === 'notes' ? 'active' : ''}"><span class="mn-icon">📚</span>Notes</a></li>
         <li><a href="${b}quiz.html" class="${activePage === 'quiz' ? 'active' : ''}"><span class="mn-icon">📝</span>Quiz</a></li>
         <li><a href="${b}lab/index.html" class="${activePage === 'lab' ? 'active' : ''}"><span class="mn-icon">🔬</span>Lab</a></li>
         <li><a href="${b}tools/index.html" class="${activePage === 'tools' ? 'active' : ''}"><span class="mn-icon">🛠️</span>Tools</a></li>
@@ -250,13 +477,16 @@ const App = {
     const footer = document.getElementById('footer');
     if (!footer) return;
     const b = this.basePrefix();
+    const user = this.getUser();
+    const label = user ? ' · ' + this.getClassLabel() : '';
     footer.innerHTML = `
-      <p>🧠 SS2 Science BrainBox &copy; ${new Date().getFullYear()} — Built for WAEC & 3rd Term Preparation</p>
+      <p>🧠 Science BrainBox &copy; ${new Date().getFullYear()} — Built for Secondary School &amp; Exam Preparation${label}</p>
       <div class="footer-links">
         <a href="${b}dashboard.html">Dashboard</a>
         <a href="${b}quiz.html">Quiz</a>
         <a href="${b}lab/index.html">Lab Corner</a>
         <a href="${b}tools/index.html">Study Tools</a>
+        <a href="${b}profile.html">Profile</a>
       </div>
       <div class="footer-copy" style="margin-top:10px;font-size:.8rem;opacity:.85">
         Presented by KOLAWOLE ALABA WISDOM · © ${new Date().getFullYear()} All rights reserved.
@@ -268,6 +498,10 @@ const App = {
     this.renderTopbar(activePage);
     this.renderMobileNav(activePage);
     this.renderFooter();
+    this.checkReminders();
+    if (!this._reminderInterval) {
+      this._reminderInterval = setInterval(() => this.checkReminders(), 30000);
+    }
   }
 };
 

@@ -1,0 +1,355 @@
+{
+  "subject": "Social Studies",
+  "questions": [
+    {
+      "id": 1,
+      "topic": "Social Studies",
+      "difficulty": "Easy",
+      "question": "Social Studies is the study of people and their:",
+      "options": [
+        "Machines",
+        "Environment",
+        "Ships",
+        "Stars"
+      ],
+      "answer": 1,
+      "explanation": "Social Studies studies people, their environment and how they relate with one another."
+    },
+    {
+      "id": 2,
+      "topic": "Social Studies",
+      "difficulty": "Easy",
+      "question": "One main aim of Social Studies is to produce:",
+      "options": [
+        "Farmers",
+        "Responsible citizens",
+        "Engineers",
+        "Traders"
+      ],
+      "answer": 1,
+      "explanation": "Social Studies aims to produce responsible citizens who can live and work with others."
+    },
+    {
+      "id": 3,
+      "topic": "Social Studies",
+      "difficulty": "Medium",
+      "question": "Which of these is a subject area drawn upon by Social Studies?",
+      "options": [
+        "Geography",
+        "Medicine",
+        "Astronomy",
+        "Dentistry"
+      ],
+      "answer": 0,
+      "explanation": "Social Studies draws from geography, history, civics, economics and sociology."
+    },
+    {
+      "id": 4,
+      "topic": "Social Studies",
+      "difficulty": "Medium",
+      "question": "Social Studies helps us to understand and solve:",
+      "options": [
+        "Mathematical problems",
+        "Social problems",
+        "Chemical reactions",
+        "Physical problems"
+      ],
+      "answer": 1,
+      "explanation": "Social Studies helps us understand and find solutions to social problems."
+    },
+    {
+      "id": 5,
+      "topic": "Social Studies",
+      "difficulty": "Hard",
+      "question": "The study of how people earn and spend money is part of:",
+      "options": [
+        "Economics",
+        "Biology",
+        "Chemistry",
+        "Physics"
+      ],
+      "answer": 0,
+      "explanation": "Economics, which studies production and consumption, is one of the disciplines in Social Studies."
+    },
+    {
+      "id": 6,
+      "topic": "The Family",
+      "difficulty": "Easy",
+      "question": "The smallest unit of society is the:",
+      "options": [
+        "School",
+        "Family",
+        "Market",
+        "Village"
+      ],
+      "answer": 1,
+      "explanation": "The family is the smallest and most basic unit of society."
+    },
+    {
+      "id": 7,
+      "topic": "The Family",
+      "difficulty": "Easy",
+      "question": "A family made up of father, mother and their children is called a:",
+      "options": [
+        "Extended family",
+        "Nuclear family",
+        "Compound family",
+        "Joint family"
+      ],
+      "answer": 1,
+      "explanation": "A nuclear family consists of parents and their children only."
+    },
+    {
+      "id": 8,
+      "topic": "The Family",
+      "difficulty": "Medium",
+      "question": "Grandparents, uncles and cousins are members of the:",
+      "options": [
+        "Nuclear family",
+        "Extended family",
+        "Immediate family",
+        "Small family"
+      ],
+      "answer": 1,
+      "explanation": "The extended family includes grandparents, uncles, aunts and cousins."
+    },
+    {
+      "id": 9,
+      "topic": "The Family",
+      "difficulty": "Medium",
+      "question": "The first place where a child learns values and behaviour is the:",
+      "options": [
+        "Church",
+        "School",
+        "Family",
+        "Market"
+      ],
+      "answer": 2,
+      "explanation": "The family is the first agent of socialisation where a child learns basic values."
+    },
+    {
+      "id": 10,
+      "topic": "The Family",
+      "difficulty": "Hard",
+      "question": "A marriage between one man and one woman is called:",
+      "options": [
+        "Polygamy",
+        "Monogamy",
+        "Polyandry",
+        "Polygyny"
+      ],
+      "answer": 1,
+      "explanation": "Monogamy is marriage between one man and one woman."
+    },
+    {
+      "id": 11,
+      "topic": "Culture",
+      "difficulty": "Easy",
+      "question": "The total way of life of a people is called their:",
+      "options": [
+        "Culture",
+        "Weather",
+        "Government",
+        "Economy"
+      ],
+      "answer": 0,
+      "explanation": "Culture is the total way of life of a people, including language, dress, food and beliefs."
+    },
+    {
+      "id": 12,
+      "topic": "Culture",
+      "difficulty": "Easy",
+      "question": "Which of these is an example of material culture?",
+      "options": [
+        "Beliefs",
+        "Traditional dress",
+        "Values",
+        "Norms"
+      ],
+      "answer": 1,
+      "explanation": "Material culture includes physical things like clothes, tools and food."
+    },
+    {
+      "id": 13,
+      "topic": "Culture",
+      "difficulty": "Medium",
+      "question": "Beliefs, values and customs are examples of:",
+      "options": [
+        "Material culture",
+        "Non-material culture",
+        "Physical culture",
+        "Natural culture"
+      ],
+      "answer": 1,
+      "explanation": "Non-material culture consists of beliefs, values, norms and language."
+    },
+    {
+      "id": 14,
+      "topic": "Culture",
+      "difficulty": "Medium",
+      "question": "The confusion a person feels when meeting a very different culture is called:",
+      "options": [
+        "Culture shock",
+        "Culture lag",
+        "Culture clash",
+        "Acculturation"
+      ],
+      "answer": 0,
+      "explanation": "Culture shock is the confusion felt when exposed to a very different culture."
+    },
+    {
+      "id": 15,
+      "topic": "Culture",
+      "difficulty": "Hard",
+      "question": "The process of learning the culture of one's society is called:",
+      "options": [
+        "Socialisation",
+        "Migration",
+        "Tourism",
+        "Urbanisation"
+      ],
+      "answer": 0,
+      "explanation": "Socialisation is the process of learning the culture and norms of one's society."
+    },
+    {
+      "id": 16,
+      "topic": "Citizenship",
+      "difficulty": "Easy",
+      "question": "A legal member of a country is a:",
+      "options": [
+        "Visitor",
+        "Citizen",
+        "Tourist",
+        "Foreigner"
+      ],
+      "answer": 1,
+      "explanation": "A citizen is a legal member of a country who enjoys rights and performs duties."
+    },
+    {
+      "id": 17,
+      "topic": "Citizenship",
+      "difficulty": "Easy",
+      "question": "Which of these is a duty of a citizen?",
+      "options": [
+        "Paying taxes",
+        "Refusing to vote",
+        "Damaging public property",
+        "Breaking the law"
+      ],
+      "answer": 0,
+      "explanation": "Paying taxes is a civic duty expected of every citizen."
+    },
+    {
+      "id": 18,
+      "topic": "Citizenship",
+      "difficulty": "Medium",
+      "question": "Citizenship can be acquired by all of these EXCEPT:",
+      "options": [
+        "Birth",
+        "Registration",
+        "Naturalisation",
+        "Stealing"
+      ],
+      "answer": 3,
+      "explanation": "Citizenship can be acquired by birth, registration or naturalisation, not by stealing."
+    },
+    {
+      "id": 19,
+      "topic": "Citizenship",
+      "difficulty": "Medium",
+      "question": "The right to life, education and fair hearing are examples of:",
+      "options": [
+        "Duties",
+        "Rights",
+        "Laws",
+        "Norms"
+      ],
+      "answer": 1,
+      "explanation": "These are fundamental human rights of citizens."
+    },
+    {
+      "id": 20,
+      "topic": "Citizenship",
+      "difficulty": "Hard",
+      "question": "A person who gives up his citizenship of a country has:",
+      "options": [
+        "Renounced it",
+        "Registered it",
+        "Lost his job",
+        "Gained a passport"
+      ],
+      "answer": 0,
+      "explanation": "Renunciation is voluntarily giving up one's citizenship."
+    },
+    {
+      "id": 21,
+      "topic": "Social Issues",
+      "difficulty": "Easy",
+      "question": "The misuse of drugs without prescription is called:",
+      "options": [
+        "Drug abuse",
+        "Drug store",
+        "Pharmacy",
+        "Medicine"
+      ],
+      "answer": 0,
+      "explanation": "Drug abuse is the misuse of drugs without a doctor's prescription."
+    },
+    {
+      "id": 22,
+      "topic": "Social Issues",
+      "difficulty": "Easy",
+      "question": "Secret groups in schools that use violence are involved in:",
+      "options": [
+        "Sports",
+        "Cultism",
+        "Debate",
+        "Choir"
+      ],
+      "answer": 1,
+      "explanation": "Cultism involves secret groups that use violence and intimidation."
+    },
+    {
+      "id": 23,
+      "topic": "Social Issues",
+      "difficulty": "Medium",
+      "question": "The illegal movement of people for forced labour is called:",
+      "options": [
+        "Tourism",
+        "Human trafficking",
+        "Migration",
+        "Trade"
+      ],
+      "answer": 1,
+      "explanation": "Human trafficking is the illegal movement and exploitation of people."
+    },
+    {
+      "id": 24,
+      "topic": "Social Issues",
+      "difficulty": "Medium",
+      "question": "Which of the following helps to reduce drug abuse among students?",
+      "options": [
+        "Ignoring the problem",
+        "Guidance and counselling",
+        "Selling more drugs",
+        "Encouraging cultism"
+      ],
+      "answer": 1,
+      "explanation": "Guidance and counselling, education and parental care help reduce drug abuse."
+    },
+    {
+      "id": 25,
+      "topic": "Social Issues",
+      "difficulty": "Hard",
+      "question": "The dishonest practice of cheating during examinations is called:",
+      "options": [
+        "Hard work",
+        "Examination malpractice",
+        "Revision",
+        "Tutorial"
+      ],
+      "answer": 1,
+      "explanation": "Examination malpractice is any dishonest act that breaks examination rules."
+    }
+  ]
+}

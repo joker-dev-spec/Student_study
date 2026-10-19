@@ -1,0 +1,355 @@
+{
+  "subject": "Basic Science",
+  "questions": [
+    {
+      "id": 1,
+      "topic": "Matter",
+      "difficulty": "Easy",
+      "question": "Which state of matter has a fixed shape and a fixed volume?",
+      "options": [
+        "Solid",
+        "Liquid",
+        "Gas",
+        "Plasma"
+      ],
+      "answer": 0,
+      "explanation": "Solids have fixed shape and volume because their particles are tightly packed in fixed positions."
+    },
+    {
+      "id": 2,
+      "topic": "Matter",
+      "difficulty": "Easy",
+      "question": "The change of a liquid to a gas is called:",
+      "options": [
+        "Condensation",
+        "Evaporation",
+        "Freezing",
+        "Melting"
+      ],
+      "answer": 1,
+      "explanation": "Evaporation is the change of a liquid into a gas; the reverse is condensation."
+    },
+    {
+      "id": 3,
+      "topic": "Matter",
+      "difficulty": "Medium",
+      "question": "Which of the following is NOT a state of matter?",
+      "options": [
+        "Solid",
+        "Liquid",
+        "Gas",
+        "Energy"
+      ],
+      "answer": 3,
+      "explanation": "Energy is not a state of matter. The three states are solid, liquid and gas."
+    },
+    {
+      "id": 4,
+      "topic": "Matter",
+      "difficulty": "Medium",
+      "question": "When water vapour cools and turns to liquid water, the process is called:",
+      "options": [
+        "Evaporation",
+        "Condensation",
+        "Sublimation",
+        "Boiling"
+      ],
+      "answer": 1,
+      "explanation": "Condensation is the change of a gas to a liquid on cooling."
+    },
+    {
+      "id": 5,
+      "topic": "Matter",
+      "difficulty": "Hard",
+      "question": "Ice at 0°C changes to water. This process is known as:",
+      "options": [
+        "Sublimation",
+        "Freezing",
+        "Melting",
+        "Condensation"
+      ],
+      "answer": 2,
+      "explanation": "Melting is the change of a solid to a liquid at its melting point."
+    },
+    {
+      "id": 6,
+      "topic": "Living Things",
+      "difficulty": "Easy",
+      "question": "Which of the following is a characteristic of all living things?",
+      "options": [
+        "They cannot move",
+        "They reproduce",
+        "They are man-made",
+        "They do not need food"
+      ],
+      "answer": 1,
+      "explanation": "Reproduction is one of the seven life processes (MRS GREN) shown by all living things."
+    },
+    {
+      "id": 7,
+      "topic": "Living Things",
+      "difficulty": "Easy",
+      "question": "MRS GREN is a way of remembering:",
+      "options": [
+        "The states of matter",
+        "The life processes",
+        "Types of energy",
+        "Parts of a plant"
+      ],
+      "answer": 1,
+      "explanation": "MRS GREN stands for Movement, Respiration, Sensitivity, Growth, Reproduction, Excretion and Nutrition."
+    },
+    {
+      "id": 8,
+      "topic": "Living Things",
+      "difficulty": "Medium",
+      "question": "The removal of waste products from the body is called:",
+      "options": [
+        "Nutrition",
+        "Excretion",
+        "Reproduction",
+        "Respiration"
+      ],
+      "answer": 1,
+      "explanation": "Excretion is the removal of metabolic waste products from the body."
+    },
+    {
+      "id": 9,
+      "topic": "Living Things",
+      "difficulty": "Medium",
+      "question": "Which of these is a non-living thing?",
+      "options": [
+        "Maize plant",
+        "Stone",
+        "Goat",
+        "Mushroom"
+      ],
+      "answer": 1,
+      "explanation": "A stone does not carry out any of the life processes, so it is non-living."
+    },
+    {
+      "id": 10,
+      "topic": "Living Things",
+      "difficulty": "Hard",
+      "question": "A car moves and uses fuel, yet it is not a living thing because it cannot:",
+      "options": [
+        "Move",
+        "Grow and reproduce",
+        "Use energy",
+        "Change direction"
+      ],
+      "answer": 1,
+      "explanation": "Although a car moves and uses fuel, it cannot grow, reproduce or excrete, so it is non-living."
+    },
+    {
+      "id": 11,
+      "topic": "Energy",
+      "difficulty": "Easy",
+      "question": "Energy is measured in:",
+      "options": [
+        "Newtons",
+        "Joules",
+        "Metres",
+        "Kilograms"
+      ],
+      "answer": 1,
+      "explanation": "Energy is measured in joules (J); force is measured in newtons."
+    },
+    {
+      "id": 12,
+      "topic": "Energy",
+      "difficulty": "Easy",
+      "question": "The ultimate source of energy for the Earth is the:",
+      "options": [
+        "Moon",
+        "Sun",
+        "Wind",
+        "Sea"
+      ],
+      "answer": 1,
+      "explanation": "The sun is the ultimate source of most energy on Earth."
+    },
+    {
+      "id": 13,
+      "topic": "Energy",
+      "difficulty": "Medium",
+      "question": "A torch converts chemical energy mainly into:",
+      "options": [
+        "Sound energy",
+        "Light energy",
+        "Nuclear energy",
+        "Magnetic energy"
+      ],
+      "answer": 1,
+      "explanation": "A torch changes chemical energy into electrical energy, then into light and heat energy."
+    },
+    {
+      "id": 14,
+      "topic": "Energy",
+      "difficulty": "Medium",
+      "question": "A boy pushes a box with a force of 20 N through 3 m. The work done is:",
+      "options": [
+        "23 J",
+        "60 J",
+        "6.7 J",
+        "600 J"
+      ],
+      "answer": 1,
+      "explanation": "Work = Force x Distance = 20 x 3 = 60 J."
+    },
+    {
+      "id": 15,
+      "topic": "Energy",
+      "difficulty": "Hard",
+      "question": "Which law states that energy cannot be created or destroyed?",
+      "options": [
+        "Ohm's law",
+        "Law of conservation of energy",
+        "Newton's first law",
+        "Boyle's law"
+      ],
+      "answer": 1,
+      "explanation": "The law of conservation of energy states energy can only change from one form to another."
+    },
+    {
+      "id": 16,
+      "topic": "Force and Motion",
+      "difficulty": "Easy",
+      "question": "Force is measured using a:",
+      "options": [
+        "Thermometer",
+        "Spring balance",
+        "Barometer",
+        "Clock"
+      ],
+      "answer": 1,
+      "explanation": "Force is measured in newtons using a spring balance."
+    },
+    {
+      "id": 17,
+      "topic": "Force and Motion",
+      "difficulty": "Easy",
+      "question": "A car travels 240 km in 3 hours. Its average speed is:",
+      "options": [
+        "60 km/h",
+        "80 km/h",
+        "720 km/h",
+        "120 km/h"
+      ],
+      "answer": 1,
+      "explanation": "Speed = distance / time = 240 / 3 = 80 km/h."
+    },
+    {
+      "id": 18,
+      "topic": "Force and Motion",
+      "difficulty": "Medium",
+      "question": "The force that opposes motion between two surfaces is:",
+      "options": [
+        "Gravity",
+        "Friction",
+        "Magnetism",
+        "Tension"
+      ],
+      "answer": 1,
+      "explanation": "Friction opposes motion between surfaces and produces heat."
+    },
+    {
+      "id": 19,
+      "topic": "Force and Motion",
+      "difficulty": "Medium",
+      "question": "A 50 kg student on Earth (g = 10 m/s squared) has a weight of:",
+      "options": [
+        "5 N",
+        "50 N",
+        "500 N",
+        "0.5 N"
+      ],
+      "answer": 2,
+      "explanation": "Weight = mass x g = 50 x 10 = 500 N."
+    },
+    {
+      "id": 20,
+      "topic": "Force and Motion",
+      "difficulty": "Hard",
+      "question": "Which of these is a non-contact force?",
+      "options": [
+        "Friction",
+        "Tension",
+        "Gravity",
+        "Air resistance"
+      ],
+      "answer": 2,
+      "explanation": "Gravity acts at a distance without contact; the others require contact."
+    },
+    {
+      "id": 21,
+      "topic": "The Human Body",
+      "difficulty": "Easy",
+      "question": "The organ that pumps blood round the body is the:",
+      "options": [
+        "Lungs",
+        "Heart",
+        "Liver",
+        "Kidney"
+      ],
+      "answer": 1,
+      "explanation": "The heart is a muscular organ that pumps blood round the body."
+    },
+    {
+      "id": 22,
+      "topic": "The Human Body",
+      "difficulty": "Easy",
+      "question": "The correct order of organisation in the body is:",
+      "options": [
+        "Organ, cell, tissue, system",
+        "Cell, tissue, organ, system",
+        "Tissue, cell, organ, system",
+        "System, organ, cell, tissue"
+      ],
+      "answer": 1,
+      "explanation": "Cells form tissues, tissues form organs and organs form systems."
+    },
+    {
+      "id": 23,
+      "topic": "The Human Body",
+      "difficulty": "Medium",
+      "question": "Which system is responsible for breathing?",
+      "options": [
+        "Digestive system",
+        "Respiratory system",
+        "Circulatory system",
+        "Skeletal system"
+      ],
+      "answer": 1,
+      "explanation": "The respiratory system (nose, trachea, lungs) is responsible for breathing."
+    },
+    {
+      "id": 24,
+      "topic": "The Human Body",
+      "difficulty": "Medium",
+      "question": "The tube that carries food from the mouth to the stomach is the:",
+      "options": [
+        "Trachea",
+        "Oesophagus",
+        "Intestine",
+        "Bronchus"
+      ],
+      "answer": 1,
+      "explanation": "The oesophagus (gullet) carries food from the mouth to the stomach."
+    },
+    {
+      "id": 25,
+      "topic": "The Human Body",
+      "difficulty": "Hard",
+      "question": "How many bones make up the adult human skeleton?",
+      "options": [
+        "106",
+        "206",
+        "306",
+        "56"
+      ],
+      "answer": 1,
+      "explanation": "The adult human skeleton has 206 bones."
+    }
+  ]
+}

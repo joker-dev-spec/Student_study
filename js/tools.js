@@ -5,45 +5,81 @@
 // ============================
 function initTimetable() {
   App.initPage('tools');
-  const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
-  const times = ['8:00–9:00', '9:00–10:00', '10:00–11:00', '11:00–12:00', '12:00–1:00', '2:00–3:00', '3:00–4:00'];
-  const schedule = {
-    '8:00–9:00':   { Mon: 'Mathematics', Tue: 'Chemistry', Wed: 'Biology', Thu: 'Physics', Fri: 'Mathematics' },
-    '9:00–10:00':  { Mon: 'Physics', Tue: 'Mathematics', Wed: 'English', Thu: 'Chemistry', Fri: 'Biology' },
-    '10:00–11:00': { Mon: 'Chemistry', Tue: 'Biology', Wed: 'Physics', Thu: 'Mathematics', Fri: 'Computer Sci.' },
-    '11:00–12:00': { Mon: 'Biology', Tue: 'Further Maths', Wed: 'Geography', Thu: 'English', Fri: 'Physics' },
-    '12:00–1:00':  { Mon: 'English', Tue: 'Computer Sci.', Wed: 'Civic Education', Thu: 'Further Maths', Fri: 'Chemistry' },
-    '2:00–3:00':   { Mon: 'Geography', Tue: 'English', Wed: 'Mathematics', Thu: 'Computer Sci.', Fri: 'Geography' },
-    '3:00–4:00':   { Mon: 'Civic Education', Tue: 'Geography', Wed: 'Further Maths', Thu: 'Biology', Fri: 'Civic Education' }
-  };
-  const subjectIcons = {
-    'Mathematics': '📐', 'Further Maths': '📊', 'English': '📖', 'Physics': '⚛️',
-    'Chemistry': '🧪', 'Biology': '🔬', 'Computer Sci.': '💻', 'Geography': '🌍',
-    'Civic Education': '🏛️'
-  };
-  const todayIdx = (new Date().getDay() + 6) % 7;
-  const todayName = days[todayIdx] || '';
-
+  const days = App.days;
+  const tt = App.getTimetable();
+  const times = Object.keys(tt);
+  const todayName = App.todayName();
   const table = document.getElementById('timetableTable');
   if (!table) return;
 
-  let html = '<thead><tr><th>Time</th>';
-  days.forEach(d => {
-    html += `<th class="${d === todayName ? 'today-col' : ''}">${d}</th>`;
-  });
-  html += '</tr></thead><tbody>';
+  const subjectIcons = App.subjectIcons;
 
-  times.forEach(t => {
-    html += `<tr><td style="font-weight:700;background:var(--bg-input)">${t}</td>`;
+  function renderTable() {
+    let html = '<thead><tr><th>Time</th>';
     days.forEach(d => {
-      const s = schedule[t][d];
-      const icon = subjectIcons[s] || '📘';
-      html += `<td class="subject-cell ${d === todayName ? 'today-col' : ''}">${icon} ${s}</td>`;
+      html += `<th class="${d === todayName ? 'today-col' : ''}">${d}</th>`;
     });
-    html += '</tr>';
-  });
-  html += '</tbody>';
-  table.innerHTML = html;
+    html += '</tr></thead><tbody>';
+
+    times.forEach(t => {
+      html += `<tr><td style="font-weight:700;background:var(--bg-input)">${t}</td>`;
+      days.forEach(d => {
+        const s = tt[t][d];
+        const icon = subjectIcons[s] || '📘';
+        const on = App.hasReminder(d, t, s);
+        html += `<td class="subject-cell ${d === todayName ? 'today-col' : ''}">
+          <span class="cell-subject">${icon} ${s}</span>
+          <button class="remind-btn ${on ? 'on' : ''}" title="${on ? 'Reminder on' : 'Remind me'}"
+            onclick="window.__toggleReminder('${d}','${t}','${s}')">${on ? '🔔' : '🔕'}</button>
+        </td>`;
+      });
+      html += '</tr>';
+    });
+    html += '</tbody>';
+    table.innerHTML = html;
+    renderReminderList();
+  }
+
+  function renderReminderList() {
+    const listEl = document.getElementById('reminderList');
+    if (!listEl) return;
+    const list = App.getReminders();
+    if (!list.length) {
+      listEl.innerHTML = '<div class="alert show alert-warning">🔕 No reminders yet. Click the bell next to any class to get a notification before it starts.</div>';
+      return;
+    }
+    listEl.innerHTML = list.map(r => `
+      <div class="bookmark-item">
+        <div class="bm-info">
+          <h4>${subjectIcons[r.subject] || '📘'} ${r.subject}</h4>
+          <p>${r.day} · ${r.slot}</p>
+        </div>
+        <div class="bm-actions">
+          <button class="btn btn-sm btn-danger" onclick="window.__toggleReminder('${r.day}','${r.slot}','${r.subject}')">🗑️ Remove</button>
+        </div>
+      </div>`).join('');
+  }
+
+  window.__toggleReminder = function (day, slot, subject) {
+    if (App.hasReminder(day, slot, subject)) {
+      App.removeReminder(App.reminderId(day, slot, subject));
+    } else {
+      App.addReminder(day, slot, subject);
+      App.requestNotify();
+      App.toast('🔔 Reminder set for ' + subject + ' on ' + day + ' at ' + slot.split('–')[0].trim());
+    }
+    renderTable();
+  };
+
+  const notifyBtn = document.getElementById('enableNotify');
+  if (notifyBtn) {
+    notifyBtn.addEventListener('click', async () => {
+      const ok = await App.requestNotify();
+      App.toast(ok ? '✅ Notifications enabled' : '⚠️ Notifications blocked — reminders will still show in-app.');
+    });
+  }
+
+  renderTable();
 }
 
 // ============================

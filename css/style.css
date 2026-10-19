@@ -1742,3 +1742,151 @@ img { max-width: 100%; display: block; }
   .topbar, .mobile-nav, .footer, .quiz-nav, .theme-toggle { display: none !important; }
   body { background: #fff; color: #000; }
 }
+
+/* =============================================
+   v2 ADDITIONS: multi-class, reminders, widgets
+   ============================================= */
+
+/* Difficulty tabs on quiz start */
+.difficulty-tabs {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 10px 0 4px;
+}
+
+/* Timetable reminder bells */
+.timetable td.subject-cell { display: table-cell; }
+.cell-subject { display: inline-block; }
+.remind-btn {
+  display: inline-block;
+  margin-left: 6px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.95rem;
+  line-height: 1;
+  padding: 2px 4px;
+  border-radius: 6px;
+  transition: transform var(--transition), background var(--transition);
+  vertical-align: middle;
+}
+.remind-btn:hover { transform: scale(1.2); background: var(--bg-input); }
+.remind-btn.on { filter: drop-shadow(0 0 4px var(--primary)); }
+
+/* Dashboard widgets */
+.dash-widgets {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+.dash-widget {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: var(--shadow);
+}
+.dash-widget .nc-icon { font-size: 2rem; }
+.dash-widget .nc-sub { font-weight: 800; font-size: 1.05rem; color: var(--text); }
+.dash-widget .nc-meta { font-size: 0.85rem; color: var(--text-light); }
+.exam-countdown { flex-direction: column; align-items: flex-start; gap: 4px; }
+.exam-countdown .cd-num { font-size: 2.2rem; font-weight: 800; color: var(--primary); line-height: 1; }
+.exam-countdown .cd-lbl { font-size: 0.82rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 1px; }
+
+.motive-quote {
+  margin-top: 20px;
+  font-style: italic;
+  text-align: center;
+  color: var(--text-secondary, var(--text-light));
+  font-size: 0.95rem;
+  padding: 0 12px;
+}
+
+/* Toast notifications */
+.app-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 84px;
+  transform: translate(-50%, 20px);
+  background: var(--primary);
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 2000;
+  max-width: 90vw;
+  text-align: center;
+}
+.app-toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+/* Profile page */
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+.pf-avatar {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 2.4rem;
+  background: var(--primary-light);
+  flex-shrink: 0;
+}
+.pf-main h2 { margin: 0 0 4px; }
+.pf-main p { margin: 0; color: var(--text-light); font-size: 0.9rem; }
+.pf-level { font-weight: 700; color: var(--primary) !important; margin-top: 4px !important; }
+.profile-stats { margin-top: 20px; }
+.profile-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* =============================================
+   v3 ADDITIONS: animated splash, polished header
+   ============================================= */
+
+/* Splash entrance animation */
+@keyframes logoPop {
+  0% { opacity: 0; transform: scale(0.7); }
+  60% { opacity: 1; transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+#splash .splash-brand { animation: logoPop 0.7s ease-out both; }
+
+/* Smooth transitions for cards across the app */
+.subject-card, .tool-card, .quick-link { transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition); }
+.subject-card:hover, .tool-card:hover { transform: translateY(-4px); }
+
+/* Section title accent */
+.section-title { position: relative; }
+
+/* Better focus visibility for accessibility */
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible {
+  outline: 2.5px solid var(--primary);
+  outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+  .app-toast { bottom: 76px; }
+  .profile-card { flex-direction: column; text-align: center; }
+}

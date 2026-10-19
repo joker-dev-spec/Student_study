@@ -179,6 +179,156 @@
       "subject": "Biology",
       "front": "Functions of the human heart",
       "back": "The heart pumps blood through the body. Right side: deoxygenated blood to lungs. Left side: oxygenated blood to body. Beats ~72 times per minute."
+    },
+    {
+      "id": 31,
+      "subject": "Basic Science",
+      "front": "Three states of matter",
+      "back": "Solid, liquid and gas. In solids particles are tightly packed; in liquids they are close but can flow; in gases they are far apart and move freely."
+    },
+    {
+      "id": 32,
+      "subject": "Basic Science",
+      "front": "MRS GREN",
+      "back": "The seven life processes: Movement, Respiration, Sensitivity, Growth, Reproduction, Excretion and Nutrition."
+    },
+    {
+      "id": 33,
+      "subject": "Basic Science",
+      "front": "Energy",
+      "back": "The ability to do work, measured in joules (J). Energy cannot be created or destroyed, only changed in form."
+    },
+    {
+      "id": 34,
+      "subject": "Basic Science",
+      "front": "Speed",
+      "back": "Speed = Distance / Time. It is measured in metres per second (m/s) or km/h."
+    },
+    {
+      "id": 35,
+      "subject": "Basic Science",
+      "front": "Work",
+      "back": "Work = Force x Distance (W = F x d), measured in joules."
+    },
+    {
+      "id": 36,
+      "subject": "Basic Technology",
+      "front": "Safety colour: Red",
+      "back": "Red indicates fire-fighting equipment such as fire extinguishers."
+    },
+    {
+      "id": 37,
+      "subject": "Basic Technology",
+      "front": "Mechanical Advantage",
+      "back": "MA = Load / Effort. It shows how much a machine multiplies the applied force."
+    },
+    {
+      "id": 38,
+      "subject": "Basic Technology",
+      "front": "Ohm's Law",
+      "back": "V = I x R — Voltage equals current multiplied by resistance."
+    },
+    {
+      "id": 39,
+      "subject": "Basic Technology",
+      "front": "Thermoplastic vs Thermosetting",
+      "back": "Thermoplastics soften on heating and can be reshaped; thermosetting plastics set hard and cannot be remelted."
+    },
+    {
+      "id": 40,
+      "subject": "Basic Technology",
+      "front": "Series vs Parallel circuit",
+      "back": "Series: one path — one break stops all. Parallel: many paths — one break does not stop others."
+    },
+    {
+      "id": 41,
+      "subject": "Business Studies",
+      "front": "Profit",
+      "back": "Profit = Total Revenue - Total Cost. It is the reward for business risk."
+    },
+    {
+      "id": 42,
+      "subject": "Business Studies",
+      "front": "Accounting Equation",
+      "back": "Assets = Capital + Liabilities. Use it to find any missing figure."
+    },
+    {
+      "id": 43,
+      "subject": "Business Studies",
+      "front": "Aids to trade",
+      "back": "Banking, insurance, transport, warehousing, advertising and communication."
+    },
+    {
+      "id": 44,
+      "subject": "Business Studies",
+      "front": "Sole proprietorship",
+      "back": "A business owned and controlled by one person; has unlimited liability."
+    },
+    {
+      "id": 45,
+      "subject": "Business Studies",
+      "front": "Double entry",
+      "back": "Every transaction affects two accounts: an equal debit and credit."
+    },
+    {
+      "id": 46,
+      "subject": "Agricultural Science",
+      "front": "Agriculture",
+      "back": "The science and art of producing crops and rearing animals. Branches: crop production and animal husbandry."
+    },
+    {
+      "id": 47,
+      "subject": "Agricultural Science",
+      "front": "Loamy soil",
+      "back": "The best soil for most crops — it holds enough water and air and is rich in humus."
+    },
+    {
+      "id": 48,
+      "subject": "Agricultural Science",
+      "front": "Humus",
+      "back": "Dark organic matter in soil formed from decayed plants and animals; it improves soil fertility."
+    },
+    {
+      "id": 49,
+      "subject": "Agricultural Science",
+      "front": "Incubation",
+      "back": "The process of keeping eggs warm until they hatch — about 21 days for a hen's egg."
+    },
+    {
+      "id": 50,
+      "subject": "Agricultural Science",
+      "front": "Plough",
+      "back": "A farm implement used to turn and loosen the soil before planting."
+    },
+    {
+      "id": 51,
+      "subject": "Social Studies",
+      "front": "Culture",
+      "back": "The total way of life of a people — language, dress, food, beliefs, values and customs."
+    },
+    {
+      "id": 52,
+      "subject": "Social Studies",
+      "front": "Nuclear family",
+      "back": "A family made up of father, mother and their children only."
+    },
+    {
+      "id": 53,
+      "subject": "Social Studies",
+      "front": "Extended family",
+      "back": "A family that includes grandparents, uncles, aunts and cousins in addition to parents and children."
+    },
+    {
+      "id": 54,
+      "subject": "Social Studies",
+      "front": "Citizenship",
+      "back": "Legal membership of a country, acquired by birth, registration or naturalisation."
+    },
+    {
+      "id": 55,
+      "subject": "Social Studies",
+      "front": "Socialisation",
+      "back": "The process of learning the culture, values and norms of one's society, starting in the family."
     }
   ]
 }

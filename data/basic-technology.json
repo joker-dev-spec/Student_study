@@ -1,0 +1,355 @@
+{
+  "subject": "Basic Technology",
+  "questions": [
+    {
+      "id": 1,
+      "topic": "Safety",
+      "difficulty": "Easy",
+      "question": "Which colour is used to indicate fire-fighting equipment?",
+      "options": [
+        "Green",
+        "Red",
+        "Blue",
+        "Yellow"
+      ],
+      "answer": 1,
+      "explanation": "Red is the safety colour for fire equipment."
+    },
+    {
+      "id": 2,
+      "topic": "Safety",
+      "difficulty": "Easy",
+      "question": "Protective wear used to protect the eyes in the workshop is:",
+      "options": [
+        "Gloves",
+        "Goggles",
+        "Boots",
+        "Apron"
+      ],
+      "answer": 1,
+      "explanation": "Goggles protect the eyes from dust, sparks and chemicals."
+    },
+    {
+      "id": 3,
+      "topic": "Safety",
+      "difficulty": "Medium",
+      "question": "The immediate treatment given to an injured person before a doctor arrives is called:",
+      "options": [
+        "Surgery",
+        "First aid",
+        "Diagnosis",
+        "Injection"
+      ],
+      "answer": 1,
+      "explanation": "First aid is the immediate help given to an injured person before expert help arrives."
+    },
+    {
+      "id": 4,
+      "topic": "Safety",
+      "difficulty": "Medium",
+      "question": "A student's clothes catch fire. The best immediate action is to:",
+      "options": [
+        "Run around",
+        "Wrap him in a fire blanket",
+        "Fan the flames",
+        "Pour petrol"
+      ],
+      "answer": 1,
+      "explanation": "Wrapping in a fire blanket cuts off oxygen and smothers the flames; running spreads the fire."
+    },
+    {
+      "id": 5,
+      "topic": "Safety",
+      "difficulty": "Hard",
+      "question": "In the safety colour code, yellow generally means:",
+      "options": [
+        "Fire equipment",
+        "Mandatory action",
+        "Caution or warning",
+        "First aid"
+      ],
+      "answer": 2,
+      "explanation": "Yellow is the warning colour, used to indicate caution."
+    },
+    {
+      "id": 6,
+      "topic": "Materials",
+      "difficulty": "Easy",
+      "question": "Which of the following is a natural material?",
+      "options": [
+        "Plastic",
+        "Wood",
+        "Nylon",
+        "PVC"
+      ],
+      "answer": 1,
+      "explanation": "Wood is a natural material obtained from trees; the others are synthetic."
+    },
+    {
+      "id": 7,
+      "topic": "Materials",
+      "difficulty": "Easy",
+      "question": "Which material is a good conductor of electricity?",
+      "options": [
+        "Rubber",
+        "Copper",
+        "Plastic",
+        "Dry wood"
+      ],
+      "answer": 1,
+      "explanation": "Copper is a metal and a good conductor of electricity."
+    },
+    {
+      "id": 8,
+      "topic": "Materials",
+      "difficulty": "Medium",
+      "question": "Plastics that soften when heated and harden on cooling are called:",
+      "options": [
+        "Thermosetting plastics",
+        "Thermoplastics",
+        "Metals",
+        "Ceramics"
+      ],
+      "answer": 1,
+      "explanation": "Thermoplastics can be softened repeatedly by heating; thermosetting plastics cannot."
+    },
+    {
+      "id": 9,
+      "topic": "Materials",
+      "difficulty": "Medium",
+      "question": "Which of these is a ferrous metal?",
+      "options": [
+        "Aluminium",
+        "Copper",
+        "Steel",
+        "Brass"
+      ],
+      "answer": 2,
+      "explanation": "Steel contains iron, so it is ferrous; aluminium, copper and brass are non-ferrous."
+    },
+    {
+      "id": 10,
+      "topic": "Materials",
+      "difficulty": "Hard",
+      "question": "Copper is used for electrical wires mainly because it:",
+      "options": [
+        "Is cheap",
+        "Conducts electricity well",
+        "Is light",
+        "Does not melt"
+      ],
+      "answer": 1,
+      "explanation": "Copper conducts electricity well and is ductile, making it ideal for wires."
+    },
+    {
+      "id": 11,
+      "topic": "Technical Drawing",
+      "difficulty": "Easy",
+      "question": "Which instrument is used to draw a circle of a given radius?",
+      "options": [
+        "Protractor",
+        "Compass",
+        "T-square",
+        "Ruler"
+      ],
+      "answer": 1,
+      "explanation": "A pair of compasses is set to the required radius to draw circles."
+    },
+    {
+      "id": 12,
+      "topic": "Technical Drawing",
+      "difficulty": "Easy",
+      "question": "A standard A4 drawing sheet measures:",
+      "options": [
+        "210 x 297 mm",
+        "297 x 420 mm",
+        "420 x 594 mm",
+        "148 x 210 mm"
+      ],
+      "answer": 0,
+      "explanation": "A4 is 210 mm by 297 mm."
+    },
+    {
+      "id": 13,
+      "topic": "Technical Drawing",
+      "difficulty": "Medium",
+      "question": "Hidden details in a technical drawing are shown with:",
+      "options": [
+        "Thick continuous lines",
+        "Dashed lines",
+        "Chain lines",
+        "Thin continuous lines"
+      ],
+      "answer": 1,
+      "explanation": "Dashed lines represent hidden or invisible edges."
+    },
+    {
+      "id": 14,
+      "topic": "Technical Drawing",
+      "difficulty": "Medium",
+      "question": "The drawing that shows the top view of an object is called the:",
+      "options": [
+        "Front elevation",
+        "Plan",
+        "End elevation",
+        "Section"
+      ],
+      "answer": 1,
+      "explanation": "The plan is the top view in orthographic projection."
+    },
+    {
+      "id": 15,
+      "topic": "Technical Drawing",
+      "difficulty": "Hard",
+      "question": "The 45-degree set square is used with the T-square to draw:",
+      "options": [
+        "Curves",
+        "Angles of 30 degrees",
+        "Angles of 45 and 90 degrees",
+        "Circles"
+      ],
+      "answer": 2,
+      "explanation": "The 45-degree set square helps draw angles of 45 and 90 degrees."
+    },
+    {
+      "id": 16,
+      "topic": "Simple Machines",
+      "difficulty": "Easy",
+      "question": "A machine makes work easier by changing the size or direction of a:",
+      "options": [
+        "Mass",
+        "Force",
+        "Volume",
+        "Temperature"
+      ],
+      "answer": 1,
+      "explanation": "Machines change the size or direction of a force."
+    },
+    {
+      "id": 17,
+      "topic": "Simple Machines",
+      "difficulty": "Easy",
+      "question": "A wheel with a grooved rim used with a rope is a:",
+      "options": [
+        "Lever",
+        "Pulley",
+        "Screw",
+        "Wedge"
+      ],
+      "answer": 1,
+      "explanation": "A pulley is a wheel with a grooved rim through which a rope passes."
+    },
+    {
+      "id": 18,
+      "topic": "Simple Machines",
+      "difficulty": "Medium",
+      "question": "A load of 600 N is lifted with an effort of 200 N. The mechanical advantage is:",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "0.33"
+      ],
+      "answer": 1,
+      "explanation": "MA = Load / Effort = 600 / 200 = 3."
+    },
+    {
+      "id": 19,
+      "topic": "Simple Machines",
+      "difficulty": "Medium",
+      "question": "A crowbar is an example of which class of lever?",
+      "options": [
+        "Class 1",
+        "Class 2",
+        "Class 3",
+        "None"
+      ],
+      "answer": 0,
+      "explanation": "In a class 1 lever, the fulcrum is between the load and the effort, like a crowbar."
+    },
+    {
+      "id": 20,
+      "topic": "Simple Machines",
+      "difficulty": "Hard",
+      "question": "A wheelbarrow is an example of a:",
+      "options": [
+        "Class 1 lever",
+        "Class 2 lever",
+        "Class 3 lever",
+        "Pulley"
+      ],
+      "answer": 1,
+      "explanation": "A wheelbarrow is a class 2 lever because the load is between the fulcrum and the effort."
+    },
+    {
+      "id": 21,
+      "topic": "Electricity",
+      "difficulty": "Easy",
+      "question": "Current is measured with an:",
+      "options": [
+        "Ammeter",
+        "Voltmeter",
+        "Thermometer",
+        "Barometer"
+      ],
+      "answer": 0,
+      "explanation": "An ammeter measures electric current in amperes."
+    },
+    {
+      "id": 22,
+      "topic": "Electricity",
+      "difficulty": "Easy",
+      "question": "Which material is an electrical insulator?",
+      "options": [
+        "Copper",
+        "Rubber",
+        "Aluminium",
+        "Steel"
+      ],
+      "answer": 1,
+      "explanation": "Rubber is an insulator because it does not allow current to flow."
+    },
+    {
+      "id": 23,
+      "topic": "Electricity",
+      "difficulty": "Medium",
+      "question": "In a series circuit, if one bulb is removed:",
+      "options": [
+        "Others still light",
+        "All bulbs go off",
+        "Bulbs get brighter",
+        "Current increases"
+      ],
+      "answer": 1,
+      "explanation": "A series circuit has only one path, so removing one bulb breaks the circuit."
+    },
+    {
+      "id": 24,
+      "topic": "Electricity",
+      "difficulty": "Medium",
+      "question": "A current of 2 A flows through a 5 ohm resistor. The voltage is:",
+      "options": [
+        "2.5 V",
+        "10 V",
+        "7 V",
+        "0.4 V"
+      ],
+      "answer": 1,
+      "explanation": "Ohm's law: V = I x R = 2 x 5 = 10 V."
+    },
+    {
+      "id": 25,
+      "topic": "Electricity",
+      "difficulty": "Hard",
+      "question": "In a parallel circuit, the voltage across each branch is:",
+      "options": [
+        "Different",
+        "The same",
+        "Zero",
+        "Doubled"
+      ],
+      "answer": 1,
+      "explanation": "In a parallel circuit each branch has the same voltage across it."
+    }
+  ]
+}

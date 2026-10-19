@@ -1,16 +1,29 @@
-# 🧠 SS2 Science BrainBox
+# 🧠 Science BrainBox
 
-A complete study app for **SS2 Science students in Nigeria** preparing for **WAEC** and their **3rd term** examinations.
+A complete study app for **secondary school students in Nigeria** — from **JSS1 to SS3** — preparing for **WAEC, BECE/JSCE** and terminal examinations.
 
 Built with **only HTML, CSS, JavaScript and a reference Java backend** — no React, no frameworks, no build step. It runs by simply opening `index.html`, or on **GitHub Pages**, or on **localhost**.
 
 ---
 
+## 🆕 What's New (v2)
+
+- **All classes supported** — choose JSS1, JSS2, JSS3, SS1, SS2 or SS3 at login. Subjects and quizzes adapt to your level.
+- **Junior subjects added** — Basic Science, Basic Technology, Business Studies, Agricultural Science and Social Studies (with full notes + 25-question quizzes each).
+- **Timetable reminders** 🔔 — tap the bell beside any class in your timetable to get a notification before it starts.
+- **Profile page** 👤 — view your stats, set an exam countdown, export your data and reset progress.
+- **Exam countdown & study streak** — stay motivated with a live countdown and a daily streak.
+- **Difficulty selection in quizzes** — practise Easy, Medium or Hard questions only.
+- **20-second intro splash** with a "Presented by KOLAWOLE ALABA WISDOM" credit and a skip button.
+
+---
+
+
 ## ✨ Features
 
 ### 1. Login
-- Enter **Name** and **School**
-- **Science Class** is auto-selected (Science Department)
+- Enter **Name**, **School** and choose your **Class** (JSS1–SS3)
+- Content adapts automatically: junior students see junior subjects, senior students see the science set
 - Session saved in `localStorage`
 
 ### 2. Dashboard
@@ -24,15 +37,20 @@ Every topic includes **Definition**, **Formula**, **Diagram description**, **Wor
 
 | Subject | Topics |
 |---|---|
-| **Physics** | Vectors, Equilibrium, Motion, Light, Waves |
-| **Chemistry** | Particulate Nature of Matter, Periodic Table, Chemical Bonding, Acids & Bases, Organic Introduction |
-| **Biology** | Cell, Tissues, Photosynthesis, Respiratory System, Ecology |
+| **Physics** (SS) | Vectors, Equilibrium, Motion, Light, Waves |
+| **Chemistry** (SS) | Particulate Nature of Matter, Periodic Table, Chemical Bonding, Acids & Bases, Organic Introduction |
+| **Biology** (SS) | Cell, Tissues, Photosynthesis, Respiratory System, Ecology |
 | **Mathematics** | Logarithms, Sequences, Trigonometry, Calculus Intro |
 | Further Mathematics | Vectors, Matrices, Differentiation, Integration, Probability |
 | English | Vocabulary, Grammar, Figures of Speech |
 | Computer Science | Hardware & Software, Programming, Networking, Data Representation |
 | Geography | Map Reading, Physical Geography, Climatology, Human Geography |
 | Civic Education | Democracy, Human Rights, Rule of Law, Citizenship |
+| **Basic Science** (JSS) | Matter, Living & Non-Living Things, Energy, Force & Motion, The Human Body |
+| **Basic Technology** (JSS) | Workshop Safety, Materials, Technical Drawing, Simple Machines, Electricity |
+| **Business Studies** (JSS) | Business, Office Practice, Book-keeping, Commerce, Business Organisations |
+| **Agricultural Science** (JSS) | Agriculture, Soil, Crop Production, Farm Tools, Livestock |
+| **Social Studies** (JSS) | Social Studies, The Family, Culture, Citizenship, Social Issues |
 
 ### 4. Science Lab Corner
 - **Virtual Experiments** — step-by-step practical guides (starch test, water test, Hooke's Law, moments)
@@ -48,12 +66,18 @@ Every topic includes **Definition**, **Formula**, **Diagram description**, **Wor
 - Questions stored in **`/data/*.json`** (fetched with vanilla JS) and also in a **Java `ArrayList`** (`QuizServlet`)
 
 ### 6. Study Tools
-- **Timetable** — weekly science schedule with today highlighted
+- **Timetable** — weekly class schedule with **🔔 reminders** before each class (browser notification + in-app toast)
 - **Pomodoro** — 25/5/15/50-minute focus & break timers, session counter
 - **Flashcards** — flip cards for formulas and definitions, filterable by subject
 - **Bookmarks** — save any subject's notes for quick review
 
-### 7. Design
+### 7. Profile & Motivation
+- **Profile page** — account details, stats, best subject, data export and reset
+- **Exam countdown** — set your exam date and see the days remaining
+- **Study streak** — count of consecutive days you have studied
+- **Daily quote** — a fresh motivational line each day
+
+### 8. Design
 - **Science lab theme**: blue, white and green
 - **Mobile-first** responsive layout with bottom navigation
 - **Dark mode** toggle (remembered across sessions)
@@ -65,32 +89,39 @@ Every topic includes **Definition**, **Formula**, **Diagram description**, **Wor
 
 ```
 Study project/
-├── index.html                 # Login page
+├── index.html                 # Login page (with intro splash)
 ├── dashboard.html             # Student dashboard
 ├── quiz.html                  # CBT quiz engine (loads by subject)
+├── profile.html               # Profile, stats & settings
 ├── css/
-│   └── style.css              # Science lab theme + dark mode
+│   └── style.css              # Theme + dark mode
 ├── js/
 │   ├── data.js                # Embedded copy of all JSON (offline fallback)
-│   ├── app.js                 # Shared utilities: auth, theme, nav, data loader
+│   ├── app.js                 # Shared utilities: auth, classes, timetable, reminders
 │   ├── auth.js                # Login logic
-│   ├── dashboard.js           # Dashboard, progress, weak topics, daily challenge
-│   ├── quiz.js                # CBT quiz engine (timer, scoring, corrections)
+│   ├── dashboard.js           # Dashboard, progress, streak, countdown
+│   ├── quiz.js                # CBT quiz engine (timer, scoring, difficulty)
 │   ├── notes.js               # Subject page, formula sheet, periodic table
-│   └── tools.js               # Timetable, Pomodoro, Flashcards, Bookmarks
+│   ├── tools.js               # Timetable (+reminders), Pomodoro, Flashcards, Bookmarks
+│   └── profile.js             # Profile page logic
 ├── data/                      # All content as JSON
 │   ├── physics.json           # 25 questions
-│   ├── chemistry.json         # 25 questions
-│   ├── biology.json           # 25 questions
-│   ├── mathematics.json       # 25 questions
+│   ├── chemistry.json
+│   ├── biology.json
+│   ├── mathematics.json
 │   ├── further-mathematics.json
 │   ├── english.json
 │   ├── computer-science.json
 │   ├── geography.json
 │   ├── civic-education.json
-│   ├── flashcards.json        # 30 flashcards
+│   ├── basic-science.json       # Junior subject (25 questions)
+│   ├── basic-technology.json    # Junior subject
+│   ├── business-studies.json    # Junior subject
+│   ├── agricultural-science.json# Junior subject
+│   ├── social-studies.json      # Junior subject
+│   ├── flashcards.json        # 55 flashcards
 │   └── formulas.json          # 50+ formulas
-├── Subjects/                  # Notes pages
+├── Subjects/                  # Notes pages (14 subjects)
 │   ├── physics.html
 │   ├── chemistry.html
 │   ├── biology.html
@@ -99,7 +130,12 @@ Study project/
 │   ├── english.html
 │   ├── computer-science.html
 │   ├── geography.html
-│   └── civic-education.html
+│   ├── civic-education.html
+│   ├── basic-science.html
+│   ├── basic-technology.html
+│   ├── business-studies.html
+│   ├── agricultural-science.html
+│   └── social-studies.html
 ├── lab/                       # Science Lab Corner
 │   ├── index.html
 │   ├── experiments.html
@@ -222,4 +258,4 @@ Each subject JSON file looks like this:
 
 ---
 
-**Built for SS2 Science students in Nigeria — study smart, pass WAEC.** 🇳🇬
+**Built for secondary school students in Nigeria — study smart, pass your exams.** 🇳🇬

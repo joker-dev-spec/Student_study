@@ -1,0 +1,355 @@
+{
+  "subject": "Business Studies",
+  "questions": [
+    {
+      "id": 1,
+      "topic": "Business",
+      "difficulty": "Easy",
+      "question": "Business is concerned with the production and exchange of goods and services to make a:",
+      "options": [
+        "Loss",
+        "Profit",
+        "Friendship",
+        "Mistake"
+      ],
+      "answer": 1,
+      "explanation": "The main aim of business is to make profit by satisfying human wants."
+    },
+    {
+      "id": 2,
+      "topic": "Business",
+      "difficulty": "Easy",
+      "question": "Which of the following is a service?",
+      "options": [
+        "Bread",
+        "Shoe",
+        "Banking",
+        "Pen"
+      ],
+      "answer": 2,
+      "explanation": "Banking is a service (intangible); bread, shoes and pens are goods."
+    },
+    {
+      "id": 3,
+      "topic": "Business",
+      "difficulty": "Medium",
+      "question": "A trader buys goods for 35,000 naira and sells for 50,000 naira. The profit is:",
+      "options": [
+        "15,000 naira",
+        "85,000 naira",
+        "35,000 naira",
+        "50,000 naira"
+      ],
+      "answer": 0,
+      "explanation": "Profit = Total revenue - Total cost = 50,000 - 35,000 = 15,000 naira."
+    },
+    {
+      "id": 4,
+      "topic": "Business",
+      "difficulty": "Medium",
+      "question": "The order of a person's needs by importance is called:",
+      "options": [
+        "Balance sheet",
+        "Scale of preference",
+        "Profit and loss",
+        "Trade"
+      ],
+      "answer": 1,
+      "explanation": "A scale of preference lists wants in order of importance."
+    },
+    {
+      "id": 5,
+      "topic": "Business",
+      "difficulty": "Hard",
+      "question": "Which of the following is NOT a factor of production?",
+      "options": [
+        "Land",
+        "Labour",
+        "Capital",
+        "Profit"
+      ],
+      "answer": 3,
+      "explanation": "The factors of production are land, labour, capital and entrepreneur; profit is a reward, not a factor."
+    },
+    {
+      "id": 6,
+      "topic": "Office Practice",
+      "difficulty": "Easy",
+      "question": "A place where office work and paperwork are processed is an:",
+      "options": [
+        "Office",
+        "Farm",
+        "Factory",
+        "Market"
+      ],
+      "answer": 0,
+      "explanation": "An office is where information and paperwork are processed."
+    },
+    {
+      "id": 7,
+      "topic": "Office Practice",
+      "difficulty": "Easy",
+      "question": "Which office equipment is used to make copies of documents?",
+      "options": [
+        "Telephone",
+        "Photocopier",
+        "Stapler",
+        "Filing cabinet"
+      ],
+      "answer": 1,
+      "explanation": "A photocopier makes copies of documents."
+    },
+    {
+      "id": 8,
+      "topic": "Office Practice",
+      "difficulty": "Medium",
+      "question": "Arranging files from A to Z is which filing method?",
+      "options": [
+        "Numerical",
+        "Alphabetical",
+        "Chronological",
+        "Subject"
+      ],
+      "answer": 1,
+      "explanation": "Alphabetical filing arranges files according to the letters of the alphabet."
+    },
+    {
+      "id": 9,
+      "topic": "Office Practice",
+      "difficulty": "Medium",
+      "question": "Which of these is a function of the office?",
+      "options": [
+        "Keeping records",
+        "Farming",
+        "Manufacturing",
+        "Mining"
+      ],
+      "answer": 0,
+      "explanation": "Keeping records and processing information are key office functions."
+    },
+    {
+      "id": 10,
+      "topic": "Office Practice",
+      "difficulty": "Hard",
+      "question": "A franking machine is used in the office to:",
+      "options": [
+        "Print stamps on mail",
+        "Copy files",
+        "Bind books",
+        "Cut paper"
+      ],
+      "answer": 0,
+      "explanation": "A franking machine prints postage stamps on outgoing mail."
+    },
+    {
+      "id": 11,
+      "topic": "Book-keeping",
+      "difficulty": "Easy",
+      "question": "Book-keeping is the recording of business:",
+      "options": [
+        "Parties",
+        "Transactions",
+        "Friends",
+        "Meetings"
+      ],
+      "answer": 1,
+      "explanation": "Book-keeping is the recording of business transactions in books of account."
+    },
+    {
+      "id": 12,
+      "topic": "Book-keeping",
+      "difficulty": "Easy",
+      "question": "The accounting equation is:",
+      "options": [
+        "Assets = Capital + Liabilities",
+        "Capital = Assets + Liabilities",
+        "Liabilities = Assets + Capital",
+        "Assets = Capital - Liabilities"
+      ],
+      "answer": 0,
+      "explanation": "Assets = Capital + Liabilities is the basic accounting equation."
+    },
+    {
+      "id": 13,
+      "topic": "Book-keeping",
+      "difficulty": "Medium",
+      "question": "The owner puts 200,000 naira into the business. The double entry is:",
+      "options": [
+        "Debit Capital, Credit Cash",
+        "Debit Cash, Credit Capital",
+        "Debit Bank, Credit Sales",
+        "Debit Cash, Credit Sales"
+      ],
+      "answer": 1,
+      "explanation": "Cash increases (debit) and capital increases (credit)."
+    },
+    {
+      "id": 14,
+      "topic": "Book-keeping",
+      "difficulty": "Medium",
+      "question": "Things owned by a business are called:",
+      "options": [
+        "Liabilities",
+        "Assets",
+        "Capital",
+        "Expenses"
+      ],
+      "answer": 1,
+      "explanation": "Assets are the property and possessions owned by a business."
+    },
+    {
+      "id": 15,
+      "topic": "Book-keeping",
+      "difficulty": "Hard",
+      "question": "If Assets = 500,000 and Liabilities = 200,000, the Capital is:",
+      "options": [
+        "700,000",
+        "300,000",
+        "200,000",
+        "500,000"
+      ],
+      "answer": 1,
+      "explanation": "Capital = Assets - Liabilities = 500,000 - 200,000 = 300,000."
+    },
+    {
+      "id": 16,
+      "topic": "Commerce",
+      "difficulty": "Easy",
+      "question": "Commerce is best described as trade and:",
+      "options": [
+        "Aids to trade",
+        "Farming only",
+        "Manufacturing only",
+        "Mining"
+      ],
+      "answer": 0,
+      "explanation": "Commerce is the study of trade and aids to trade."
+    },
+    {
+      "id": 17,
+      "topic": "Commerce",
+      "difficulty": "Easy",
+      "question": "Trade within a country is called:",
+      "options": [
+        "Foreign trade",
+        "Home trade",
+        "Import trade",
+        "Entrepot trade"
+      ],
+      "answer": 1,
+      "explanation": "Home (internal) trade takes place within a country."
+    },
+    {
+      "id": 18,
+      "topic": "Commerce",
+      "difficulty": "Medium",
+      "question": "Which of the following is an aid to trade?",
+      "options": [
+        "Banking",
+        "Weaving",
+        "Farming",
+        "Fishing"
+      ],
+      "answer": 0,
+      "explanation": "Banking, transport, insurance and advertising are aids to trade."
+    },
+    {
+      "id": 19,
+      "topic": "Commerce",
+      "difficulty": "Medium",
+      "question": "Buying goods from another country is called:",
+      "options": [
+        "Export",
+        "Import",
+        "Retail",
+        "Wholesale"
+      ],
+      "answer": 1,
+      "explanation": "Importing is buying goods from another country."
+    },
+    {
+      "id": 20,
+      "topic": "Commerce",
+      "difficulty": "Hard",
+      "question": "The chain of distribution for goods is:",
+      "options": [
+        "Consumer, Retailer, Wholesaler, Producer",
+        "Producer, Wholesaler, Retailer, Consumer",
+        "Retailer, Producer, Consumer, Wholesaler",
+        "Producer, Consumer, Retailer, Wholesaler"
+      ],
+      "answer": 1,
+      "explanation": "Goods flow from producer to wholesaler to retailer to consumer."
+    },
+    {
+      "id": 21,
+      "topic": "Business Organisations",
+      "difficulty": "Easy",
+      "question": "A business owned and controlled by one person is a:",
+      "options": [
+        "Partnership",
+        "Sole proprietorship",
+        "Company",
+        "Co-operative"
+      ],
+      "answer": 1,
+      "explanation": "A sole proprietorship is owned and controlled by one person."
+    },
+    {
+      "id": 22,
+      "topic": "Business Organisations",
+      "difficulty": "Easy",
+      "question": "A partnership consists of:",
+      "options": [
+        "1 person",
+        "2 to 20 persons",
+        "21 to 50 persons",
+        "Unlimited persons"
+      ],
+      "answer": 1,
+      "explanation": "A partnership usually consists of between 2 and 20 persons."
+    },
+    {
+      "id": 23,
+      "topic": "Business Organisations",
+      "difficulty": "Medium",
+      "question": "A business whose owners have limited liability is a:",
+      "options": [
+        "Sole proprietorship",
+        "Limited liability company",
+        "Partnership",
+        "Sole trader"
+      ],
+      "answer": 1,
+      "explanation": "In a limited liability company, shareholders are only liable up to the value of their shares."
+    },
+    {
+      "id": 24,
+      "topic": "Business Organisations",
+      "difficulty": "Medium",
+      "question": "A co-operative society is owned by:",
+      "options": [
+        "Government",
+        "Its members",
+        "One person",
+        "Foreigners"
+      ],
+      "answer": 1,
+      "explanation": "A co-operative society is owned and run by its members for mutual benefit."
+    },
+    {
+      "id": 25,
+      "topic": "Business Organisations",
+      "difficulty": "Hard",
+      "question": "Which type of business has the advantage of unlimited liability?",
+      "options": [
+        "Limited company",
+        "Sole proprietorship",
+        "Public company",
+        "Co-operative"
+      ],
+      "answer": 1,
+      "explanation": "A sole proprietor has unlimited liability, meaning personal property can be used to pay business debts."
+    }
+  ]
+}

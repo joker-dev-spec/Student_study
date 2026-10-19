@@ -17,7 +17,8 @@
 
     const name = document.getElementById('name').value.trim();
     const school = document.getElementById('school').value.trim();
-    const scienceClass = document.getElementById('scienceClass').value;
+    const classId = document.getElementById('studentClass').value;
+    const cls = App.getClass(classId) || { id: 'ss1', name: 'SS1', level: 'senior', dept: 'Science' };
 
     if (!name || !school) {
       showAlert('Please fill in all fields.', 'error');
@@ -32,14 +33,16 @@
     const user = {
       name: name,
       school: school,
-      className: scienceClass,
-      department: 'Science',
+      classId: cls.id,
+      className: cls.name,
+      level: cls.level,
+      department: cls.level === 'junior' ? 'Junior Secondary' : 'Science',
       loginTime: new Date().toISOString()
     };
 
     App.setUser(user);
     showAlert('Login successful! Redirecting...', 'success');
-    setTimeout(() => { window.location.href = 'dashboard.html'; }, 800);
+    setTimeout(() => { window.location.href = 'dashboard.html'; }, 700);
   });
 
   function showAlert(msg, type) {

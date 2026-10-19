@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Profile — Science BrainBox</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar" id="topbar"></header>
+
+<main class="container">
+  <div class="page-header">
+    <h1>👤 My Profile</h1>
+    <p>Your account, stats and study data</p>
+  </div>
+
+  <div class="profile-card">
+    <div class="pf-avatar" id="pfAvatar">🎓</div>
+    <div class="pf-main">
+      <h2 id="pfName">Student</h2>
+      <p id="pfMeta">—</p>
+      <p class="pf-level" id="pfLevel">—</p>
+    </div>
+  </div>
+
+  <div class="stats profile-stats">
+    <div><div class="stat-val" id="pfQuizzes">0</div><div class="stat-lbl">Quizzes</div></div>
+    <div><div class="stat-val" id="pfAvg">0%</div><div class="stat-lbl">Average</div></div>
+    <div><div class="stat-val" id="pfBest">—</div><div class="stat-lbl">Best Subject</div></div>
+    <div><div class="stat-val" id="pfStreak">0</div><div class="stat-lbl">Day Streak</div></div>
+  </div>
+
+  <h2 class="section-title">📊 Progress by Subject</h2>
+  <div class="weak-topics"><ul class="weak-topic-list" id="pfProgress"></ul></div>
+
+  <h2 class="section-title">⚙️ Account</h2>
+  <div class="profile-actions">
+    <button class="btn btn-primary" onclick="App.__setExam()">📅 Set / Change Exam Date</button>
+    <button class="btn btn-secondary" id="pfExport">⬇️ Export My Data</button>
+    <button class="btn btn-danger" id="pfReset">🗑️ Reset Progress</button>
+    <button class="btn btn-secondary" id="pfLogout">🚪 Logout</button>
+  </div>
+
+  <p class="text-center mt-3" style="color:var(--text-light);font-size:.82rem">
+    Presented by KOLAWOLE ALABA WISDOM · © 2026 All rights reserved.
+  </p>
+</main>
+
+<footer class="footer" id="footer"></footer>
+<nav class="mobile-nav" id="mobileNav"></nav>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/profile.js"></script>
+</body>
+</html>

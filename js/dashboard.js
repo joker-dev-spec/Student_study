@@ -8,7 +8,7 @@
 
   // Welcome banner
   document.getElementById('welcomeName').textContent = user.name;
-  document.getElementById('welcomeSchool').textContent = user.school + ' — ' + user.className;
+  document.getElementById('welcomeSchool').textContent = user.school + ' — ' + App.getClassLabel();
 
   const history = App.getQuizHistory();
   const totalQuizzes = history.length;
@@ -16,9 +16,48 @@
   document.getElementById('statQuizzes').textContent = totalQuizzes;
   document.getElementById('statAvg').textContent = avgPct + '%';
 
+  // Streak
+  const streak = App.getStreak();
+  const statStreak = document.getElementById('statStreak');
+  if (statStreak) statStreak.textContent = streak.count;
+
+  // Exam countdown
+  const countdownEl = document.getElementById('examCountdown');
+  if (countdownEl) {
+    const days = App.daysToExam();
+    if (days === null) {
+      countdownEl.innerHTML = `<span class="cd-num">—</span><span class="cd-lbl">Set exam date</span>
+        <button class="btn btn-secondary btn-sm" onclick="App.__setExam()">📅 Set Date</button>`;
+    } else if (days < 0) {
+      countdownEl.innerHTML = `<span class="cd-num">Done</span><span class="cd-lbl">Exam passed</span>
+        <button class="btn btn-secondary btn-sm" onclick="App.__setExam()">Change</button>`;
+    } else {
+      countdownEl.innerHTML = `<span class="cd-num">${days}</span><span class="cd-lbl">day${days === 1 ? '' : 's'} to exam</span>
+        <button class="btn btn-secondary btn-sm" onclick="App.__setExam()">Change</button>`;
+    }
+  }
+
+  // Next class today
+  const nextEl = document.getElementById('nextClass');
+  if (nextEl) {
+    const nc = App.nextClassToday();
+    if (nc) {
+      const icon = App.subjectIcons[nc.subject] || '📘';
+      nextEl.innerHTML = `<div class="nc-icon">${icon}</div>
+        <div><div class="nc-sub">${nc.subject}</div><div class="nc-meta">Today · ${nc.slot}</div></div>`;
+    } else {
+      nextEl.innerHTML = `<div class="nc-icon">🎉</div><div><div class="nc-sub">No more classes today</div>
+        <div class="nc-meta">Great time to revise!</div></div>`;
+    }
+  }
+
+  // Quote
+  const quoteEl = document.getElementById('dailyQuote');
+  if (quoteEl) quoteEl.textContent = '“' + App.getDailyQuote() + '”';
+
   // Subject progress cards
   const grid = document.getElementById('subjectGrid');
-  App.subjects.forEach(sub => {
+  App.getSubjects().forEach(sub => {
     const pct = App.getSubjectPct(sub.id);
     const prog = App.getProgress();
     const p = prog[sub.id];
@@ -79,3 +118,17 @@
     });
   }
 })();
+
+// Exam date setter (prompt-based, exposed globally for the inline buttons)
+App.__setExam = function () {
+  const cur = App.getExamDate();
+  const val = prompt('Enter your exam date (YYYY-MM-DD). Leave blank to clear:', cur || '');
+  if (val === null) return;
+  const trimmed = val.trim();
+  if (trimmed && !/^\d{4}-\d{2}-\d{2}$/.test(trimmed)) {
+    alert('Please use the format YYYY-MM-DD, e.g. 2026-06-15');
+    return;
+  }
+  App.setExamDate(trimmed);
+  window.location.reload();
+};

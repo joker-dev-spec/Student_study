@@ -1,0 +1,355 @@
+{
+  "subject": "Agricultural Science",
+  "questions": [
+    {
+      "id": 1,
+      "topic": "Introduction to Agriculture",
+      "difficulty": "Easy",
+      "question": "Agriculture is the science and art of:",
+      "options": [
+        "Building houses",
+        "Producing crops and rearing animals",
+        "Driving cars",
+        "Making clothes"
+      ],
+      "answer": 1,
+      "explanation": "Agriculture is the production of crops and rearing of animals."
+    },
+    {
+      "id": 2,
+      "topic": "Introduction to Agriculture",
+      "difficulty": "Easy",
+      "question": "The two main branches of agriculture are:",
+      "options": [
+        "Farming and fishing",
+        "Crop production and animal husbandry",
+        "Mining and farming",
+        "Trade and commerce"
+      ],
+      "answer": 1,
+      "explanation": "Agriculture is divided into crop production and animal husbandry."
+    },
+    {
+      "id": 3,
+      "topic": "Introduction to Agriculture",
+      "difficulty": "Medium",
+      "question": "Which of the following is NOT an importance of agriculture?",
+      "options": [
+        "Provision of food",
+        "Provision of employment",
+        "Manufacture of cars",
+        "Source of raw materials"
+      ],
+      "answer": 2,
+      "explanation": "Agriculture provides food, employment and raw materials, but does not manufacture cars."
+    },
+    {
+      "id": 4,
+      "topic": "Introduction to Agriculture",
+      "difficulty": "Medium",
+      "question": "Farming mainly for family consumption is called:",
+      "options": [
+        "Commercial farming",
+        "Subsistence farming",
+        "Plantation farming",
+        "Mixed farming"
+      ],
+      "answer": 1,
+      "explanation": "Subsistence farming is carried out mainly to feed the farmer's family."
+    },
+    {
+      "id": 5,
+      "topic": "Introduction to Agriculture",
+      "difficulty": "Hard",
+      "question": "The branch of agriculture that deals with the study of soils is:",
+      "options": [
+        "Soil science",
+        "Animal science",
+        "Crop science",
+        "Extension"
+      ],
+      "answer": 0,
+      "explanation": "Soil science is the study of soil and its management."
+    },
+    {
+      "id": 6,
+      "topic": "Soil",
+      "difficulty": "Easy",
+      "question": "The loose upper layer of the earth in which plants grow is:",
+      "options": [
+        "Rock",
+        "Soil",
+        "Sandstone",
+        "Granite"
+      ],
+      "answer": 1,
+      "explanation": "Soil is the loose, weathered upper layer of the earth's crust."
+    },
+    {
+      "id": 7,
+      "topic": "Soil",
+      "difficulty": "Easy",
+      "question": "The best soil for most crops is:",
+      "options": [
+        "Sandy soil",
+        "Clayey soil",
+        "Loamy soil",
+        "Rocky soil"
+      ],
+      "answer": 2,
+      "explanation": "Loamy soil holds water and air well and is rich in humus, making it best for crops."
+    },
+    {
+      "id": 8,
+      "topic": "Soil",
+      "difficulty": "Medium",
+      "question": "The dark organic matter in the soil formed from decayed plants and animals is:",
+      "options": [
+        "Humus",
+        "Gravel",
+        "Clay",
+        "Silt"
+      ],
+      "answer": 0,
+      "explanation": "Humus is the dark organic matter that makes soil fertile."
+    },
+    {
+      "id": 9,
+      "topic": "Soil",
+      "difficulty": "Medium",
+      "question": "The layers of soil seen in a vertical section are called:",
+      "options": [
+        "Soil types",
+        "Soil profile",
+        "Soil texture",
+        "Soil structure"
+      ],
+      "answer": 1,
+      "explanation": "A soil profile is the arrangement of soil layers/horizons from top to bottom."
+    },
+    {
+      "id": 10,
+      "topic": "Soil",
+      "difficulty": "Hard",
+      "question": "Which soil type drains water fastest?",
+      "options": [
+        "Clayey soil",
+        "Sandy soil",
+        "Loamy soil",
+        "Silty soil"
+      ],
+      "answer": 1,
+      "explanation": "Sandy soil has large particles and drains water fastest."
+    },
+    {
+      "id": 11,
+      "topic": "Crop Production",
+      "difficulty": "Easy",
+      "question": "Maize and rice are examples of:",
+      "options": [
+        "Legumes",
+        "Cereals",
+        "Tubers",
+        "Vegetables"
+      ],
+      "answer": 1,
+      "explanation": "Maize and rice are cereal crops (grasses grown for grain)."
+    },
+    {
+      "id": 12,
+      "topic": "Crop Production",
+      "difficulty": "Easy",
+      "question": "Which of the following is a root/tuber crop?",
+      "options": [
+        "Cassava",
+        "Beans",
+        "Tomato",
+        "Groundnut"
+      ],
+      "answer": 0,
+      "explanation": "Cassava is a root/tuber crop; beans and groundnut are legumes."
+    },
+    {
+      "id": 13,
+      "topic": "Crop Production",
+      "difficulty": "Medium",
+      "question": "Fertilisers are applied to the soil to:",
+      "options": [
+        "Kill weeds",
+        "Add nutrients",
+        "Add water",
+        "Attract insects"
+      ],
+      "answer": 1,
+      "explanation": "Fertilisers add nutrients such as nitrogen, phosphorus and potassium to the soil."
+    },
+    {
+      "id": 14,
+      "topic": "Crop Production",
+      "difficulty": "Medium",
+      "question": "Which of these is an organic fertiliser?",
+      "options": [
+        "NPK",
+        "Urea",
+        "Compost manure",
+        "Superphosphate"
+      ],
+      "answer": 2,
+      "explanation": "Compost manure is organic; NPK, urea and superphosphate are inorganic."
+    },
+    {
+      "id": 15,
+      "topic": "Crop Production",
+      "difficulty": "Hard",
+      "question": "Removing weeds from a farm is called:",
+      "options": [
+        "Weeding",
+        "Mulching",
+        "Pruning",
+        "Thinning"
+      ],
+      "answer": 0,
+      "explanation": "Weeding is the removal of unwanted plants (weeds) from a farm."
+    },
+    {
+      "id": 16,
+      "topic": "Farm Tools",
+      "difficulty": "Easy",
+      "question": "Which farm tool is used for weeding and making ridges?",
+      "options": [
+        "Cutlass",
+        "Hoe",
+        "Rake",
+        "Watering can"
+      ],
+      "answer": 1,
+      "explanation": "A hoe is used for weeding, digging and making ridges."
+    },
+    {
+      "id": 17,
+      "topic": "Farm Tools",
+      "difficulty": "Easy",
+      "question": "A cutlass is mainly used for:",
+      "options": [
+        "Watering plants",
+        "Clearing bush",
+        "Lifting loose soil",
+        "Measuring length"
+      ],
+      "answer": 1,
+      "explanation": "A cutlass is used for clearing bush and cutting stems."
+    },
+    {
+      "id": 18,
+      "topic": "Farm Tools",
+      "difficulty": "Medium",
+      "question": "Which implement is used to turn and loosen the soil before planting?",
+      "options": [
+        "Plough",
+        "Watering can",
+        "Harrow",
+        "Spade"
+      ],
+      "answer": 0,
+      "explanation": "A plough is used to turn and loosen the soil (ploughing)."
+    },
+    {
+      "id": 19,
+      "topic": "Farm Tools",
+      "difficulty": "Medium",
+      "question": "Tools should be stored in a dry place mainly to prevent:",
+      "options": [
+        "Breaking",
+        "Rusting",
+        "Bending",
+        "Sharpening"
+      ],
+      "answer": 1,
+      "explanation": "Keeping tools dry prevents rusting of the metal parts."
+    },
+    {
+      "id": 20,
+      "topic": "Farm Tools",
+      "difficulty": "Hard",
+      "question": "The farm tool used for lifting loose materials like sand and manure is a:",
+      "options": [
+        "Spade",
+        "Shovel",
+        "Hoe",
+        "Rake"
+      ],
+      "answer": 1,
+      "explanation": "A shovel is used for lifting loose materials; a spade is for digging."
+    },
+    {
+      "id": 21,
+      "topic": "Animal Husbandry",
+      "difficulty": "Easy",
+      "question": "The rearing and care of farm animals is called:",
+      "options": [
+        "Crop production",
+        "Animal husbandry",
+        "Horticulture",
+        "Forestry"
+      ],
+      "answer": 1,
+      "explanation": "Animal husbandry is the branch of agriculture concerned with rearing animals."
+    },
+    {
+      "id": 22,
+      "topic": "Animal Husbandry",
+      "difficulty": "Easy",
+      "question": "A young hen is called a:",
+      "options": [
+        "Cock",
+        "Chick",
+        "Ram",
+        "Kid"
+      ],
+      "answer": 1,
+      "explanation": "A young hen or fowl is called a chick."
+    },
+    {
+      "id": 23,
+      "topic": "Animal Husbandry",
+      "difficulty": "Medium",
+      "question": "The process by which a hen's egg hatches is called:",
+      "options": [
+        "Lactation",
+        "Incubation",
+        "Gestation",
+        "Fertilisation"
+      ],
+      "answer": 1,
+      "explanation": "Incubation is the process of keeping eggs warm until they hatch, about 21 days for hens."
+    },
+    {
+      "id": 24,
+      "topic": "Animal Husbandry",
+      "difficulty": "Medium",
+      "question": "Which of these is a product from cattle?",
+      "options": [
+        "Egg",
+        "Milk",
+        "Wool",
+        "Honey"
+      ],
+      "answer": 1,
+      "explanation": "Cattle produce milk (and beef and hides); wool comes from sheep and eggs from poultry."
+    },
+    {
+      "id": 25,
+      "topic": "Animal Husbandry",
+      "difficulty": "Hard",
+      "question": "Feeds rich in protein are given to farm animals mainly for:",
+      "options": [
+        "Energy",
+        "Growth and repair",
+        "Warmth",
+        "Water"
+      ],
+      "answer": 1,
+      "explanation": "Proteins are needed for growth and repair of body tissues, while carbohydrates supply energy."
+    }
+  ]
+}

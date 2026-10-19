@@ -3,19 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Study Timetable — SS2 Science BrainBox</title>
+<title>Study Timetable — Science BrainBox</title>
 <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 <header class="topbar" id="topbar"></header>
 <main class="container">
   <div class="page-header">
-    <h1>📅 Weekly Science Timetable</h1>
-    <p>Your SS2 Science class schedule — today's subjects are highlighted</p>
+    <h1>📅 Weekly Class Timetable</h1>
+    <p>Your class schedule — today's subjects are highlighted. Tap a bell 🔔 to get a reminder.</p>
+  </div>
+
+  <div class="text-center mb-2" style="margin-bottom:14px">
+    <button class="btn btn-primary btn-sm" id="enableNotify">🔔 Enable Notifications</button>
   </div>
 
   <div style="overflow-x:auto">
     <table class="timetable" id="timetableTable"></table>
+  </div>
+
+  <h2 class="section-title">🔔 My Class Reminders</h2>
+  <div id="reminderList"></div>
+
+  <div class="tip-box mt-3">
+    <span class="tip-label">How reminders work</span>
+    When you enable notifications and tap a bell beside a class, the app alerts you 5 minutes before that class starts (while the app is open). Reminders work for Today's classes in your timetable.
   </div>
 
   <div class="tip-box mt-3">
