@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mathematics Notes — SS2 Science BrainBox</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="topbar" id="topbar"></header>
+
+<div class="subject-hero">
+  <div class="icon">📐</div>
+  <h1>Mathematics</h1>
+  <p>Logarithms · Sequences · Trigonometry · Calculus Intro</p>
+</div>
+
+<div class="subject-actions">
+  <a href="../quiz.html?subject=mathematics" class="btn btn-primary btn-sm">📝 Take Mathematics Quiz</a>
+  <button class="btn btn-secondary btn-sm" id="bookmarkBtn">☆ Bookmark</button>
+</div>
+
+<main class="notes-content">
+
+  <!-- LOGARITHMS -->
+  <section class="note-topic" id="logarithms">
+    <h2>🔢 Logarithms</h2>
+    <h3>Definition</h3>
+    <p>A <strong>logarithm</strong> is the power to which a base must be raised to produce a given number. If bʸ = x, then log<sub>b</sub>(x) = y. The logarithm and exponent are inverse operations.</p>
+    <div class="formula-box">
+      <span class="formula-label">Definition</span>
+      log<sub>b</sub>(x) = y &nbsp;means&nbsp; b<sup>y</sup> = x
+    </div>
+    <h3>Laws of Logarithms</h3>
+    <ul>
+      <li><strong>Product rule:</strong> log(ab) = log a + log b</li>
+      <li><strong>Quotient rule:</strong> log(a/b) = log a − log b</li>
+      <li><strong>Power rule:</strong> log(aⁿ) = n log a</li>
+      <li><strong>Change of base:</strong> log<sub>b</sub>(x) = log a(x) / log a(b)</li>
+      <li><strong>Special:</strong> log 1 = 0; log<sub>b</sub>(b) = 1</li>
+    </ul>
+    <div class="diagram-box">
+      <span class="diagram-label">Diagram Description</span>
+      A number line showing powers of 10: 10⁰ = 1, 10¹ = 10, 10² = 100, 10³ = 1000. Below, the corresponding logarithms: log₁₀(1) = 0, log₁₀(10) = 1, log₁₀(100) = 2, log₁₀(1000) = 3. This illustrates that logarithms convert multiplicative relationships into additive ones.
+    </div>
+    <div class="example-box">
+      <span class="example-label">Worked Example</span>
+      Given that log₁₀ 2 = 0.3010, find log₁₀ 5.
+      <div class="solution">
+log₁₀ 5 = log₁₀(10/2) = log₁₀ 10 − log₁₀ 2<br>
+= 1 − 0.3010 = <strong>0.6990</strong>
+      </div>
+    </div>
+    <div class="tip-box">
+      <span class="tip-label">JAMB / WAEC Tip</span>
+      Always convert a log to its exponential form before solving. log₁₀ 0.01 = log₁₀(10⁻²) = −2 — logarithms of numbers between 0 and 1 are negative. Given log 2 = 0.3010 and log 3 = 0.4771, you can find any log by breaking the number into factors of 2 and 3.
+    </div>
+  </section>
+
+  <!-- SEQUENCES -->
+  <section class="note-topic" id="sequences">
+    <h2>📈 Sequences</h2>
+    <h3>Definition</h3>
+    <p>A <strong>sequence</strong> is a set of numbers arranged in a definite order, following a pattern. The numbers are called <strong>terms</strong>. An <strong>arithmetic progression (AP)</strong> has a constant difference between consecutive terms; a <strong>geometric progression (GP)</strong> has a constant ratio.</p>
+    <h3>Arithmetic Progression (AP)</h3>
+    <div class="formula-box">
+      <span class="formula-label">nth term &amp; Sum</span>
+      Tₙ = a + (n − 1)d &nbsp;|&nbsp; Sₙ = n/2 [2a + (n − 1)d]
+    </div>
+    <p>where <strong>a</strong> = first term, <strong>d</strong> = common difference, <strong>n</strong> = number of terms.</p>
+    <h3>Geometric Progression (GP)</h3>
+    <div class="formula-box">
+      <span class="formula-label">nth term &amp; Sum</span>
+      Tₙ = ar<sup>n−1</sup> &nbsp;|&nbsp; Sₙ = a(1 − r<sup>n</sup>)/(1 − r) &nbsp;(r ≠ 1)
+    </div>
+    <p>where <strong>r</strong> = common ratio.</p>
+    <div class="diagram-box">
+      <span class="diagram-label">Diagram Description</span>
+      AP pattern: 3, 7, 11, 15, 19... arrows between terms labelled "+4" showing the constant difference. GP pattern: 3, 6, 12, 24... arrows labelled "×2" showing the constant ratio.
+    </div>
+    <div class="example-box">
+      <span class="example-label">Worked Example</span>
+      Find the 10th term of the AP: 3, 7, 11, 15, ...
+      <div class="solution">
+a = 3, d = 7 − 3 = 4, n = 10<br>
+T₁₀ = 3 + (10 − 1)(4) = 3 + 36 = <strong>39</strong>
+      </div>
+    </div>
+    <div class="example-box">
+      <span class="example-label">Worked Example</span>
+      Find the 7th term of the GP: 2, 6, 18, ...
+      <div class="solution">
+a = 2, r = 6/2 = 3, n = 7<br>
+T₇ = 2 × 3<sup>7−1</sup> = 2 × 729 = <strong>1458</strong>
+      </div>
+    </div>
+    <div class="tip-box">
+      <span class="tip-label">JAMB / WAEC Tip</span>
+      To find the common difference in an AP, subtract any term from the next: d = T₂ − T₁. To find r in a GP, divide any term by the previous: r = T₂/T₁. The nth term formula is always your starting point in sequence questions.
+    </div>
+  </section>
+
+  <!-- TRIGONOMETRY -->
+  <section class="note-topic" id="trigonometry">
+    <h2>📐 Trigonometry</h2>
+    <h3>Definition</h3>
+    <p><strong>Trigonometry</strong> is the study of relationships between the angles and sides of triangles. It is fundamental in calculating distances, heights and angles in science and engineering.</p>
+    <div class="formula-box">
+      <span class="formula-label">SOH CAH TOA</span>
+      sin θ = Opposite / Hypotenuse<br>
+      cos θ = Adjacent / Hypotenuse<br>
+      tan θ = Opposite / Adjacent
+    </div>
+    <h3>Standard Values</h3>
+    <ul>
+      <li>sin 0° = 0 &nbsp;|&nbsp; sin 30° = ½ &nbsp;|&nbsp; sin 45° = √2/2 &nbsp;|&nbsp; sin 60° = √3/2 &nbsp;|&nbsp; sin 90° = 1</li>
+      <li>cos 0° = 1 &nbsp;|&nbsp; cos 30° = √3/2 &nbsp;|&nbsp; cos 45° = √2/2 &nbsp;|&nbsp; cos 60° = ½ &nbsp;|&nbsp; cos 90° = 0</li>
+      <li>tan 0° = 0 &nbsp;|&nbsp; tan 30° = 1/√3 &nbsp;|&nbsp; tan 45° = 1 &nbsp;|&nbsp; tan 60° = √3 &nbsp;|&nbsp; tan 90° = undefined</li>
+    </ul>
+    <div class="formula-box">
+      <span class="formula-label">Identity</span>
+      sin²θ + cos²θ = 1
+    </div>
+    <div class="diagram-box">
+      <span class="diagram-label">Diagram Description</span>
+      A right-angled triangle with the right angle marked. The angle θ is at the bottom-left vertex. The side opposite θ is on the right, the adjacent side is along the bottom, and the hypotenuse is the slanted side (opposite the right angle). Label each side O, A, H to remember SOH CAH TOA.
+    </div>
+    <div class="example-box">
+      <span class="example-label">Worked Example</span>
+      If tan θ = 1 and θ is an acute angle, find θ.
+      <div class="solution">tan θ = 1 → θ = tan⁻¹(1) = <strong>45°</strong></div>
+    </div>
+    <div class="tip-box">
+      <span class="tip-label">JAMB / WAEC Tip</span>
+      Memorise the standard angles 0°, 30°, 45°, 60°, 90° — they appear frequently. sin²θ + cos²θ = 1 is the most used identity. For area of a triangle when two sides and the included angle are known: Area = ½ab sin C.
+    </div>
+  </section>
+
+  <!-- CALCULUS INTRO -->
+  <section class="note-topic" id="calculus">
+    <h2>∫ Calculus Introduction</h2>
+    <h3>Definition</h3>
+    <p><strong>Calculus</strong> has two main branches: <strong>differentiation</strong> (finding the rate of change / gradient of a curve) and <strong>integration</strong> (finding the area under a curve / reversing differentiation).</p>
+    <h3>Differentiation</h3>
+    <div class="formula-box">
+      <span class="formula-label">Power Rule</span>
+      d/dx (x<sup>n</sup>) = n x<sup>n−1</sup>
+    </div>
+    <p>The <strong>derivative</strong> dy/dx gives the gradient (slope) of the curve y = f(x) at any point x.</p>
+    <h3>Integration (anti-differentiation)</h3>
+    <div class="formula-box">
+      <span class="formula-label">Integral Power Rule</span>
+      ∫ x<sup>n</sup> dx = x<sup>n+1</sup> / (n+1) + C &nbsp;&nbsp;(n ≠ −1)
+    </div>
+    <p><strong>C</strong> is the constant of integration.</p>
+    <div class="diagram-box">
+      <span class="diagram-label">Diagram Description</span>
+      A parabola y = x² drawn on a graph. At the point (2, 4), a tangent line is drawn; its slope (gradient) is 4 — this is dy/dx = 2x evaluated at x = 2. Beneath the curve, the area between x = 0 and x = 1 and the x-axis is shaded; this area is found by integration.
+    </div>
+    <div class="example-box">
+      <span class="example-label">Worked Example</span>
+      If y = 4x² − 2x, find dy/dx when x = 2.
+      <div class="solution">
+dy/dx = 8x − 2<br>
+At x = 2: dy/dx = 8(2) − 2 = 16 − 2 = <strong>14</strong>
+      </div>
+    </div>
+    <div class="tip-box">
+      <span class="tip-label">JAMB / WAEC Tip</span>
+      Differentiation: bring the power down and reduce the power by 1. Integration is the reverse: increase the power by 1 and divide by the new power. Always add + C for indefinite integrals. The gradient of a straight line y = mx + c is simply m (constant).
+    </div>
+  </section>
+
+  <div class="text-center mt-3">
+    <a href="../quiz.html?subject=mathematics" class="btn btn-primary btn-lg">📝 Test Yourself — Mathematics Quiz (25 Qs)</a>
+  </div>
+</main>
+
+<footer class="footer" id="footer"></footer>
+<nav class="mobile-nav" id="mobileNav"></nav>
+
+<script src="../js/data.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/notes.js"></script>
+<script>initSubjectPage('mathematics');</script>
+</body>
+</html>

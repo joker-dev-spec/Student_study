@@ -1,0 +1,240 @@
+{
+  "subject": "Geography",
+  "questions": [
+    {
+      "id": 1,
+      "topic": "Map Reading",
+      "difficulty": "Easy",
+      "question": "The imaginary line dividing the Earth into Northern and Southern Hemispheres is the:",
+      "options": ["Prime Meridian", "Equator", "Tropic of Cancer", "International Date Line"],
+      "answer": 1,
+      "explanation": "The Equator (0° latitude) divides Earth into Northern and Southern Hemispheres."
+    },
+    {
+      "id": 2,
+      "topic": "Map Reading",
+      "difficulty": "Easy",
+      "question": "A scale of 1:50,000 means:",
+      "options": [
+        "1 cm on the map represents 50,000 cm on the ground",
+        "1 cm on the map represents 50,000 km on the ground",
+        "50,000 cm on the map represents 1 cm on the ground",
+        "1 m on the map represents 50,000 m on the ground"
+      ],
+      "answer": 0,
+      "explanation": "A representative fraction scale of 1:50,000 means 1 unit on the map equals 50,000 of the same units on the ground (1 cm = 500 m)."
+    },
+    {
+      "id": 3,
+      "topic": "Map Reading",
+      "difficulty": "Medium",
+      "question": "Lines of longitude are also called:",
+      "options": ["Parallels", "Meridians", "Tropics", "Great circles"],
+      "answer": 1,
+      "explanation": "Lines of longitude are called meridians. The Prime Meridian (0°) passes through Greenwich, London."
+    },
+    {
+      "id": 4,
+      "topic": "Physical Geography",
+      "difficulty": "Easy",
+      "question": "The layer of the Earth on which we live is the:",
+      "options": ["Core", "Mantle", "Crust", "Asthenosphere"],
+      "answer": 2,
+      "explanation": "The crust is the outermost, thinnest layer of the Earth. It is the layer on which we live."
+    },
+    {
+      "id": 5,
+      "topic": "Physical Geography",
+      "difficulty": "Easy",
+      "question": "The most abundant gas in the Earth's atmosphere is:",
+      "options": ["Oxygen", "Carbon dioxide", "Nitrogen", "Hydrogen"],
+      "answer": 2,
+      "explanation": "Nitrogen makes up about 78% of the atmosphere, followed by oxygen at about 21%."
+    },
+    {
+      "id": 6,
+      "topic": "Physical Geography",
+      "difficulty": "Medium",
+      "question": "The process by which rocks are broken down by water is called:",
+      "options": ["Erosion", "Weathering", "Deposition", "Transportation"],
+      "answer": 1,
+      "explanation": "Weathering is the in-situ breakdown of rocks by physical, chemical, or biological agents. Erosion involves transport of weathered material."
+    },
+    {
+      "id": 7,
+      "topic": "Physical Geography",
+      "difficulty": "Medium",
+      "question": "Which rock type is formed from cooled magma?",
+      "options": ["Sedimentary", "Metamorphic", "Igneous", "Organic"],
+      "answer": 2,
+      "explanation": "Igneous rocks form when magma (intrusive) or lava (extrusive) cools and solidifies."
+    },
+    {
+      "id": 8,
+      "topic": "Physical Geography",
+      "difficulty": "Medium",
+      "question": "The longest river in Africa is the:",
+      "options": ["River Niger", "River Congo", "River Nile", "River Zambezi"],
+      "answer": 2,
+      "explanation": "The River Nile is the longest river in Africa (and was long considered the longest in the world) at about 6,650 km."
+    },
+    {
+      "id": 9,
+      "topic": "Physical Geography",
+      "difficulty": "Hard",
+      "question": "The type of rainfall common in Lagos, Nigeria is:",
+      "options": ["Relief (orographic)", "Convectional", "Frontal", "Cyclonic"],
+      "answer": 1,
+      "explanation": "Lagos experiences convectional rainfall: intense heating causes air to rise, cool, and form cumulonimbus clouds with heavy rain."
+    },
+    {
+      "id": 10,
+      "topic": "Human Geography",
+      "difficulty": "Easy",
+      "question": "Nigeria has how many states?",
+      "options": ["24", "30", "36", "40"],
+      "answer": 2,
+      "explanation": "Nigeria has 36 states plus the Federal Capital Territory (Abuja), making 37 administrative units."
+    },
+    {
+      "id": 11,
+      "topic": "Human Geography",
+      "difficulty": "Easy",
+      "question": "The most populous city in Nigeria is:",
+      "options": ["Abuja", "Kano", "Lagos", "Ibadan"],
+      "answer": 2,
+      "explanation": "Lagos is the most populous city in Nigeria and one of the largest cities in Africa, with over 15 million people."
+    },
+    {
+      "id": 12,
+      "topic": "Human Geography",
+      "difficulty": "Medium",
+      "question": "The main occupational activity in the savanna regions of Nigeria is:",
+      "options": ["Fishing", "Crop farming and livestock rearing", "Manufacturing", "Mining"],
+      "answer": 1,
+      "explanation": "The savanna supports both crop farming (millet, sorghum, yam) and livestock rearing (cattle, goats, sheep)."
+    },
+    {
+      "id": 13,
+      "topic": "Human Geography",
+      "difficulty": "Medium",
+      "question": "A population pyramid that is wide at the base indicates:",
+      "options": [
+        "An aging population with high death rate",
+        "A young population with high birth rate",
+        "A declining population",
+        "Equal numbers at all ages"
+      ],
+      "answer": 1,
+      "explanation": "A wide base means many young people (0-15 years), indicating a high birth rate — typical of developing countries like Nigeria."
+    },
+    {
+      "id": 14,
+      "topic": "Climatology",
+      "difficulty": "Medium",
+      "question": "The instrument used to measure rainfall is:",
+      "options": ["Barometer", "Thermometer", "Rain gauge", "Anemometer"],
+      "answer": 2,
+      "explanation": "A rain gauge measures the amount of rainfall. Barometer measures pressure, thermometer measures temperature, anemometer measures wind speed."
+    },
+    {
+      "id": 15,
+      "topic": "Climatology",
+      "difficulty": "Medium",
+      "question": "The climate type found in the northern part of Nigeria is:",
+      "options": ["Equatorial climate", "Tropical savanna climate", "Tropical monsoon climate", "Mediterranean climate"],
+      "answer": 1,
+      "explanation": "Northern Nigeria has a tropical savanna climate with distinct wet and dry seasons and less rainfall than the south."
+    },
+    {
+      "id": 16,
+      "topic": "Map Reading",
+      "difficulty": "Hard",
+      "question": "On a map with a scale of 1:100,000, two places are 5 cm apart. The actual distance between them is:",
+      "options": ["500 m", "5 km", "50 km", "500 km"],
+      "answer": 1,
+      "explanation": "Actual distance = 5 cm × 100,000 = 500,000 cm = 5,000 m = 5 km."
+    },
+    {
+      "id": 17,
+      "topic": "Physical Geography",
+      "difficulty": "Hard",
+      "question": "Which of the following is a depositional landform?",
+      "options": ["Waterfall", "Flood plain", "Gorge", "V-shaped valley"],
+      "answer": 1,
+      "explanation": "A flood plain is formed by deposition of sediment during river flooding. Waterfalls, gorges and V-shaped valleys are erosional landforms."
+    },
+    {
+      "id": 18,
+      "topic": "Human Geography",
+      "difficulty": "Easy",
+      "question": "Crude oil is found mainly in which region of Nigeria?",
+      "options": ["Northern region", "Middle Belt", "Niger Delta region", "South-East"],
+      "answer": 2,
+      "explanation": "The Niger Delta region (South-South) is the main oil-producing area of Nigeria."
+    },
+    {
+      "id": 19,
+      "topic": "Physical Geography",
+      "difficulty": "Easy",
+      "question": "The imaginary line at 0° longitude is called the:",
+      "options": ["Equator", "Prime Meridian", "Tropic of Capricorn", "Arctic Circle"],
+      "answer": 1,
+      "explanation": "The Prime Meridian (0° longitude) passes through Greenwich, London, and divides Earth into Eastern and Western Hemispheres."
+    },
+    {
+      "id": 20,
+      "topic": "Climatology",
+      "difficulty": "Hard",
+      "question": "The instrument used to measure atmospheric pressure is:",
+      "options": ["Hygrometer", "Barometer", "Wind vane", "Sun thermometer"],
+      "answer": 1,
+      "explanation": "A barometer measures atmospheric pressure. A hygrometer measures humidity, a wind vane shows wind direction."
+    },
+    {
+      "id": 21,
+      "topic": "Map Reading",
+      "difficulty": "Medium",
+      "question": "Contour lines on a map join places of equal:",
+      "options": ["Longitude", "Latitude", "Altitude (height)", "Temperature"],
+      "answer": 2,
+      "explanation": "Contour lines connect points of equal elevation/height above sea level. Closely spaced contours indicate steep slopes."
+    },
+    {
+      "id": 22,
+      "topic": "Human Geography",
+      "difficulty": "Medium",
+      "question": "The major occupational activity in coastal areas of Nigeria is:",
+      "options": ["Farming", "Fishing", "Cattle rearing", "Mining"],
+      "answer": 1,
+      "explanation": "Coastal communities engage mainly in fishing due to access to the Atlantic Ocean and abundant water bodies."
+    },
+    {
+      "id": 23,
+      "topic": "Physical Geography",
+      "difficulty": "Medium",
+      "question": "The process of water changing to water vapour is called:",
+      "options": ["Condensation", "Evaporation", "Precipitation", "Transpiration"],
+      "answer": 1,
+      "explanation": "Evaporation is the change of liquid water to gas (vapour) due to heat from the sun."
+    },
+    {
+      "id": 24,
+      "topic": "Physical Geography",
+      "difficulty": "Hard",
+      "question": "The Earth's atmosphere layer where weather occurs is the:",
+      "options": ["Stratosphere", "Troposphere", "Mesosphere", "Thermosphere"],
+      "answer": 1,
+      "explanation": "The troposphere (lowest layer, 0-12 km) contains most of the atmosphere's water vapour and is where all weather phenomena occur."
+    },
+    {
+      "id": 25,
+      "topic": "Human Geography",
+      "difficulty": "Hard",
+      "question": "The Hausa people of Nigeria are mainly found in the:",
+      "options": ["South-West", "South-East", "North", "Middle Belt"],
+      "answer": 2,
+      "explanation": "The Hausa (and Hausa-Fulani) people predominantly inhabit northern Nigeria, particularly states like Kano, Kaduna, and Sokoto."
+    }
+  ]
+}

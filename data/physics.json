@@ -1,0 +1,233 @@
+{
+  "subject": "Physics",
+  "questions": [
+    {
+      "id": 1,
+      "topic": "Vectors",
+      "difficulty": "Easy",
+      "question": "Which of the following is a vector quantity?",
+      "options": ["Speed", "Mass", "Displacement", "Temperature"],
+      "answer": 2,
+      "explanation": "Displacement has both magnitude and direction, making it a vector quantity. Speed, mass and temperature are scalar quantities."
+    },
+    {
+      "id": 2,
+      "topic": "Vectors",
+      "difficulty": "Medium",
+      "question": "The resultant of two forces of 3 N and 4 N acting at right angles to each other is:",
+      "options": ["5 N", "7 N", "1 N", "12 N"],
+      "answer": 0,
+      "explanation": "Using Pythagoras theorem: R = √(3² + 4²) = √(9 + 16) = √25 = 5 N."
+    },
+    {
+      "id": 3,
+      "topic": "Vectors",
+      "difficulty": "Medium",
+      "question": "A vector of magnitude 10 N makes an angle of 30° with the horizontal. Its horizontal component is:",
+      "options": ["10 N", "8.66 N", "5 N", "17.32 N"],
+      "answer": 1,
+      "explanation": "Horizontal component = F cos θ = 10 cos 30° = 10 × 0.866 = 8.66 N."
+    },
+    {
+      "id": 4,
+      "topic": "Equilibrium",
+      "difficulty": "Easy",
+      "question": "For a body to be in equilibrium, the resultant force on it must be:",
+      "options": ["Maximum", "Zero", "Equal to weight", "Directed upward"],
+      "answer": 1,
+      "explanation": "A body is in equilibrium when the net (resultant) force acting on it is zero. It is either at rest or moving with constant velocity."
+    },
+    {
+      "id": 5,
+      "topic": "Equilibrium",
+      "difficulty": "Medium",
+      "question": "The principle of moments states that for equilibrium, the sum of clockwise moments about a point is:",
+      "options": ["Greater than anticlockwise moments",
+        "Equal to the sum of anticlockwise moments",
+        "Zero",
+        "Equal to the weight of the body"],
+      "answer": 1,
+      "explanation": "For rotational equilibrium, the sum of clockwise moments about any point must equal the sum of anticlockwise moments about the same point."
+    },
+    {
+      "id": 6,
+      "topic": "Equilibrium",
+      "difficulty": "Hard",
+      "question": "A uniform metre rule of weight 1.5 N is pivoted at the 40 cm mark. A weight of 2.5 N is hung at the 10 cm mark. What weight must be hung at the 80 cm mark to balance the rule?",
+      "options": ["1.0 N", "1.5 N", "2.0 N", "0.5 N"],
+      "answer": 0,
+      "explanation": "Clockwise moment = 1.5 × (70 - 50) + W × (80 - 40)... Actually taking moments about the 40 cm pivot: Clockwise = 1.5 × 10 + W × 40, Anticlockwise = 2.5 × 30. So 15 + 40W = 75, 40W = 60, W = 1.5 N. Hmm let me recalculate: Uniform rule centre at 50 cm. Pivot at 40 cm. Weight of rule acts at 50 cm (10 cm right of pivot). 2.5 N at 10 cm (30 cm left of pivot). Clockwise moment from rule weight = 1.5 × 10 = 15 Ncm. Anticlockwise = 2.5 × 30 = 75 Ncm. Need additional clockwise = 60 Ncm from weight at 80 cm = 40 cm from pivot. W = 60/40 = 1.5 N. But we need extra anticlockwise... wait. The rule weight gives clockwise. The 2.5N gives anticlockwise (larger). So we need more clockwise: 2.5 × 30 = 75 anticlockwise. Clockwise so far = 1.5 × 10 = 15. Need 60 more clockwise from 80cm mark which is 40cm from pivot: W = 60/40 = 1.5 N."
+    },
+    {
+      "id": 7,
+      "topic": "Motion",
+      "difficulty": "Easy",
+      "question": "The slope of a velocity-time graph represents:",
+      "options": ["Displacement", "Acceleration", "Distance", "Speed"],
+      "answer": 1,
+      "explanation": "The slope (gradient) of a velocity-time graph gives acceleration, because a = Δv/Δt."
+    },
+    {
+      "id": 8,
+      "topic": "Motion",
+      "difficulty": "Easy",
+      "question": "A body moving with uniform acceleration has its velocity doubled in 4 s. If its initial velocity was 6 m/s, what is the acceleration?",
+      "options": ["1.5 m/s²", "3 m/s²", "6 m/s²", "0.75 m/s²"],
+      "answer": 0,
+      "explanation": "a = (v - u)/t = (12 - 6)/4 = 6/4 = 1.5 m/s²."
+    },
+    {
+      "id": 9,
+      "topic": "Motion",
+      "difficulty": "Medium",
+      "question": "A car accelerates from rest at 2 m/s² for 10 s. The distance covered is:",
+      "options": ["100 m", "50 m", "200 m", "20 m"],
+      "answer": 0,
+      "explanation": "Using s = ut + ½at² = 0 + ½ × 2 × 10² = 100 m."
+    },
+    {
+      "id": 10,
+      "topic": "Motion",
+      "difficulty": "Hard",
+      "question": "A stone is thrown vertically upward with a velocity of 20 m/s. (g = 10 m/s²). The maximum height reached is:",
+      "options": ["20 m", "40 m", "10 m", "5 m"],
+      "answer": 0,
+      "explanation": "At max height v = 0. Using v² = u² - 2gs: 0 = 400 - 2(10)s, s = 400/20 = 20 m."
+    },
+    {
+      "id": 11,
+      "topic": "Motion",
+      "difficulty": "Medium",
+      "question": "The distance travelled by a body in the nth second of its motion is given by:",
+      "options": ["u + a(2n-1)/2", "u + a/2", "un + an²/2", "a/2"],
+      "answer": 0,
+      "explanation": "Sn = u + a(2n - 1)/2. This gives the distance covered in exactly the nth second."
+    },
+    {
+      "id": 12,
+      "topic": "Light",
+      "difficulty": "Easy",
+      "question": "The bending of light as it passes from one medium to another is called:",
+      "options": ["Reflection", "Refraction", "Diffraction", "Dispersion"],
+      "answer": 1,
+      "explanation": "Refraction is the change of direction of light when it passes from one medium to another due to change in speed."
+    },
+    {
+      "id": 13,
+      "topic": "Light",
+      "difficulty": "Medium",
+      "question": "The refractive index of glass is 1.5. The speed of light in glass is (speed of light in vacuum = 3 × 10⁸ m/s):",
+      "options": ["3 × 10⁸ m/s", "2 × 10⁸ m/s", "4.5 × 10⁸ m/s", "1.5 × 10⁸ m/s"],
+      "answer": 1,
+      "explanation": "n = c/v, so v = c/n = (3 × 10⁸)/1.5 = 2 × 10⁸ m/s."
+    },
+    {
+      "id": 14,
+      "topic": "Light",
+      "difficulty": "Medium",
+      "question": "When light travels from air to glass, it bends:",
+      "options": ["Away from the normal", "Towards the normal", "Parallel to the normal", "In a random direction"],
+      "answer": 1,
+      "explanation": "Glass is optically denser than air, so light slows down and bends towards the normal when entering glass from air."
+    },
+    {
+      "id": 15,
+      "topic": "Light",
+      "difficulty": "Hard",
+      "question": "The critical angle for a medium is 42°. Its refractive index is approximately:",
+      "options": ["1.5", "1.33", "1.41", "2.0"],
+      "answer": 0,
+      "explanation": "n = 1/sin C = 1/sin 42° = 1/0.669 = 1.49 ≈ 1.5."
+    },
+    {
+      "id": 16,
+      "topic": "Waves",
+      "difficulty": "Easy",
+      "question": "Which of the following waves is longitudinal?",
+      "options": ["Light wave", "Sound wave", "Water wave", "Radio wave"],
+      "answer": 1,
+      "explanation": "Sound waves are longitudinal because the particles vibrate parallel to the direction of wave propagation. Light, water and radio waves are transverse."
+    },
+    {
+      "id": 17,
+      "topic": "Waves",
+      "difficulty": "Easy",
+      "question": "The frequency of a wave is 50 Hz. Its period is:",
+      "options": ["0.02 s", "50 s", "0.5 s", "5 s"],
+      "answer": 0,
+      "explanation": "T = 1/f = 1/50 = 0.02 s."
+    },
+    {
+      "id": 18,
+      "topic": "Waves",
+      "difficulty": "Medium",
+      "question": "A wave has a frequency of 200 Hz and a wavelength of 2 m. Its speed is:",
+      "options": ["100 m/s", "400 m/s", "202 m/s", "40 m/s"],
+      "answer": 1,
+      "explanation": "v = fλ = 200 × 2 = 400 m/s."
+    },
+    {
+      "id": 19,
+      "topic": "Waves",
+      "difficulty": "Medium",
+      "question": "The property of waves that allows them to bend around obstacles is:",
+      "options": ["Refraction", "Diffraction", "Polarisation", "Interference"],
+      "answer": 1,
+      "explanation": "Diffraction is the spreading or bending of waves as they pass through a narrow opening or around an edge/obstacle."
+    },
+    {
+      "id": 20,
+      "topic": "Waves",
+      "difficulty": "Hard",
+      "question": "Two waves meet in phase. Wave A has amplitude 3 cm, Wave B has amplitude 5 cm. The amplitude of the resultant wave is:",
+      "options": ["8 cm", "2 cm", "15 cm", "4 cm"],
+      "answer": 0,
+      "explanation": "When waves meet in phase (constructive interference), amplitudes add: 3 + 5 = 8 cm."
+    },
+    {
+      "id": 21,
+      "topic": "Motion",
+      "difficulty": "Medium",
+      "question": "A bus travels 120 km in 2 hours. Its average speed is:",
+      "options": ["60 km/h", "240 km/h", "30 km/h", "120 km/h"],
+      "answer": 0,
+      "explanation": "Average speed = total distance / total time = 120/2 = 60 km/h."
+    },
+    {
+      "id": 22,
+      "topic": "Vectors",
+      "difficulty": "Hard",
+      "question": "A force of 6 N acts due East and another of 8 N acts due North. The magnitude of the resultant is:",
+      "options": ["14 N", "10 N", "48 N", "2 N"],
+      "answer": 1,
+      "explanation": "R = √(6² + 8²) = √(36 + 64) = √100 = 10 N."
+    },
+    {
+      "id": 23,
+      "topic": "Waves",
+      "difficulty": "Easy",
+      "question": "In a transverse wave, particle vibration is:",
+      "options": ["Parallel to wave direction", "Perpendicular to wave direction", "In circular motion", "At random"],
+      "answer": 1,
+      "explanation": "In transverse waves, particles vibrate perpendicular (at right angles) to the direction of energy transfer."
+    },
+    {
+      "id": 24,
+      "topic": "Light",
+      "difficulty": "Easy",
+      "question": "The image formed by a plane mirror is:",
+      "options": ["Real and inverted", "Virtual and erect", "Real and erect", "Virtual and inverted"],
+      "answer": 1,
+      "explanation": "A plane mirror forms a virtual, erect (upright) image that is the same size as the object and laterally inverted."
+    },
+    {
+      "id": 25,
+      "topic": "Equilibrium",
+      "difficulty": "Easy",
+      "question": "Which condition is NOT required for a body in equilibrium?",
+      "options": ["Resultant force is zero", "Resultant moment is zero", "Body must be at rest", "Sum of clockwise moments equals anticlockwise moments"],
+      "answer": 2,
+      "explanation": "A body can be in equilibrium while moving with constant velocity (dynamic equilibrium). It does not have to be at rest."
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Further Mathematics Notes — SS2 Science BrainBox</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="topbar" id="topbar"></header>
+<div class="subject-hero">
+  <div class="icon">📊</div>
+  <h1>Further Mathematics</h1>
+  <p>Vectors · Matrices · Differentiation · Integration · Probability</p>
+</div>
+<div class="subject-actions">
+  <a href="../quiz.html?subject=further-mathematics" class="btn btn-primary btn-sm">📝 Take Quiz</a>
+  <button class="btn btn-secondary btn-sm" id="bookmarkBtn">☆ Bookmark</button>
+</div>
+<main class="notes-content">
+
+  <section class="note-topic" id="vectors-fm">
+    <h2>📐 Vectors</h2>
+    <h3>Definition</h3>
+    <p>A <strong>vector</strong> has magnitude and direction. Vectors are written as column or row forms, e.g. a = (3, 4) or a = 3i + 4j. The <strong>dot product</strong> (scalar product) of two vectors is a scalar; the <strong>cross product</strong> (vector product) is a vector.</p>
+    <div class="formula-box">
+      <span class="formula-label">Dot Product &amp; Magnitude</span>
+      a·b = |a||b| cos θ = x₁x₂ + y₁y₂ &nbsp;|&nbsp; |a| = √(x² + y²)
+    </div>
+    <div class="example-box">
+      <span class="example-label">Worked Example</span>
+      If a = (2, 3) and b = (4, 1), find a·b.
+      <div class="solution">a·b = (2)(4) + (3)(1) = 8 + 3 = <strong>11</strong></div>
+    </div>
+    <div class="tip-box">
+      <span class="tip-label">JAMB / WAEC Tip</span>
+      For parallel vectors, a₁/a₂ = b₁/b₂. For perpendicular vectors, a·b = 0. Two vectors are perpendicular if their dot product equals zero.
+    </div>
+  </section>
+
+  <section class="note-topic" id="matrices">
+    <h2>🔢 Matrices</h2>
+    <h3>Definition</h3>
+    <p>A <strong>matrix</strong> is a rectangular array of numbers arranged in rows and columns. The <strong>order</strong> (or dimension) is rows × columns. A <strong>determinant</strong> is a single number calculated from a square matrix.</p>
+    <div class="formula-box">
+      <span class="formula-label">Determinant &amp; Inverse (2×2)</span>
+      det[a b; c d] = ad − bc<br>
+      A⁻¹ = (1/det A) × [d −b; −c a]
+    </div>
+    <div class="example-box">
+      <span class="example-label">Worked Example</span>
+      Find the determinant of A = [2 1; 3 4].
+      <div class="solution">det(A) = (2)(4) − (1)(3) = 8 − 3 = <strong>5</strong></div>
+    </div>
+    <div class="tip-box">
+      <span class="tip-label">JAMB / WAEC Tip</span>
+      Matrices can only be added or subtracted if they have the same order. Multiplication requires that the columns of the first matrix equal the rows of the second. If det = 0, the matrix has no inverse.
+    </div>
+  </section>
+
+  <section class="note-topic" id="diff-fm">
+    <h2>📈 Differentiation</h2>
+    <h3>Definition</h3>
+    <p><strong>Differentiation</strong> finds the rate of change of y with respect to x (dy/dx), also the gradient of the tangent at a point. The chain rule, product rule and quotient rule are used for composite functions.</p>
+    <div class="formula-box">
+      <span class="formula-label">Power Rule &amp; Chain Rule</span>
+      d/dx(xⁿ) = nxⁿ⁻¹ &nbsp;|&nbsp; dy/dx = dy/du × du/dx
+    </div>
+    <div class="example-box">
+      <span class="example-label">Worked Example</span>
+      If y = (2x + 1)³, find dy/dx.
+      <div class="solution">
+Let u = 2x + 1, y = u³. Then du/dx = 2, dy/du = 3u².<br>
+dy/dx = 3u² × 2 = 6(2x + 1)² = <strong>6(2x+1)²</strong>
+      </div>
+    </div>
+    <div class="tip-box">
+      <span class="tip-label">JAMB / WAEC Tip</span>
+      Gradient of y = f(x) at x = a is found by substituting x = a into dy/dx. Maximum and minimum points occur where dy/dx = 0.
+    </div>
+  </section>
+
+  <section class="note-topic" id="int-fm">
+    <h2>∫ Integration</h2>
+    <h3>Definition</h3>
+    <p><strong>Integration</strong> is the reverse of differentiation. <strong>Indefinite integration</strong> adds a constant C; <strong>definite integration</strong> between limits gives a numerical area under a curve.</p>
+    <div class="formula-box">
+      <span class="formula-label">Integration Rules</span>
+      ∫xⁿ dx = xⁿ⁺¹/(n+1) + C &nbsp;|&nbsp; ∫ₐᵇ f(x)dx = F(b) − F(a)
+    </div>
+    <div class="example-box">
+      <span class="example-label">Worked Example</span>
+      Evaluate ∫₀² 4x dx.
+      <div class="solution">
+∫4x dx = 2x²<br>
+= 2(2²) − 2(0²) = <strong>8</strong>
+      </div>
+    </div>
+    <div class="tip-box">
+      <span class="tip-label">JAMB / WAEC Tip</span>
+      Remember +C for indefinite integrals but NOT for definite integrals (the constant cancels). Area under the graph = definite integral (take absolute value if the curve dips below the x-axis).
+    </div>
+  </section>
+
+  <section class="note-topic" id="prob-fm">
+    <h2>🎲 Probability</h2>
+    <h3>Definition</h3>
+    <p><strong>Probability</strong> measures the likelihood of an event occurring, ranging from 0 (impossible) to 1 (certain). P(A) = number of favourable outcomes / total number of possible outcomes.</p>
+    <div class="formula-box">
+      <span class="formula-label">Probability Rules</span>
+      P(A) = favourable / total<br>
+      P(A∩B) = P(A) × P(B) &nbsp;(independent)<br>
+      P(A∪B) = P(A) + P(B) − P(A∩B)
+    </div>
+    <div class="example-box">
+      <span class="example-label">Worked Example</span>
+      Two fair dice are thrown. Find P(sum = 7).
+      <div class="solution">
+Favourable: (1,6)(2,5)(3,4)(4,3)(5,2)(6,1) = 6 outcomes.<br>
+Total = 36.<br>
+P = 6/36 = <strong>1/6</strong>
+      </div>
+    </div>
+    <div class="tip-box">
+      <span class="tip-label">JAMB / WAEC Tip</span>
+      P(not A) = 1 − P(A). For independent events, the occurrence of one does not affect the other. Mutually exclusive events: P(A∩B) = 0, so P(A∪B) = P(A) + P(B).
+    </div>
+  </section>
+
+  <div class="text-center mt-3">
+    <a href="../quiz.html?subject=further-mathematics" class="btn btn-primary btn-lg">📝 Test Yourself — Further Maths Quiz (25 Qs)</a>
+  </div>
+</main>
+
+<footer class="footer" id="footer"></footer>
+<nav class="mobile-nav" id="mobileNav"></nav>
+<script src="../js/data.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/notes.js"></script>
+<script>initSubjectPage('further-mathematics');</script>
+</body>
+</html>

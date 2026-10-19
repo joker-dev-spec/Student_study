@@ -1,0 +1,230 @@
+{
+  "subject": "Further Mathematics",
+  "questions": [
+    {
+      "id": 1,
+      "topic": "Vectors",
+      "difficulty": "Easy",
+      "question": "If a = (3, 4) and b = (1, 2), then a + b =:",
+      "options": ["(4, 6)", "(2, 2)", "(3, 6)", "(4, 8)"],
+      "answer": 0,
+      "explanation": "Add corresponding components: (3+1, 4+2) = (4, 6)."
+    },
+    {
+      "id": 2,
+      "topic": "Vectors",
+      "difficulty": "Medium",
+      "question": "The dot product of vectors a = (2, 3) and b = (4, 1) is:",
+      "options": ["11", "14", "10", "8"],
+      "answer": 0,
+      "explanation": "a·b = (2)(4) + (3)(1) = 8 + 3 = 11."
+    },
+    {
+      "id": 3,
+      "topic": "Vectors",
+      "difficulty": "Medium",
+      "question": "The magnitude of the vector (3, 4) is:",
+      "options": ["5", "7", "12", "25"],
+      "answer": 0,
+      "explanation": "|v| = √(3² + 4²) = √(9 + 16) = √25 = 5."
+    },
+    {
+      "id": 4,
+      "topic": "Matrices",
+      "difficulty": "Easy",
+      "question": "The order of the matrix [1 2 3; 4 5 6] is:",
+      "options": ["2 × 3", "3 × 2", "2 × 2", "3 × 3"],
+      "answer": 0,
+      "explanation": "The matrix has 2 rows and 3 columns, so its order is 2 × 3."
+    },
+    {
+      "id": 5,
+      "topic": "Matrices",
+      "difficulty": "Medium",
+      "question": "If A = [2 1; 3 4], the determinant of A is:",
+      "options": ["5", "8", "14", "11"],
+      "answer": 0,
+      "explanation": "det(A) = (2)(4) - (1)(3) = 8 - 3 = 5."
+    },
+    {
+      "id": 6,
+      "topic": "Matrices",
+      "difficulty": "Medium",
+      "question": "The identity matrix of order 2 × 2 is:",
+      "options": ["[1 0; 0 1]", "[0 1; 1 0]", "[1 1; 1 1]", "[2 0; 0 2]"],
+      "answer": 0,
+      "explanation": "The identity matrix has 1s on the main diagonal and 0s elsewhere: [1 0; 0 1]."
+    },
+    {
+      "id": 7,
+      "topic": "Matrices",
+      "difficulty": "Hard",
+      "question": "If A = [1 2; 3 4] and B = [2 0; 1 3], find AB.",
+      "options": ["[4 6; 10 12]", "[4 10; 6 12]", "[2 6; 10 4]", "[6 4; 12 10]"],
+      "answer": 0,
+      "explanation": "AB = [1×2+2×1, 1×0+2×3; 3×2+4×1, 3×0+4×3] = [4, 6; 10, 12]."
+    },
+    {
+      "id": 8,
+      "topic": "Differentiation",
+      "difficulty": "Easy",
+      "question": "Differentiate y = 3x⁴ with respect to x.",
+      "options": ["12x³", "3x³", "12x⁴", "4x³"],
+      "answer": 0,
+      "explanation": "dy/dx = 3 × 4x³ = 12x³."
+    },
+    {
+      "id": 9,
+      "topic": "Differentiation",
+      "difficulty": "Medium",
+      "question": "The gradient of y = x³ - 2x at x = 2 is:",
+      "options": ["10", "8", "6", "4"],
+      "answer": 0,
+      "explanation": "dy/dx = 3x² - 2. At x = 2: 3(4) - 2 = 12 - 2 = 10."
+    },
+    {
+      "id": 10,
+      "topic": "Differentiation",
+      "difficulty": "Hard",
+      "question": "If y = (2x + 1)³, then dy/dx =:",
+      "options": ["6(2x+1)²", "3(2x+1)²", "6(2x+1)³", "(2x+1)²"],
+      "answer": 0,
+      "explanation": "Using chain rule: dy/dx = 3(2x+1)² × 2 = 6(2x+1)²."
+    },
+    {
+      "id": 11,
+      "topic": "Integration",
+      "difficulty": "Easy",
+      "question": "∫3x² dx =:",
+      "options": ["x³ + C", "3x³ + C", "6x + C", "x³"],
+      "answer": 0,
+      "explanation": "∫3x² dx = 3 × x³/3 + C = x³ + C."
+    },
+    {
+      "id": 12,
+      "topic": "Integration",
+      "difficulty": "Medium",
+      "question": "∫₀² 4x dx =:",
+      "options": ["8", "16", "4", "12"],
+      "answer": 0,
+      "explanation": "∫4x dx = 2x². Evaluating from 0 to 2: 2(4) - 2(0) = 8."
+    },
+    {
+      "id": 13,
+      "topic": "Probability",
+      "difficulty": "Easy",
+      "question": "Two fair dice are thrown. The probability of getting a sum of 7 is:",
+      "options": ["1/6", "1/9", "1/12", "5/36"],
+      "answer": 0,
+      "explanation": "Favourable outcomes: (1,6),(2,5),(3,4),(4,3),(5,2),(6,1) = 6. Total outcomes = 36. P = 6/36 = 1/6."
+    },
+    {
+      "id": 14,
+      "topic": "Probability",
+      "difficulty": "Medium",
+      "question": "A bag contains 3 red and 5 blue balls. Two balls are drawn without replacement. P(both red) =:",
+      "options": ["3/28", "3/8", "9/64", "1/28"],
+      "answer": 0,
+      "explanation": "P(first red) = 3/8, P(second red) = 2/7. P(both) = 3/8 × 2/7 = 6/56 = 3/28."
+    },
+    {
+      "id": 15,
+      "topic": "Probability",
+      "difficulty": "Hard",
+      "question": "Events A and B are independent. P(A) = 0.3 and P(B) = 0.5. P(A ∪ B) =:",
+      "options": ["0.65", "0.15", "0.80", "0.45"],
+      "answer": 0,
+      "explanation": "P(A∪B) = P(A) + P(B) - P(A∩B). For independent events: P(A∩B) = 0.3 × 0.5 = 0.15. So P(A∪B) = 0.3 + 0.5 - 0.15 = 0.65."
+    },
+    {
+      "id": 16,
+      "topic": "Statics",
+      "difficulty": "Medium",
+      "question": "The moment of a force of 10 N about a point 0.5 m from the line of action is:",
+      "options": ["5 Nm", "20 Nm", "15 Nm", "50 Nm"],
+      "answer": 0,
+      "explanation": "Moment = Force × perpendicular distance = 10 × 0.5 = 5 Nm."
+    },
+    {
+      "id": 17,
+      "topic": "Dynamics",
+      "difficulty": "Medium",
+      "question": "A body of mass 5 kg has a momentum of 20 kg m/s. Its velocity is:",
+      "options": ["4 m/s", "25 m/s", "15 m/s", "100 m/s"],
+      "answer": 0,
+      "explanation": "p = mv, so v = p/m = 20/5 = 4 m/s."
+    },
+    {
+      "id": 18,
+      "topic": "Dynamics",
+      "difficulty": "Hard",
+      "question": "A force of 20 N acts on a body of mass 4 kg for 5 s. The impulse is:",
+      "options": ["100 Ns", "20 Ns", "5 Ns", "400 Ns"],
+      "answer": 0,
+      "explanation": "Impulse = Force × time = 20 × 5 = 100 Ns. (Also equals change in momentum.)"
+    },
+    {
+      "id": 19,
+      "topic": "Vectors",
+      "difficulty": "Hard",
+      "question": "Two vectors a = (1, 2) and b = (k, 6) are parallel. The value of k is:",
+      "options": ["3", "2", "6", "12"],
+      "answer": 0,
+      "explanation": "For parallel vectors: a₁/a₂ = b₁/b₂. So 1/2 = k/6, giving k = 3."
+    },
+    {
+      "id": 20,
+      "topic": "Matrices",
+      "difficulty": "Hard",
+      "question": "The inverse of the matrix [3 1; 5 2] is:",
+      "options": ["[2 -1; -5 3]", "[-2 1; 5 -3]", "[2 -5; -1 3]", "[3 -1; -5 2]"],
+      "answer": 0,
+      "explanation": "det = 6 - 5 = 1. A⁻¹ = (1/1)[2 -1; -5 3] = [2 -1; -5 3]."
+    },
+    {
+      "id": 21,
+      "topic": "Differentiation",
+      "difficulty": "Easy",
+      "question": "The derivative of a constant function f(x) = 7 is:",
+      "options": ["0", "7", "1", "Undefined"],
+      "answer": 0,
+      "explanation": "The derivative of any constant is 0, since the gradient of a horizontal line is 0."
+    },
+    {
+      "id": 22,
+      "topic": "Integration",
+      "difficulty": "Medium",
+      "question": "∫(6x² + 4x) dx =:",
+      "options": ["2x³ + 2x² + C", "6x³ + 4x² + C", "3x³ + 2x² + C", "2x³ + 4x + C"],
+      "answer": 0,
+      "explanation": "∫6x² dx = 2x³ and ∫4x dx = 2x². So result = 2x³ + 2x² + C."
+    },
+    {
+      "id": 23,
+      "topic": "Probability",
+      "difficulty": "Medium",
+      "question": "The probability of not getting a head when a fair coin is tossed once is:",
+      "options": ["0.5", "1", "0", "0.25"],
+      "answer": 0,
+      "explanation": "P(not head) = P(tail) = 0.5."
+    },
+    {
+      "id": 24,
+      "topic": "Statics",
+      "difficulty": "Hard",
+      "question": "A uniform beam of weight 200 N is pivoted at its centre. A weight of 50 N hangs 2 m from the pivot. Where must a 100 N weight be hung to balance it?",
+      "options": ["1 m from pivot", "2 m from pivot", "4 m from pivot", "0.5 m from pivot"],
+      "answer": 0,
+      "explanation": "For equilibrium: clockwise moment = anticlockwise moment. 100 × d = 50 × 2, so d = 100/100 = 1 m from pivot on the other side."
+    },
+    {
+      "id": 25,
+      "topic": "Dynamics",
+      "difficulty": "Easy",
+      "question": "According to Newton's second law, F = ma. A body of mass 3 kg accelerates at 4 m/s². The force is:",
+      "options": ["12 N", "7 N", "1.33 N", "36 N"],
+      "answer": 0,
+      "explanation": "F = ma = 3 × 4 = 12 N."
+    }
+  ]
+}

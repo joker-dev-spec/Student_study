@@ -1,0 +1,328 @@
+{
+  "formulas": [
+    {
+      "subject": "Physics",
+      "category": "Mechanics",
+      "name": "Newton's Second Law",
+      "formula": "F = ma"
+    },
+    {
+      "subject": "Physics",
+      "category": "Mechanics",
+      "name": "Weight",
+      "formula": "W = mg"
+    },
+    {
+      "subject": "Physics",
+      "category": "Mechanics",
+      "name": "Equation of Motion 1",
+      "formula": "v = u + at"
+    },
+    {
+      "subject": "Physics",
+      "category": "Mechanics",
+      "name": "Equation of Motion 2",
+      "formula": "s = ut + ½at²"
+    },
+    {
+      "subject": "Physics",
+      "category": "Mechanics",
+      "name": "Equation of Motion 3",
+      "formula": "v² = u² + 2as"
+    },
+    {
+      "subject": "Physics",
+      "category": "Mechanics",
+      "name": "Distance in nth second",
+      "formula": "Sₙ = u + a(2n-1)/2"
+    },
+    {
+      "subject": "Physics",
+      "category": "Mechanics",
+      "name": "Momentum",
+      "formula": "p = mv"
+    },
+    {
+      "subject": "Physics",
+      "category": "Mechanics",
+      "name": "Impulse",
+      "formula": "Ft = mv - mu"
+    },
+    {
+      "subject": "Physics",
+      "category": "Mechanics",
+      "name": "Work Done",
+      "formula": "W = Fs cos θ"
+    },
+    {
+      "subject": "Physics",
+      "category": "Mechanics",
+      "name": "Kinetic Energy",
+      "formula": "KE = ½mv²"
+    },
+    {
+      "subject": "Physics",
+      "category": "Mechanics",
+      "name": "Potential Energy",
+      "formula": "PE = mgh"
+    },
+    {
+      "subject": "Physics",
+      "category": "Mechanics",
+      "name": "Hooke's Law",
+      "formula": "F = ke"
+    },
+    {
+      "subject": "Physics",
+      "category": "Mechanics",
+      "name": "Power",
+      "formula": "P = W/t = Fv"
+    },
+    {
+      "subject": "Physics",
+      "category": "Waves & Optics",
+      "name": "Wave Speed",
+      "formula": "v = fλ"
+    },
+    {
+      "subject": "Physics",
+      "category": "Waves & Optics",
+      "name": "Refractive Index",
+      "formula": "n = c/v = sin i / sin r"
+    },
+      {
+      "subject": "Physics",
+      "category": "Waves & Optics",
+      "name": "Critical Angle",
+      "formula": "sin C = 1/n"
+    },
+    {
+      "subject": "Physics",
+      "category": "Waves & Optics",
+      "name": "Mirror/Lens Formula",
+      "formula": "1/f = 1/u + 1/v"
+    },
+    {
+      "subject": "Physics",
+      "category": "Waves & Optics",
+      "name": "Magnification",
+      "formula": "m = v/u = h'/h"
+    },
+    {
+      "subject": "Physics",
+      "category": "Electricity",
+      "name": "Ohm's Law",
+      "formula": "V = IR"
+    },
+    {
+      "subject": "Physics",
+      "category": "Electricity",
+      "name": "Electrical Energy",
+      "formula": "E = VIt"
+    },
+    {
+      "subject": "Physics",
+      "category": "Electricity",
+      "name": "Electrical Power",
+      "formula": "P = VI = I²R = V²/R"
+    },
+    {
+      "subject": "Physics",
+      "category": "Electricity",
+      "name": "Resistance (series)",
+      "formula": "R_total = R₁ + R₂ + R₃"
+    },
+    {
+      "subject": "Physics",
+      "category": "Electricity",
+      "name": "Resistance (parallel)",
+      "formula": "1/R_total = 1/R₁ + 1/R₂ + 1/R₃"
+    },
+    {
+      "subject": "Chemistry",
+      "category": "Stoichiometry",
+      "name": "Mole",
+      "formula": "n = m/M"
+    },
+    {
+      "subject": "Chemistry",
+      "category": "Stoichiometry",
+      "name": "Molar Volume",
+      "formula": "n = V/22.4 (at STP)"
+    },
+    {
+      "subject": "Chemistry",
+      "category": "Stoichiometry",
+      "name": "Concentration",
+      "formula": "C = n/V"
+    },
+    {
+      "subject": "Chemistry",
+      "category": "Stoichiometry",
+      "name": "Percentage Yield",
+      "formula": "% yield = (actual/theoretical) × 100"
+    },
+    {
+      "subject": "Chemistry",
+      "category": "Gas Laws",
+      "name": "Ideal Gas Law",
+      "formula": "PV = nRT"
+    },
+    {
+      "subject": "Chemistry",
+      "category": "Gas Laws",
+      "name": "Boyle's Law",
+      "formula": "P₁V₁ = P₂V₂"
+    },
+    {
+      "subject": "Chemistry",
+      "category": "Gas Laws",
+      "name": "Charles's Law",
+      "formula": "V₁/T₁ = V₂/T₂"
+    },
+    {
+      "subject": "Chemistry",
+      "category": "Gas Laws",
+      "name": "Gay-Lussac's Law",
+      "formula": "P₁/T₁ = P₂/T₂"
+    },
+    {
+      "subject": "Chemistry",
+      "category": "Acids & Bases",
+      "name": "pH",
+      "formula": "pH = -log[H⁺]"
+    },
+    {
+      "subject": "Chemistry",
+      "category": "Acids & Bases",
+      "name": "pOH",
+      "formula": "pOH = -log[OH⁻]"
+    },
+    {
+      "subject": "Chemistry",
+      "category": "Acids & Bases",
+      "name": "Ionic Product of Water",
+      "formula": "Kw = [H⁺][OH⁻] = 1 × 10⁻¹⁴"
+    },
+    {
+      "subject": "Chemistry",
+      "category": "Thermochemistry",
+      "name": "Heat Change",
+      "formula": "Q = mcΔT"
+    },
+    {
+      "subject": "Chemistry",
+      "category": "Thermochemistry",
+      "name": "Molar Heat",
+      "formula": "Q = nCΔT"
+    },
+    {
+      "subject": "Mathematics",
+      "category": "Algebra",
+      "name": "Quadratic Formula",
+      "formula": "x = (-b ± √(b²-4ac)) / 2a"
+    },
+    {
+      "subject": "Mathematics",
+      "category": "Algebra",
+      "name": "Sum of AP",
+      "formula": "Sₙ = n/2[2a + (n-1)d]"
+    },
+    {
+      "subject": "Mathematics",
+      "category": "Algebra",
+      "name": "Sum of GP",
+      "formula": "Sₙ = a(1-rⁿ)/(1-r)"
+    },
+    {
+      "subject": "Mathematics",
+      "category": "Algebra",
+      "name": "nth term of AP",
+      "formula": "Tₙ = a + (n-1)d"
+    },
+    {
+      "subject": "Mathematics",
+      "category": "Algebra",
+      "name": "nth term of GP",
+      "formula": "Tₙ = arⁿ⁻¹"
+    },
+    {
+      "subject": "Mathematics",
+      "category": "Trigonometry",
+      "name": "SOH CAH TOA",
+      "formula": "sin=O/H, cos=A/H, tan=O/A"
+    },
+    {
+      "subject": "Mathematics",
+      "category": "Trigonometry",
+      "name": "Pythagorean Identity",
+      "formula": "sin²θ + cos²θ = 1"
+    },
+    {
+      "subject": "Mathematics",
+      "category": "Trigonometry",
+      "name": "Area of Triangle",
+      "formula": "Area = ½ab sin C"
+    },
+    {
+      "subject": "Mathematics",
+      "category": "Calculus",
+      "name": "Power Rule",
+      "formula": "d/dx(xⁿ) = nxⁿ⁻¹"
+    },
+    {
+      "subject": "Mathematics",
+      "category": "Calculus",
+      "name": "Integral Power Rule",
+      "formula": "∫xⁿ dx = xⁿ⁺¹/(n+1) + C"
+    },
+    {
+      "subject": "Mathematics",
+      "category": "Logarithms",
+      "name": "Log Product Rule",
+      "formula": "log(ab) = log a + log b"
+    },
+    {
+      "subject": "Mathematics",
+      "category": "Logarithms",
+      "name": "Log Power Rule",
+      "formula": "log(aⁿ) = n log a"
+    },
+    {
+      "subject": "Further Maths",
+      "category": "Vectors",
+      "name": "Dot Product",
+      "formula": "a·b = |a||b|cos θ = x₁x₂ + y₁y₂"
+    },
+    {
+      "subject": "Further Maths",
+      "category": "Matrices",
+      "name": "Determinant 2×2",
+      "formula": "det[a b; c d] = ad - bc"
+    },
+    {
+      "subject": "Further Maths",
+      "category": "Matrices",
+      "name": "Matrix Inverse 2×2",
+      "formula": "A⁻¹ = 1/det(A) × [d -b; -c a]"
+    },
+    {
+      "subject": "Further Maths",
+      "category": "Probability",
+      "name": "Basic Probability",
+      "formula": "P(A) = favourable/total"
+    },
+    {
+      "subject": "Further Maths",
+      "category": "Probability",
+      "name": "Independent Events",
+      "formula": "P(A∩B) = P(A) × P(B)"
+    },
+    {
+      "subject": "Further Maths",
+      "category": "Probability",
+      "name": "Addition Rule",
+      "formula": "P(A∪B) = P(A) + P(B) - P(A∩B)"
+    }
+  ]
+}

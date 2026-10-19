@@ -1,0 +1,270 @@
+{
+  "subject": "English",
+  "questions": [
+    {
+      "id": 1,
+      "topic": "Comprehension",
+      "difficulty": "Easy",
+      "question": "Choose the word nearest in meaning to 'abundant':",
+      "options": ["Scarce", "Plentiful", "Rare", "Limited"],
+      "answer": 1,
+      "explanation": "Abundant means existing in large quantities; plentiful. Its opposite is scarce."
+    },
+    {
+      "id": 2,
+      "topic": "Vocabulary",
+      "difficulty": "Easy",
+      "question": "Choose the word nearest in meaning to 'benevolent':",
+      "options": ["Cruel", "Kind", "Selfish", "Hostile"],
+      "answer": 1,
+      "explanation": "Benevolent means well-meaning, kindly, charitable."
+    },
+    {
+      "id": 3,
+      "topic": "Vocabulary",
+      "difficulty": "Easy",
+      "question": "Choose the opposite (antonym) of 'transparent':",
+      "options": ["Clear", "Opaque", "Visible", "Bright"],
+      "answer": 1,
+      "explanation": "Transparent means see-through. Opaque means not able to be seen through — its direct opposite."
+    },
+    {
+      "id": 4,
+      "topic": "Grammar",
+      "difficulty": "Easy",
+      "question": "Choose the correct sentence:",
+      "options": [
+        "He don't have a book",
+        "He doesn't have a book",
+        "He not have a book",
+        "He haven't a book"
+      ],
+      "answer": 1,
+      "explanation": "The correct form for third person singular present tense is 'doesn't' (does not) followed by the base verb 'have'."
+    },
+    {
+      "id": 5,
+      "topic": "Grammar",
+      "difficulty": "Medium",
+      "question": "Identify the correct passive form of: 'The boy ate the mango.'",
+      "options": [
+        "The mango was eaten by the boy",
+        "The mango is eaten by the boy",
+        "The mango ate the boy",
+        "The mango has ate by the boy"
+      ],
+      "answer": 0,
+      "explanation": "The past tense 'ate' becomes 'was eaten' in passive voice. Object becomes subject: The mango was eaten by the boy."
+    },
+    {
+      "id": 6,
+      "topic": "Grammar",
+      "difficulty": "Medium",
+      "question": "Choose the correctly punctuated sentence:",
+      "options": [
+        "Where are you going, John?",
+        "Where are you going John?",
+        "Where, are you going John?",
+        "Where are you, going John?"
+      ],
+      "answer": 0,
+      "explanation": "Direct questions end with a question mark, and a name in direct address is set off by a comma."
+    },
+    {
+      "id": 7,
+      "topic": "Grammar",
+      "difficulty": "Medium",
+      "question": "The plural of 'crisis' is:",
+      "options": ["crisises", "crises", "crisis", "crisi"],
+      "answer": 1,
+      "explanation": "Crisis is from Greek; its plural is crises (change of -is to -es)."
+    },
+    {
+      "id": 8,
+      "topic": "Comprehension",
+      "difficulty": "Medium",
+      "question": "'He kicked the bucket' is an example of:",
+      "options": ["A literal statement", "An idiom", "A metaphor", "A simile"],
+      "answer": 1,
+      "explanation": "This is an idiom meaning 'he died'. It cannot be understood from the individual meanings of the words."
+    },
+    {
+      "id": 9,
+      "topic": "Comprehension",
+      "difficulty": "Medium",
+      "question": "Which figure of speech is: 'She is as busy as a bee'?",
+      "options": ["Metaphor", "Simile", "Personification", "Hyperbole"],
+      "answer": 1,
+      "explanation": "A simile compares two things using 'like' or 'as'. This compares her busyness to a bee's."
+    },
+    {
+      "id": 10,
+      "topic": "Comprehension",
+      "difficulty": "Hard",
+      "question": "Which figure of speech is: 'The wind whispered through the trees'?",
+      "options": ["Simile", "Hyperbole", "Personification", "Irony"],
+      "answer": 2,
+      "explanation": "Personification gives human qualities (whispering) to non-human things (wind)."
+    },
+    {
+      "id": 11,
+      "topic": "Vocabulary",
+      "difficulty": "Medium",
+      "question": "Choose the word nearest in meaning to 'frugal':",
+      "options": ["Wasteful", "Thrifty", "Generous", "Lavish"],
+      "answer": 1,
+      "explanation": "Frugal means careful with money, economical, thrifty."
+    },
+    {
+      "id": 12,
+      "topic": "Grammar",
+      "difficulty": "Medium",
+      "question": "Choose the correct option: 'If I ______ a bird, I would fly south.'",
+      "options": ["am", "was", "were", "will be"],
+      "answer": 2,
+      "explanation": "This is a second conditional sentence (unreal present). The subjunctive 'were' is used for all subjects."
+    },
+    {
+      "id": 13,
+      "topic": "Grammar",
+      "difficulty": "Easy",
+      "question": "'The sun ______ in the east.' Choose the correct verb form:",
+      "options": ["rise", "rises", "rose", "rising"],
+      "answer": 1,
+      "explanation": "This is a general truth/habitual action, so simple present tense is used. 'The sun' is third person singular, so 'rises'."
+    },
+    {
+      "id": 14,
+      "topic": "Comprehension",
+      "difficulty": "Medium",
+      "question": "A synonym for 'diligent' is:",
+      "options": ["Lazy", "Hardworking", "Careless", "Slow"],
+      "answer": 1,
+      "explanation": "Diligent means showing careful and persistent effort; hardworking."
+    },
+    {
+      "id": 15,
+      "topic": "Vocabulary",
+      "difficulty": "Hard",
+      "question": "Choose the word nearest in meaning to 'obstinate':",
+      "options": ["Obedient", "Stubborn", "Flexible", "Gentle"],
+      "answer": 1,
+      "explanation": "Obstinate means stubbornly refusing to change one's opinion; unyielding."
+    },
+    {
+      "id": 16,
+      "topic": "Grammar",
+      "difficulty": "Hard",
+      "question": "Identify the correct reported speech: He said, 'I am going to school now.'",
+      "options": [
+        "He said that he is going to school now",
+        "He said that he was going to school then",
+        "He said that he went to school now",
+        "He said that I was going to school"
+      ],
+      "answer": 1,
+      "explanation": "In reported speech: 'am going' → 'was going', 'now' → 'then', and first person 'I' → third person 'he'."
+    },
+    {
+      "id": 17,
+      "topic": "Comprehension",
+      "difficulty": "Easy",
+      "question": "'His speech was a breath of fresh air' is:",
+      "options": ["An idiom", "A proverb", "A tautology", "An oxymoron"],
+      "answer": 0,
+      "explanation": "'A breath of fresh air' is an idiom meaning something new and refreshing, different from what came before."
+    },
+    {
+      "id": 18,
+      "topic": "Grammar",
+      "difficulty": "Medium",
+      "question": "Which sentence contains a relative pronoun?",
+      "options": [
+        "The book is interesting",
+        "The book that I read was interesting",
+        "I read the book",
+        "Reading books is fun"
+      ],
+      "answer": 1,
+      "explanation": "'That' is a relative pronoun introducing the relative clause 'that I read'."
+    },
+    {
+      "id": 19,
+      "topic": "Vocabulary",
+      "difficulty": "Medium",
+      "question": "The word 'meticulous' means:",
+      "options": ["Careless", "Extremely careful about details", "Very quick", "Extremely tall"],
+      "answer": 1,
+      "explanation": "Meticulous means showing great attention to detail; very careful and precise."
+    },
+    {
+      "id": 20,
+      "topic": "Comprehension",
+      "difficulty": "Hard",
+      "question": "Which sentence is a paradox?",
+      "options": [
+        "She is as tall as a building",
+        "I must be cruel to be kind",
+        "The classroom was as quiet as a graveyard",
+        "He runs like the wind"
+      ],
+      "answer": 1,
+      "explanation": "A paradox is a statement that appears self-contradictory but may reveal a truth. 'Cruel to be kind' seems contradictory."
+    },
+    {
+      "id": 21,
+      "topic": "Grammar",
+      "difficulty": "Easy",
+      "question": "Choose the correct sentence:",
+      "options": [
+        "Me and him went to school",
+        "He and I went to school",
+        "Him and me went to school",
+        "I and he went to school"
+      ],
+      "answer": 1,
+      "explanation": "Subject pronouns (he, I) are used as subjects. Also, etiquette places 'I' last when referring to yourself with another person."
+    },
+    {
+      "id": 22,
+      "topic": "Vocabulary",
+      "difficulty": "Hard",
+      "question": "A word that is spelled the same but has different meanings (e.g., 'bat') is called:",
+      "options": ["Homophone", "Homonym", "Synonym", "Antonym"],
+      "answer": 1,
+      "explanation": "A homonym has the same spelling but different meanings (bat = animal, bat = sports equipment). Homophones sound the same but may be spelled differently."
+    },
+    {
+      "id": 23,
+      "topic": "Comprehension",
+      "difficulty": "Medium",
+      "question": "'Many hands make light work' is best described as:",
+      "options": ["An idiom", "A proverb", "A metaphor", "A euphemism"],
+      "answer": 1,
+      "explanation": "A proverb is a short saying expressing a general truth or piece of advice. This teaches that cooperation makes tasks easier."
+    },
+    {
+      "id": 24,
+      "topic": "Grammar",
+      "difficulty": "Hard",
+      "question": "The passive voice of: 'The teacher will punish the students.'",
+      "options": [
+        "The students will be punished by the teacher",
+        "The students were punished by the teacher",
+        "The students are punished by the teacher",
+        "The students would punish the teacher"
+      ],
+      "answer": 0,
+      "explanation": "Future tense 'will punish' becomes 'will be punished' in passive voice."
+    },
+    {
+      "id": 25,
+      "topic": "Vocabulary",
+      "difficulty": "Medium",
+      "question": "The antonym of 'benevolent' is:",
+      "options": ["Generous", "Malevolent", "Friendly", "Compassionate"],
+      "answer": 1,
+      "explanation": "Malevolent means wishing harm to others — the direct opposite of benevolent (wishing good for others)."
+    }
+  ]
+}

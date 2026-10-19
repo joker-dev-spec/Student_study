@@ -1,0 +1,240 @@
+{
+  "subject": "Chemistry",
+  "questions": [
+    {
+      "id": 1,
+      "topic": "Particulate Nature of Matter",
+      "difficulty": "Easy",
+      "question": "The smallest particle of an element that retains its chemical properties is:",
+      "options": ["Molecule", "Atom", "Compound", "Ion"],
+      "answer": 1,
+      "explanation": "An atom is the smallest particle of an element that retains all the chemical properties of that element."
+    },
+    {
+      "id": 2,
+      "topic": "Particulate Nature of Matter",
+      "difficulty": "Easy",
+      "question": "Which postulate of the kinetic molecular theory states that particles are in constant random motion?",
+      "options": ["Particles have negligible volume", "Particles are in constant random motion", "Particles attract each other", "Temperature is proportional to kinetic energy"],
+      "answer": 1,
+      "explanation": "The kinetic molecular theory states that all particles of matter are in constant, rapid, random motion."
+    },
+    {
+      "id": 3,
+      "topic": "Particulate Nature of Matter",
+      "difficulty": "Medium",
+      "question": "The process by which a solid changes directly to a gas without passing through the liquid state is called:",
+      "options": ["Evaporation", "Sublimation", "Distillation", "Boiling"],
+      "answer": 1,
+      "explanation": "Sublimation is the direct change of state from solid to gas. Examples include iodine and dry ice (solid CO₂)."
+    },
+    {
+      "id": 4,
+      "topic": "Particulate Nature of Matter",
+      "difficulty": "Medium",
+      "question": "Diffusion is best described as:",
+      "options": ["Movement of particles from low to high concentration", "Random movement of particles from high to low concentration until evenly distributed", "A chemical reaction between gases", "The evaporation of a liquid"],
+      "answer": 1,
+      "explanation": "Diffusion is the net movement of particles from a region of higher concentration to a region of lower concentration due to random motion."
+    },
+    {
+      "id": 5,
+      "topic": "Particulate Nature of Matter",
+      "difficulty": "Hard",
+      "question": "Which of the following will diffuse fastest?",
+      "options": ["Oxygen (O₂)", "Chlorine (Cl₂)", "Carbon dioxide (CO₂)", "Hydrogen (H₂)"],
+      "answer": 3,
+      "explanation": "According to Graham's law, the rate of diffusion is inversely proportional to the square root of the molar mass. Hydrogen has the lowest molar mass (2 g/mol) so it diffuses fastest."
+    },
+    {
+      "id": 6,
+      "topic": "Periodic Table",
+      "difficulty": "Easy",
+      "question": "Elements in the same group of the periodic table have the same:",
+      "options": ["Number of shells", "Atomic mass", "Number of valence electrons", "Number of neutrons"],
+      "answer": 2,
+      "explanation": "Elements in the same group (column) have the same number of valence electrons, which gives them similar chemical properties."
+    },
+    {
+      "id": 7,
+      "topic": "Periodic Table",
+      "difficulty": "Easy",
+      "question": "How many periods are in the periodic table?",
+      "options": ["7", "8", "18", "10"],
+      "answer": 0,
+      "explanation": "There are 7 periods (rows) in the periodic table, corresponding to the number of electron shells."
+    },
+    {
+      "id": 8,
+      "topic": "Periodic Table",
+      "difficulty": "Medium",
+      "question": "Which element is in Group 14, Period 3?",
+      "options": ["Carbon", "Silicon", "Germanium", "Tin"],
+      "answer": 1,
+      "explanation": "Silicon (Si) has atomic number 14 and is in Group 14, Period 3. Carbon is Period 2, Germanium Period 4, Tin Period 5."
+    },
+    {
+      "id": 9,
+      "topic": "Periodic Table",
+      "difficulty": "Medium",
+      "question": "The most electronegative element in the periodic table is:",
+      "options": ["Oxygen", "Chlorine", "Fluorine", "Nitrogen"],
+      "answer": 2,
+      "explanation": "Fluorine is the most electronegative element with a value of 4.0 on the Pauling scale."
+    },
+    {
+      "id": 10,
+      "topic": "Periodic Table",
+      "difficulty": "Hard",
+      "question": "Which of the following orders correctly shows increasing atomic radius?",
+      "options": ["Na < Mg < Al", "Al < Mg < Na", "Mg < Na < Al", "Na < Al < Mg"],
+      "answer": 1,
+      "explanation": "Across a period (Na → Mg → Al), atomic radius decreases because effective nuclear charge increases, pulling electrons closer. So Al < Mg < Na."
+    },
+    {
+      "id": 11,
+      "topic": "Chemical Bonding",
+      "difficulty": "Easy",
+      "question": "The bond formed by the sharing of electron pairs between two atoms is:",
+      "options": ["Ionic bond", "Covalent bond", "Metallic bond", "Hydrogen bond"],
+      "answer": 1,
+      "explanation": "In covalent bonding, atoms share pairs of electrons to achieve a stable electron configuration."
+    },
+    {
+      "id": 12,
+      "topic": "Chemical Bonding",
+      "difficulty": "Easy",
+      "question": "An ionic bond is formed between:",
+      "options": ["Two non-metals", "A metal and a non-metal", "Two metals", "Two noble gases"],
+      "answer": 1,
+      "explanation": "Ionic bonds form when a metal transfers electrons to a non-metal, creating oppositely charged ions that attract each other."
+    },
+    {
+      "id": 13,
+      "topic": "Chemical Bonding",
+      "difficulty": "Medium",
+      "question": "The electron dot structure of HCl shows:",
+      "options": ["Ionic bond with H⁺ and Cl⁻", "One shared pair and three lone pairs on Cl", "Two shared pairs", "No lone pairs"],
+      "answer": 1,
+      "explanation": "HCl has a single covalent bond (one shared electron pair) with H, and the chlorine atom has three lone pairs (6 non-bonding electrons)."
+    },
+    {
+      "id": 14,
+      "topic": "Chemical Bonding",
+      "difficulty": "Medium",
+      "question": "Which molecule has a double bond between its atoms?",
+      "options": ["H₂", "O₂", "N₂", "Cl₂"],
+      "answer": 1,
+      "explanation": "O₂ has a double bond (O=O). H₂ and Cl₂ have single bonds, N₂ has a triple bond."
+    },
+    {
+      "id": 15,
+      "topic": "Chemical Bonding",
+      "difficulty": "Hard",
+      "question": "The shape of the methane (CH₄) molecule according to VSEPR theory is:",
+      "options": ["Trigonal planar", "Tetrahedral", "Bent", "Linear"],
+      "answer": 1,
+      "explanation": "CH₄ has 4 bonding pairs and 0 lone pairs on the central carbon, giving a tetrahedral shape with bond angles of 109.5°."
+    },
+    {
+      "id": 16,
+      "topic": "Acids and Bases",
+      "difficulty": "Easy",
+      "question": "A substance with a pH of 3 is:",
+      "options": ["Strongly acidic", "Neutral", "Strongly alkaline", "Slightly alkaline"],
+      "answer": 0,
+      "explanation": "pH below 7 indicates acidity. pH 3 is strongly acidic (far from neutral pH 7)."
+    },
+    {
+      "id": 17,
+      "topic": "Acids and Bases",
+      "difficulty": "Easy",
+      "question": "Which of the following is a strong acid?",
+      "options": ["CH₃COOH", "HCl", "NH₃", "NaOH"],
+      "answer": 1,
+      "explanation": "HCl (hydrochloric acid) is a strong acid that ionizes completely in water. CH₃COOH is a weak acid, NH₃ is a base, and NaOH is a strong base."
+    },
+    {
+      "id": 18,
+      "topic": "Acids and Bases",
+      "difficulty": "Medium",
+      "question": "The reaction between an acid and a base to form salt and water is called:",
+      "options": ["Decomposition", "Neutralisation", "Displacement", "Oxidation"],
+      "answer": 1,
+      "explanation": "Neutralisation: Acid + Base → Salt + Water. For example, HCl + NaOH → NaCl + H₂O."
+    },
+    {
+      "id": 19,
+      "topic": "Acids and Bases",
+      "difficulty": "Medium",
+      "question": "A salt formed by the partial replacement of replaceable hydrogen ions in an acid is:",
+      "options": ["Normal salt", "Acid salt", "Basic salt", "Double salt"],
+      "answer": 1,
+      "explanation": "An acid salt is formed by partial neutralisation of an acid, e.g., NaHSO₄ from H₂SO₄ + NaOH."
+    },
+    {
+      "id": 20,
+      "topic": "Acids and Bases",
+      "difficulty": "Hard",
+      "question": "What is the pH of a 0.001 M HCl solution?",
+      "options": ["1", "3", "11", "0.001"],
+      "answer": 1,
+      "explanation": "HCl is a strong acid, so [H⁺] = 0.001 = 10⁻³ M. pH = -log(10⁻³) = 3."
+    },
+    {
+      "id": 21,
+      "topic": "Organic Introduction",
+      "difficulty": "Easy",
+      "question": "The general formula for alkanes is:",
+      "options": ["CₙH₂ₙ", "CₙH₂ₙ₊₂", "CₙH₂ₙ₋₂", "CₙHₙ"],
+      "answer": 1,
+      "explanation": "Alkanes are saturated hydrocarbons with the general formula CₙH₂ₙ₊₂. Examples: CH₄ (methane), C₂H₆ (ethane)."
+    },
+    {
+      "id": 22,
+      "topic": "Organic Introduction",
+      "difficulty": "Easy",
+      "question": "Which of the following is an alkene?",
+      "options": ["Methane", "Ethene", "Ethane", "Propane"],
+      "answer": 1,
+      "explanation": "Ethene (C₂H₄) is an alkene with a carbon-carbon double bond. The general formula for alkenes is CₙH₂ₙ."
+    },
+    {
+      "id": 23,
+      "topic": "Organic Introduction",
+      "difficulty": "Medium",
+      "question": "The IUPAC name for CH₃CH₂CH₂OH is:",
+      "options": ["Methanol", "Ethanol", "Propan-1-ol", "Butanol"],
+      "answer": 2,
+      "explanation": "The compound has 3 carbon atoms (prop-) with an -OH group on carbon 1: Propan-1-ol."
+    },
+    {
+      "id": 24,
+      "topic": "Particulate Nature of Matter",
+      "difficulty": "Hard",
+      "question": "Which statement about the arrangement of particles in solids, liquids, and gases is correct?",
+      "options": [
+        "Solids have particles that are far apart and move freely",
+        "Liquids have particles that are closely packed but can slide over each other",
+        "Gases have particles that are arranged in a fixed pattern",
+        "In all states, particles are stationary"
+      ],
+      "answer": 1,
+      "explanation": "In liquids, particles are close together but can move past each other, giving liquids a definite volume but no definite shape."
+    },
+    {
+      "id": 25,
+      "topic": "Chemical Bonding",
+      "difficulty": "Medium",
+      "question": "Metallic bonding involves:",
+      "options": [
+        "Sharing of electrons between two non-metals",
+        "Electrostatic attraction between metal cations and delocalised electrons",
+        "Transfer of electrons from metal to non-metal",
+        "Attraction between permanent dipoles"
+      ],
+      "answer": 1,
+      "explanation": "In metallic bonding, positive metal ions (cations) are held together by a 'sea' of delocalised (free-moving) electrons."
+    }
+  ]
+}

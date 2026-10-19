@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Periodic Table — SS2 Science BrainBox</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="topbar" id="topbar"></header>
+<main class="container">
+  <div class="page-header">
+    <h1>⚛️ Interactive Periodic Table</h1>
+    <p>Tap or click any element to see its properties</p>
+  </div>
+
+  <div class="periodic-wrap">
+    <div class="periodic-table" id="periodicGrid"></div>
+  </div>
+
+  <div class="pt-legend">
+    <div class="pt-legend-item"><span class="pt-legend-color pt-nonmetal"></span>Non-metal</div>
+    <div class="pt-legend-item"><span class="pt-legend-color pt-noble"></span>Noble Gas</div>
+    <div class="pt-legend-item"><span class="pt-legend-color pt-alkali"></span>Alkali Metal</div>
+    <div class="pt-legend-item"><span class="pt-legend-color pt-alkaline"></span>Alkaline Earth</div>
+    <div class="pt-legend-item"><span class="pt-legend-color pt-transition"></span>Transition Metal</div>
+    <div class="pt-legend-item"><span class="pt-legend-color pt-metalloid"></span>Metalloid</div>
+    <div class="pt-legend-item"><span class="pt-legend-color pt-halogen"></span>Halogen</div>
+    <div class="pt-legend-item"><span class="pt-legend-color pt-metal"></span>Metal</div>
+    <div class="pt-legend-item"><span class="pt-legend-color pt-lanth"></span>Lanthanide</div>
+    <div class="pt-legend-item"><span class="pt-legend-color pt-act"></span>Actinide</div>
+  </div>
+
+  <div class="text-center mt-3">
+    <a href="index.html" class="btn btn-secondary">← Back to Lab Corner</a>
+    <a href="formula-sheet.html" class="btn btn-primary">📋 Formula Sheet</a>
+  </div>
+</main>
+
+<div class="element-modal" id="elementModal">
+  <div class="modal-content">
+    <div class="m-sym" id="modalSymbol">H</div>
+    <div class="m-name" id="modalName">Hydrogen</div>
+    <div class="m-info" id="modalType">Non-metal</div>
+    <div class="m-details" id="modalDetails"></div>
+    <button class="btn btn-primary mt-2 w-full" onclick="document.getElementById('elementModal').classList.remove('show')">Close</button>
+  </div>
+</div>
+
+<footer class="footer" id="footer"></footer>
+<nav class="mobile-nav" id="mobileNav"></nav>
+<script src="../js/data.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/notes.js"></script>
+<script>initPeriodicTable();</script>
+</body>
+</html>

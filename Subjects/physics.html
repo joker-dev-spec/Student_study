@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Physics Notes — SS2 Science BrainBox</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="topbar" id="topbar"></header>
+
+<div class="subject-hero">
+  <div class="icon">⚛️</div>
+  <h1>Physics</h1>
+  <p>Vectors · Equilibrium · Motion · Light · Waves — complete SS2 &amp; WAEC notes</p>
+</div>
+
+<div class="subject-actions">
+  <a href="../quiz.html?subject=physics" class="btn btn-primary btn-sm">📝 Take Physics Quiz</a>
+  <button class="btn btn-secondary btn-sm" id="bookmarkBtn">☆ Bookmark</button>
+</div>
+
+<main class="notes-content">
+
+  <!-- VECTORS -->
+  <section class="note-topic" id="vectors">
+    <h2>📐 Vectors</h2>
+    <h3>Definition</h3>
+    <p>A <strong>vector</strong> is a physical quantity that has both <strong>magnitude</strong> and <strong>direction</strong>. Examples include displacement, velocity, acceleration, force, momentum and weight. A <strong>scalar</strong> has magnitude only — e.g. distance, speed, mass, time, temperature, energy and work.</p>
+    <h3>Key Concepts</h3>
+    <ul>
+      <li><strong>Resultant:</strong> a single vector that has the same effect as two or more vectors combined.</li>
+      <li><strong>Components:</strong> a vector can be split into horizontal (x) and vertical (y) parts.</li>
+      <li><strong>Triangle of forces:</strong> three forces in equilibrium are represented by the sides of a triangle taken in order.</li>
+      <li><strong>Parallelogram law:</strong> if two vectors are represented by adjacent sides of a parallelogram, the resultant is the diagonal.</li>
+    </ul>
+    <div class="formula-box">
+      <span class="formula-label">Resultant (perpendicular vectors)</span>
+      R = √(A² + B²)
+    </div>
+    <div class="formula-box">
+      <span class="formula-label">Components</span>
+      Fx = F cos θ ,  Fy = F sin θ
+    </div>
+    <div class="diagram-box">
+      <span class="diagram-label">Diagram Description</span>
+      Imagine two arrows drawn from a common point O: one arrow 3 units long pointing East, another 4 units long pointing North. Completing the parallelogram, the diagonal from O represents the resultant. Its length (5 units) gives the magnitude, and its angle with the horizontal (≈53°) gives the direction.
+    </div>
+    <div class="example-box">
+      <span class="example-label">Worked Example</span>
+      A force of 6 N acts due East and a force of 8 N acts due North. Find the magnitude of the resultant.
+      <div class="solution">R = √(6² + 8²) = √(36 + 64) = √100 = <strong>10 N</strong></div>
+    </div>
+    <div class="tip-box">
+      <span class="tip-label">JAMB / WAEC Tip</span>
+      Always resolve vectors into perpendicular components when three or more forces act. Remember: a vector at 90° to another has zero component along it. In equilibrium questions, resolve forces horizontally and vertically, then set each sum to zero.
+    </div>
+  </section>
+
+  <!-- EQUILIBRIUM -->
+  <section class="note-topic" id="equilibrium">
+    <h2>⚖️ Equilibrium</h2>
+    <h3>Definition</h3>
+    <p>A body is in <strong>equilibrium</strong> when the net force acting on it is zero and the net turning effect (moment) about any point is zero. The body is either at rest (static equilibrium) or moving with a constant velocity (dynamic equilibrium).</p>
+    <h3>Conditions for Equilibrium</h3>
+    <ul>
+      <li>Sum of all forces in any direction = 0 (ΣF = 0)</li>
+      <li>Sum of clockwise moments = sum of anticlockwise moments (ΣM = 0)</li>
+    </ul>
+    <div class="formula-box">
+      <span class="formula-label">Principle of Moments</span>
+      Clockwise moment = Anticlockwise moment
+    </div>
+    <div class="formula-box">
+      <span class="formula-label">Moment of a Force</span>
+      Moment = Force × perpendicular distance from pivot
+    </div>
+    <div class="diagram-box">
+      <span class="diagram-label">Diagram Description</span>
+      A seesaw balanced on a fulcrum. A heavy child sits close to the pivot; a lighter child sits farther away. The clockwise turning effect of one equals the anticlockwise turning effect of the other, so the beam stays horizontal.
+    </div>
+    <div class="example-box">
+      <span class="example-label">Worked Example</span>
+      A uniform metre rule of weight 1.5 N is pivoted at the 40 cm mark. A weight of 2.5 N is hung at the 10 cm mark. What weight must be hung at the 80 cm mark to balance it?
+      <div class="solution">
+Weight of rule acts at 50 cm (10 cm right of pivot): clockwise moment = 1.5 × 10 = 15 N·cm<br>
+2.5 N at 10 cm (30 cm left of pivot): anticlockwise = 2.5 × 30 = 75 N·cm<br>
+Extra clockwise needed = 75 − 15 = 60 N·cm<br>
+W × (80 − 40) = 60 → W = <strong>1.5 N</strong>
+      </div>
+    </div>
+    <div class="tip-box">
+      <span class="tip-label">JAMB / WAEC Tip</span>
+      For a uniform rule, always take the weight of the rule as acting at its geometric centre (50 cm). Choose the pivot as your reference point so that the moment of the pivot force is zero. This simplifies calculations.
+    </div>
+  </section>
+
+  <!-- MOTION -->
+  <section class="note-topic" id="motion">
+    <h2>🚀 Motion</h2>
+    <h3>Definition</h3>
+    <p><strong>Motion</strong> is a change in position of a body with time relative to a reference point. It is described using distance, displacement, speed, velocity and acceleration.</p>
+    <ul>
+      <li><strong>Speed</strong> = distance / time (scalar)</li>
+      <li><strong>Velocity</strong> = displacement / time (vector)</li>
+      <li><strong>Acceleration</strong> = change in velocity / time (vector)</li>
+    </ul>
+    <div class="formula-box">
+      <span class="formula-label">Equations of Motion (uniform acceleration)</span>
+      v = u + at &nbsp;|&nbsp; s = ut + ½at² &nbsp;|&nbsp; v² = u² + 2as
+    </div>
+    <div class="formula-box">
+      <span class="formula-label">Distance in the nth second</span>
+      Sₙ = u + a(2n − 1)/2
+    </div>
+    <div class="diagram-box">
+      <span class="diagram-label">Diagram Description</span>
+      A velocity–time graph: a straight sloping line starting at height u on the y-axis and rising to v. The <em>gradient</em> of the line equals acceleration; the <em>area under</em> the line equals the distance travelled. A horizontal line means constant velocity (zero acceleration).
+    </div>
+    <div class="example-box">
+      <span class="example-label">Worked Example</span>
+      A stone is thrown vertically upward with a velocity of 20 m/s (g = 10 m/s²). Find the maximum height reached.
+      <div class="solution">
+At maximum height, v = 0.<br>
+v² = u² − 2gs → 0 = 20² − 2(10)s<br>
+s = 400 / 20 = <strong>20 m</strong>
+      </div>
+    </div>
+    <div class="tip-box">
+      <span class="tip-label">JAMB / WAEC Tip</span>
+      For bodies thrown upwards, take g as negative (−) since it opposes motion. At the highest point the velocity is momentarily zero but acceleration is still g downward. The area under a velocity–time graph gives distance; the area under an acceleration–time graph gives velocity change.
+    </div>
+  </section>
+
+  <!-- LIGHT -->
+  <section class="note-topic" id="light">
+    <h2>💡 Light</h2>
+    <h3>Definition</h3>
+    <p>Light is a form of electromagnetic radiation that travels in straight lines (rectilinear propagation) and can be reflected, refracted or dispersed. <strong>Reflection</strong> is the bouncing of light off a surface; <strong>refraction</strong> is the bending of light as it moves between media of different densities.</p>
+    <h3>Laws of Reflection</h3>
+    <ul>
+      <li>The incident ray, reflected ray and normal all lie in the same plane.</li>
+      <li>The angle of incidence equals the angle of reflection (i = r).</li>
+    </ul>
+    <h3>Laws of Refraction (Snell's Law)</h3>
+    <div class="formula-box">
+      <span class="formula-label">Snell's Law</span>
+      n = sin i / sin r
+    </div>
+    <div class="formula-box">
+      <span class="formula-label">Refractive Index &amp; Critical Angle</span>
+      n = c / v &nbsp;|&nbsp; sin C = 1 / n
+    </div>
+    <div class="diagram-box">
+      <span class="diagram-label">Diagram Description</span>
+      A ray of light passing from air into a glass block bends <em>towards</em> the normal at the point of entry because glass is denser. On leaving the glass, it bends <em>away</em> from the normal. At the critical angle, the refracted ray travels along the surface; beyond it, total internal reflection occurs.
+    </div>
+    <div class="example-box">
+      <span class="example-label">Worked Example</span>
+      The refractive index of glass is 1.5. Find the speed of light in glass (c = 3 × 10⁸ m/s).
+      <div class="solution">
+n = c / v → v = c / n = (3 × 10⁸) / 1.5 = <strong>2 × 10⁸ m/s</strong>
+      </div>
+    </div>
+    <div class="tip-box">
+      <span class="tip-label">JAMB / WAEC Tip</span>
+      Light bends towards the normal when entering a denser medium and away from the normal when entering a less dense medium. Total internal reflection only occurs when light travels from a denser to a less dense medium and the angle of incidence exceeds the critical angle.
+    </div>
+  </section>
+
+  <!-- WAVES -->
+  <section class="note-topic" id="waves">
+    <h2>🌊 Waves</h2>
+    <h3>Definition</h3>
+    <p>A <strong>wave</strong> is a disturbance that transfers energy through a medium without transferring matter. Waves are classified as <strong>transverse</strong> (particles vibrate perpendicular to wave direction — e.g. light, water waves) or <strong>longitudinal</strong> (particles vibrate parallel to wave direction — e.g. sound).</p>
+    <div class="formula-box">
+      <span class="formula-label">Wave Equation</span>
+      v = f λ &nbsp;&nbsp;(speed = frequency × wavelength)
+    </div>
+    <div class="formula-box">
+      <span class="formula-label">Period and Frequency</span>
+      T = 1 / f
+    </div>
+    <div class="diagram-box">
+      <span class="diagram-label">Diagram Description</span>
+      A sine curve showing a transverse wave. The <em>wavelength (λ)</em> is the distance between two consecutive crests (or troughs). The <em>amplitude (A)</em> is the maximum displacement from the rest position. The <em>frequency (f)</em> is the number of complete waves passing a point per second.
+    </div>
+    <h3>Wave Phenomena</h3>
+    <ul>
+      <li><strong>Reflection</strong> — bouncing of waves off a barrier.</li>
+      <li><strong>Refraction</strong> — change in speed and direction when entering a new medium.</li>
+      <li><strong>Diffraction</strong> — spreading/bending of waves around obstacles or through gaps.</li>
+      <li><strong>Interference</strong> — superposition of two waves (constructive or destructive).</li>
+    </ul>
+    <div class="example-box">
+      <span class="example-label">Worked Example</span>
+      A wave has a frequency of 200 Hz and a wavelength of 2 m. Find its speed.
+      <div class="solution">
+v = f λ = 200 × 2 = <strong>400 m/s</strong>
+      </div>
+    </div>
+    <div class="tip-box">
+      <span class="tip-label">JAMB / WAEC Tip</span>
+      Sound cannot travel through a vacuum (it needs a medium) but light can. In constructive interference, amplitudes add; in destructive interference, they subtract. Diffraction is more noticeable when the gap size is comparable to the wavelength.
+    </div>
+  </section>
+
+  <div class="text-center mt-3">
+    <a href="../quiz.html?subject=physics" class="btn btn-primary btn-lg">📝 Test Yourself — Physics Quiz (25 Qs)</a>
+  </div>
+</main>
+
+<footer class="footer" id="footer"></footer>
+<nav class="mobile-nav" id="mobileNav"></nav>
+
+<script src="../js/data.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/notes.js"></script>
+<script>initSubjectPage('physics');</script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+{
+  "cards": [
+    {
+      "id": 1,
+      "subject": "Physics",
+      "front": "Newton's Second Law of Motion",
+      "back": "F = ma — Force equals mass times acceleration. The acceleration of a body is directly proportional to the force applied and inversely proportional to its mass."
+    },
+    {
+      "id": 2,
+      "subject": "Physics",
+      "front": "Equation of Motion (v = u + at)",
+      "back": "Final velocity = initial velocity + acceleration × time. Used when acceleration is constant."
+    },
+    {
+      "id": 3,
+      "subject": "Physics",
+      "front": "s = ut + ½at²",
+      "back": "Distance = (initial velocity × time) + ½ × acceleration × time². This is the second equation of motion."
+    },
+    {
+      "id": 4,
+      "subject": "Physics",
+      "front": "v² = u² + 2as",
+      "back": "v² = u² + 2as. Third equation of motion relating velocities, acceleration, and distance. Doesn't require time."
+    },
+    {
+      "id": 5,
+      "subject": "Physics",
+      "front": "Refractive Index formula",
+      "back": "n = c/v = 1/sin C = sin i / sin r. Where c = speed of light in vacuum, v = speed in medium, C = critical angle, i = angle of incidence, r = angle of refraction."
+    },
+    {
+      "id": 6,
+      "subject": "Physics",
+      "front": "Wave equation",
+      "back": "v = fλ — Wave speed equals frequency × wavelength. Units: v (m/s), f (Hz), λ (m)."
+    },
+    {
+      "id": 7,
+      "subject": "Chemistry",
+      "front": "Ideal Gas Equation",
+      "back": "PV = nRT — Pressure × Volume = moles × gas constant × temperature. R = 8.31 J/(mol·K) or 0.082 L·atm/(mol·K)."
+    },
+    {
+      "id": 8,
+      "subject": "Chemistry",
+      "front": "pH formula",
+      "back": "pH = -log[H⁺] — pH measures acidity. pH < 7 is acidic, pH = 7 is neutral, pH > 7 is alkaline (basic)."
+    },
+    {
+      "id": 9,
+      "subject": "Chemistry",
+      "front": "Mole formula",
+      "back": "n = m/M — Number of moles = mass (g) / molar mass (g/mol). Also n = N/Nₐ where N = number of particles, Nₐ = 6.02 × 10²³."
+    },
+    {
+      "id": 10,
+      "subject": "Chemistry",
+      "front": "Molar Volume at STP",
+      "back": "1 mole of any gas at STP occupies 22.4 litres. STP = Standard Temperature and Pressure (0°C, 1 atm)."
+    },
+    {
+      "id": 11,
+      "subject": "Chemistry",
+      "front": "Concentration formula",
+      "back": "C = n/V — Concentration (mol/L) = moles of solute / volume of solution (L). Also expressed as c(mol/dm³)."
+    },
+    {
+      "id": 12,
+      "subject": "Biology",
+      "front": "Photosynthesis equation",
+      "back": "6CO₂ + 6H₂O →(light, chlorophyll)→ C₆H₁₂O₆ + 6O₂. Raw materials: CO₂ and water. Products: glucose and oxygen. Occurs in chloroplasts."
+    },
+    {
+      "id": 13,
+      "subject": "Biology",
+      "front": "Aerobic Respiration equation",
+      "back": "C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + energy (ATP). Occurs in mitochondria. Produces about 38 ATP molecules per glucose."
+    },
+    {
+      "id": 14,
+      "subject": "Biology",
+      "front": "Parts of a plant cell",
+      "back": "Cell wall, cell membrane, nucleus, cytoplasm, chloroplasts, vacuole (large central), mitochondria, ribosomes, endoplasmic reticulum, Golgi apparatus."
+    },
+    {
+      "id": 15,
+      "subject": "Biology",
+      "front": "Functions of the liver",
+      "back": "1) Detoxification of poisons, 2) Production of bile, 3) Storage of glycogen, 4) Breakdown of red blood cells, 5) Metabolism of proteins and fats."
+    },
+    {
+      "id": 16,
+      "subject": "Biology",
+      "front": "Levels of organisation in biology",
+      "back": "Cell → Tissue → Organ → Organ System → Organism → Population → Community → Ecosystem → Biome."
+    },
+    {
+      "id": 17,
+      "subject": "Mathematics",
+      "front": "Logarithm: log_b(x) = y means",
+      "back": "b^y = x. The logarithm tells you what power the base must be raised to, to get x. Example: log₂(8) = 3 because 2³ = 8."
+    },
+    {
+      "id": 18,
+      "subject": "Mathematics",
+      "front": "Quadratic Formula",
+      "back": "x = (-b ± √(b² - 4ac)) / 2a. For ax² + bx + c = 0. The discriminant b² - 4ac determines the nature of roots."
+    },
+    {
+      "id": 19,
+      "subject": "Mathematics",
+      "front": "Sum of an Arithmetic Progression (AP)",
+      "back": "Sₙ = n/2 × [2a + (n-1)d] or Sₙ = n/2 × (a + l), where a = first term, d = common difference, l = last term, n = number of terms."
+    },
+    {
+      "id": 20,
+      "subject": "Mathematics",
+      "front": "Trigonometric ratios (SOH CAH TOA)",
+      "back": "sin θ = Opposite/Hypotenuse, cos θ = Adjacent/Hypotenuse, tan θ = Opposite/Adjacent. Remember: SOH-CAH-TOA."
+    },
+    {
+      "id": 21,
+      "subject": "Mathematics",
+      "front": "Derivative power rule",
+      "back": "d/dx(xⁿ) = nxⁿ⁻¹. The derivative of x raised to power n is n times x raised to power (n-1)."
+    },
+    {
+      "id": 22,
+      "subject": "Further Maths",
+      "front": "Dot product of vectors",
+      "back": "a·b = |a||b|cos θ. If a = (x₁,y₁) and b = (x₂,y₂), then a·b = x₁x₂ + y₁y₂. The result is a scalar."
+    },
+    {
+      "id": 23,
+      "subject": "Further Maths",
+      "front": "Determinant of 2×2 matrix",
+      "back": "For A = [a b; c d], det(A) = ad - bc. If det = 0, the matrix has no inverse (singular matrix)."
+    },
+    {
+      "id": 24,
+      "subject": "Further Maths",
+      "front": "Impulse-Momentum theorem",
+      "back": "Impulse = Force × time = Change in momentum = mv - mu. Units: Ns or kg·m/s."
+    },
+    {
+      "id": 25,
+      "subject": "Computer Science",
+      "front": "Binary to Decimal conversion",
+      "back": "Multiply each bit by its place value (powers of 2) and add. E.g., 1011 = 1×8 + 0×4 + 1×2 + 1×1 = 11."
+    },
+    {
+      "id": 26,
+      "subject": "Physics",
+      "front": "Ohm's Law",
+      "back": "V = IR — Voltage equals current × resistance. V (volts), I (amperes), R (ohms)."
+    },
+    {
+      "id": 27,
+      "subject": "Physics",
+      "front": "Hooke's Law",
+      "back": "F = ke — The restoring force of a spring is directly proportional to its extension, within the elastic limit. k = spring constant (N/m)."
+    },
+    {
+      "id": 28,
+      "subject": "Chemistry",
+      "front": "Graham's Law of Diffusion",
+      "back": "Rate₁/Rate₂ = √(M₂/M₁). The rate of diffusion of a gas is inversely proportional to the square root of its molar mass."
+    },
+    {
+      "id": 29,
+      "subject": "Chemistry",
+      "front": "General formula of alkanes, alkenes, alkynes",
+      "back": "Alkanes: CₙH₂ₙ₊₂ (saturated), Alkenes: CₙH₂ₙ (unsaturated, C=C), Alkynes: CₙH₂ₙ₋₂ (unsaturated, C≡C)."
+    },
+    {
+      "id": 30,
+      "subject": "Biology",
+      "front": "Functions of the human heart",
+      "back": "The heart pumps blood through the body. Right side: deoxygenated blood to lungs. Left side: oxygenated blood to body. Beats ~72 times per minute."
+    }
+  ]
+}

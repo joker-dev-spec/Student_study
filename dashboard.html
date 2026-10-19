@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard — SS2 Science BrainBox</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar" id="topbar"></header>
+
+<main class="container">
+  <div class="page-header">
+    <h1>Science Dashboard 🔬</h1>
+    <p>Track your progress across all science subjects</p>
+  </div>
+
+  <div class="welcome-banner">
+    <h2>Welcome back, <span id="welcomeName">Student</span>! 👋</h2>
+    <p id="welcomeSchool">—</p>
+    <div class="stats">
+      <div>
+        <div class="stat-val" id="statQuizzes">0</div>
+        <div class="stat-lbl">Quizzes Taken</div>
+      </div>
+      <div>
+        <div class="stat-val" id="statAvg">0%</div>
+        <div class="stat-lbl">Average Score</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="section-title">📊 Subject Progress</h2>
+  <div class="subject-grid" id="subjectGrid"></div>
+
+  <h2 class="section-title">⚠️ Weak Topics (Auto-detected)</h2>
+  <div class="weak-topics">
+    <ul class="weak-topic-list" id="weakTopicList"></ul>
+  </div>
+
+  <h2 class="section-title">🎯 Daily Science Challenge</h2>
+  <div class="daily-challenge">
+    <span class="challenge-badge">Today's Challenge</span>
+    <div class="q-topic" id="dailyTopic">Loading...</div>
+    <div class="q-text" id="dailyQ">Loading today's question...</div>
+    <div class="q-options" id="dailyOptions"></div>
+    <div class="q-explanation" id="dailyExpl"></div>
+  </div>
+
+  <h2 class="section-title">⚡ Quick Actions</h2>
+  <div class="quick-links">
+    <a href="quiz.html" class="quick-link"><div class="ql-icon">📝</div><div class="ql-label">Take Quiz</div></a>
+    <a href="lab/index.html" class="quick-link"><div class="ql-icon">🧪</div><div class="ql-label">Lab Corner</div></a>
+    <a href="lab/formula-sheet.html" class="quick-link"><div class="ql-icon">📋</div><div class="ql-label">Formulas</div></a>
+    <a href="lab/periodic-table.html" class="quick-link"><div class="ql-icon">⚛️</div><div class="ql-label">Periodic Table</div></a>
+    <a href="tools/flashcards.html" class="quick-link"><div class="ql-icon">🃏</div><div class="ql-label">Flashcards</div></a>
+    <a href="tools/pomodoro.html" class="quick-link"><div class="ql-icon">⏱️</div><div class="ql-label">Pomodoro</div></a>
+    <a href="tools/timetable.html" class="quick-link"><div class="ql-icon">📅</div><div class="ql-label">Timetable</div></a>
+    <a href="tools/bookmarks.html" class="quick-link"><div class="ql-icon">🔖</div><div class="ql-label">Bookmarks</div></a>
+  </div>
+</main>
+
+<footer class="footer" id="footer"></footer>
+<nav class="mobile-nav" id="mobileNav"></nav>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

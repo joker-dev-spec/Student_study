@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Computer Science Notes — SS2 Science BrainBox</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="topbar" id="topbar"></header>
+<div class="subject-hero">
+  <div class="icon">💻</div>
+  <h1>Computer Science</h1>
+  <p>Hardware · Software · Programming · Networking · Data Representation</p>
+</div>
+<div class="subject-actions">
+  <a href="../quiz.html?subject=computer-science" class="btn btn-primary btn-sm">📝 Take Quiz</a>
+  <button class="btn btn-secondary btn-sm" id="bookmarkBtn">☆ Bookmark</button>
+</div>
+<main class="notes-content">
+
+  <section class="note-topic" id="hardware">
+    <h2>🖥️ Hardware &amp; Software</h2>
+    <h3>Definition</h3>
+    <p><strong>Hardware</strong> refers to the physical components of a computer that you can touch. <strong>Software</strong> is a set of instructions (programs) that tells the hardware what to do.</p>
+    <h3>Hardware Components</h3>
+    <ul>
+      <li><strong>CPU (Central Processing Unit):</strong> the "brain" — executes instructions and processes data.</li>
+      <li><strong>RAM (Random Access Memory):</strong> volatile, temporary storage for active data.</li>
+      <li><strong>ROM (Read-Only Memory):</strong> non-volatile; stores boot-up instructions.</li>
+      <li><strong>Storage:</strong> Hard disk, SSD, flash drive — permanent data storage.</li>
+      <li><strong>Input devices:</strong> keyboard, mouse, scanner, microphone.</li>
+      <li><strong>Output devices:</strong> monitor, printer, speaker.</li>
+    </ul>
+    <h3>Software Types</h3>
+    <ul>
+      <li><strong>System software:</strong> Operating System (Windows, Linux, macOS) — manages hardware.</li>
+      <li><strong>Application software:</strong> Word, Chrome, games — end-user programs.</li>
+    </ul>
+    <div class="tip-box">
+      <span class="tip-label">WAEC Tip</span>
+      1 KB = 1024 bytes, 1 MB = 1024 KB, 1 GB = 1024 MB. RAM is volatile (data lost on power off); ROM and hard disks are non-volatile. The CPU contains the ALU (arithmetic/logic) and control unit.
+    </div>
+  </section>
+
+  <section class="note-topic" id="programming">
+    <h2>💻 Programming</h2>
+    <h3>Definition</h3>
+    <p><strong>Programming</strong> is writing step-by-step instructions (code) in a language a computer can understand to solve problems. Examples of languages: Python, Java, C++, JavaScript, BASIC.</p>
+    <h3>Programming Concepts</h3>
+    <ul>
+      <li><strong>Algorithm:</strong> a step-by-step procedure for solving a problem.</li>
+      <li><strong>Variable:</strong> a named storage location that holds a changeable value.</li>
+      <li><strong>Sequence:</strong> instructions executed one after another in order.</li>
+      <li><strong>Selection (branching):</strong> IF-THEN-ELSE makes decisions.</li>
+      <li><strong>Iteration (looping):</strong> FOR and WHILE repeat instructions.</li>
+      <li><strong>Bug:</strong> an error in a program. <strong>Debugging:</strong> finding and fixing bugs.</li>
+    </ul>
+    <h3>Steps in Program Development</h3>
+    <ol>
+      <li>Define the problem</li>
+      <li>Design the solution (algorithm / flowchart)</li>
+      <li>Write the code</li>
+      <li>Test and debug</li>
+      <li>Maintain / document</li>
+    </ol>
+    <div class="tip-box">
+      <span class="tip-label">WAEC Tip</span>
+      Know the difference between high-level languages (Python, BASIC — easier for humans) and low-level languages (machine code — easier for computers). Pseudocode and flowcharts are used to design algorithms before coding.
+    </div>
+  </section>
+
+  <section class="note-topic" id="networking">
+    <h2>🌐 Networking</h2>
+    <h3>Definition</h3>
+    <p>A <strong>computer network</strong> is a group of connected computers that share resources and information. Networks are classified by size: LAN (Local Area Network), WAN (Wide Area Network), MAN (Metropolitan Area Network).</p>
+    <h3>Key Networking Concepts</h3>
+    <ul>
+      <li><strong>LAN:</strong> connects devices in a limited area (school, office).</li>
+      <li><strong>WAN:</strong> connects networks over large distances (the Internet is a WAN).</li>
+      <li><strong>Router:</strong> directs data between different networks.</li>
+      <li><strong>Switch/Hub:</strong> connects devices within the same network.</li>
+      <li><strong>Protocols:</strong> HTTP (web), FTP (file transfer), SMTP (email).</li>
+    </ul>
+    <div class="tip-box">
+      <span class="tip-label">WAEC Tip</span>
+      Advantages of networks: resource sharing, communication, data sharing. Disadvantages: security risks, virus spread, cost of setup. Remember: Internet = Interconnected Network of Networks; WWW = World Wide Web.
+    </div>
+  </section>
+
+  <section class="note-topic" id="data-rep">
+    <h2>🔢 Data Representation</h2>
+    <h3>Definition</h3>
+    <p>Computers store all data in <strong>binary</strong> (base 2), using only the digits 0 and 1. Each binary digit is a <strong>bit</strong>; 8 bits make a <strong>byte</strong>.</p>
+    <h3>Number Systems</h3>
+    <ul>
+      <li><strong>Binary (base 2):</strong> digits 0–1. Place values: 1, 2, 4, 8, 16...</li>
+      <li><strong>Decimal (base 10):</strong> digits 0–9.</li>
+      <li><strong>Hexadecimal (base 16):</strong> digits 0–9, A–F. A=10, B=11... F=15.</li>
+    </ul>
+    <div class="formula-box">
+      <span class="formula-label">Binary → Decimal</span>
+      1010 = 1×8 + 0×4 + 1×2 + 0×1 = 10
+    </div>
+    <div class="example-box">
+      <span class="example-label">Worked Example</span>
+      Convert the decimal number 15 to binary.
+      <div class="solution">
+15 ÷ 2 = 7 r 1<br>
+7 ÷ 2 = 3 r 1<br>
+3 ÷ 2 = 1 r 1<br>
+1 ÷ 2 = 0 r 1<br>
+Reading remainders upward: <strong>1111</strong>
+      </div>
+    </div>
+    <div class="tip-box">
+      <span class="tip-label">WAEC Tip</span>
+      Hexadecimal is used as a compact way to represent binary: each hex digit = 4 binary digits. 1 byte (8 bits) = 2 hex digits. Common conversions to memorise: 10 = A, 15 = F, 16 = 10 in hex.
+    </div>
+  </section>
+
+  <div class="text-center mt-3">
+    <a href="../quiz.html?subject=computer-science" class="btn btn-primary btn-lg">📝 Test Yourself — Computer Science Quiz (25 Qs)</a>
+  </div>
+</main>
+
+<footer class="footer" id="footer"></footer>
+<nav class="mobile-nav" id="mobileNav"></nav>
+<script src="../js/data.js"></script>
+<script src="../js/app.js"></script>
+<script src="../js/notes.js"></script>
+<script>initSubjectPage('computer-science');</script>
+</body>
+</html>

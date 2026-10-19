@@ -1,0 +1,240 @@
+{
+  "subject": "Biology",
+  "questions": [
+    {
+      "id": 1,
+      "topic": "Cell",
+      "difficulty": "Easy",
+      "question": "Which organelle is known as the 'powerhouse of the cell'?",
+      "options": ["Nucleus", "Ribosome", "Mitochondrion", "Golgi apparatus"],
+      "answer": 2,
+      "explanation": "The mitochondrion is called the powerhouse of the cell because it is the site of aerobic respiration, producing ATP (energy) for the cell."
+    },
+    {
+      "id": 2,
+      "topic": "Cell",
+      "difficulty": "Easy",
+      "question": "The structure that controls the movement of substances in and out of the cell is:",
+      "options": ["Cell wall", "Cell membrane", "Cytoplasm", "Vacuole"],
+      "answer": 1,
+      "explanation": "The cell membrane (plasma membrane) is selectively permeable and controls what enters and leaves the cell."
+    },
+    {
+      "id": 3,
+      "topic": "Cell",
+      "difficulty": "Medium",
+      "question": "Which structure is found in plant cells but NOT in animal cells?",
+      "options": ["Mitochondrion", "Nucleus", "Chloroplast", "Ribosome"],
+      "answer": 2,
+      "explanation": "Chloroplasts are found only in plant cells (and algae). They contain chlorophyll for photosynthesis. Both cell types have mitochondria, nuclei and ribosomes."
+    },
+    {
+      "id": 4,
+      "topic": "Cell",
+      "difficulty": "Medium",
+      "question": "The site of protein synthesis in the cell is the:",
+      "options": ["Lysosome", "Ribosome", "Vacuole", "Centrosome"],
+      "answer": 1,
+      "explanation": "Ribosomes are the sites where amino acids are assembled into proteins based on instructions from mRNA."
+    },
+    {
+      "id": 5,
+      "topic": "Cell",
+      "difficulty": "Hard",
+      "question": "A cell has 46 chromosomes. After mitosis, each daughter cell will have:",
+      "options": ["23 chromosomes", "46 chromosomes", "92 chromosomes", "12 chromosomes"],
+      "answer": 1,
+      "explanation": "Mitosis produces genetically identical daughter cells with the same chromosome number as the parent cell (46 in humans). Meiosis would halve it to 23."
+    },
+    {
+      "id": 6,
+      "topic": "Tissues",
+      "difficulty": "Easy",
+      "question": "A group of cells with similar structure and performing the same function is called a:",
+      "options": ["Organ", "Tissue", "System", "Organelle"],
+      "answer": 1,
+      "explanation": "A tissue is a group of similar cells working together to perform a specific function, e.g., muscle tissue, epithelial tissue."
+    },
+    {
+      "id": 7,
+      "topic": "Tissues",
+      "difficulty": "Easy",
+      "question": "Which tissue is responsible for the contraction and movement of body parts?",
+      "options": ["Epithelial tissue", "Connective tissue", "Muscle tissue", "Nervous tissue"],
+      "answer": 2,
+      "explanation": "Muscle tissue contains fibres that can contract, producing movement. There are three types: skeletal, cardiac, and smooth muscle."
+    },
+    {
+      "id": 8,
+      "topic": "Tissues",
+      "difficulty": "Medium",
+      "question": "Blood is classified as which type of tissue?",
+      "options": ["Epithelial", "Connective", "Muscular", "Nervous"],
+      "answer": 1,
+      "explanation": "Blood is a fluid connective tissue. It connects and transports substances between different parts of the body."
+    },
+    {
+      "id": 9,
+      "topic": "Tissues",
+      "difficulty": "Medium",
+      "question": "The tissue that lines body surfaces and organs is:",
+      "options": ["Connective tissue", "Epithelial tissue", "Muscle tissue", "Nervous tissue"],
+      "answer": 1,
+      "explanation": "Epithelial tissue covers body surfaces (skin), lines cavities, and forms glands. It provides protection and facilitates absorption/secretion."
+    },
+    {
+      "id": 10,
+      "topic": "Tissues",
+      "difficulty": "Hard",
+      "question": "Which plant tissue is responsible for transporting water from roots to leaves?",
+      "options": ["Phloem", "Xylem", "Cambium", "Epidermis"],
+      "answer": 1,
+      "explanation": "Xylem transports water and dissolved minerals upward from roots to leaves. Phloem transports manufactured food (sugars) from leaves to other parts."
+    },
+    {
+      "id": 11,
+      "topic": "Photosynthesis",
+      "difficulty": "Easy",
+      "question": "The raw materials needed for photosynthesis are:",
+      "options": ["Glucose and oxygen", "Carbon dioxide and water", "Nitrogen and water", "Oxygen and minerals"],
+      "answer": 1,
+      "explanation": "Photosynthesis requires carbon dioxide (CO₂) and water (H₂O), which are converted into glucose and oxygen using light energy."
+    },
+    {
+      "id": 12,
+      "topic": "Photosynthesis",
+      "difficulty": "Easy",
+      "question": "The equation for photosynthesis is:",
+      "options": [
+        "6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂",
+        "C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O",
+        "6O₂ + 6H₂O → 6CO₂ + 6H₂O",
+        "6CO₂ + 6O₂ → C₆H₁₂O₆ + 6H₂O"
+      ],
+      "answer": 0,
+      "explanation": "Photosynthesis: 6CO₂ + 6H₂O --(light/chlorophyll)--> C₆H₁₂O₆ + 6O₂. Note this is the reverse of respiration."
+    },
+    {
+      "id": 13,
+      "topic": "Photosynthesis",
+      "difficulty": "Medium",
+      "question": "Which pigment absorbs light energy for photosynthesis?",
+      "options": ["Carotene", "Xanthophyll", "Chlorophyll", "Anthocyanin"],
+      "answer": 2,
+      "explanation": "Chlorophyll (mainly chlorophyll a) is the primary photosynthetic pigment, absorbing mainly red and blue-violet light and reflecting green light."
+    },
+    {
+      "id": 14,
+      "topic": "Photosynthesis",
+      "difficulty": "Medium",
+      "question": "Photosynthesis takes place mainly in which part of the leaf?",
+      "options": ["Epidermis", "Mesophyll layer", "Veins", "Cuticle"],
+      "answer": 1,
+      "explanation": "The mesophyll layer contains the highest concentration of chloroplasts and is the main site of photosynthesis."
+    },
+    {
+      "id": 15,
+      "topic": "Photosynthesis",
+      "difficulty": "Hard",
+      "question": "The light-dependent reactions of photosynthesis occur in the:",
+      "options": ["Stroma", "Thylakoid membranes", "Outer membrane", "Intermembrane space"],
+      "answer": 1,
+      "explanation": "Light-dependent reactions occur on the thylakoid membranes where chlorophyll absorbs light. The Calvin cycle (light-independent) occurs in the stroma."
+    },
+    {
+      "id": 16,
+      "topic": "Respiratory System",
+      "difficulty": "Easy",
+      "question": "The organ responsible for gaseous exchange in humans is the:",
+      "options": ["Heart", "Kidney", "Lung", "Liver"],
+      "answer": 2,
+      "explanation": "The lungs are the primary organs of respiration where oxygen enters the blood and carbon dioxide is removed."
+    },
+    {
+      "id": 17,
+      "topic": "Respiratory System",
+      "difficulty": "Easy",
+      "question": "During inhalation, the diaphragm:",
+      "options": ["Relaxes and moves upward", "Contracts and moves downward", "Remains stationary", "Moves sideways"],
+      "answer": 1,
+      "explanation": "During inhalation, the diaphragm contracts and flattens (moves downward), increasing the volume of the thoracic cavity and decreasing pressure, drawing air in."
+    },
+    {
+      "id": 18,
+      "topic": "Respiratory System",
+      "difficulty": "Medium",
+      "question": "The smallest air sacs in the lungs where gas exchange occurs are called:",
+      "options": ["Bronchi", "Bronchioles", "Alveoli", "Trachea"],
+      "answer": 2,
+      "explanation": "Alveoli are tiny, thin-walled air sacs surrounded by capillaries. Their large surface area and thin walls allow efficient gas exchange."
+    },
+    {
+      "id": 19,
+      "topic": "Respiratory System",
+      "difficulty": "Medium",
+      "question": "Which gas is taken into the blood at the alveoli?",
+      "options": ["Carbon dioxide", "Nitrogen", "Oxygen", "Hydrogen"],
+      "answer": 2,
+      "explanation": "At the alveoli, oxygen diffuses from the air in the alveoli into the blood capillaries (higher concentration in alveoli), while CO₂ diffuses out."
+    },
+    {
+      "id": 20,
+      "topic": "Respiratory System",
+      "difficulty": "Hard",
+      "question": "The equation for aerobic respiration is:",
+      "options": [
+        "6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂",
+        "C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + energy",
+        "C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂ + energy",
+        "C₆H₁₂O₆ → 2Pyruvic acid + energy"
+      ],
+      "answer": 1,
+      "explanation": "Aerobic respiration: C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + energy (ATP). This occurs in the mitochondria."
+    },
+    {
+      "id": 21,
+      "topic": "Ecology",
+      "difficulty": "Easy",
+      "question": "Organisms that produce their own food through photosynthesis are called:",
+      "options": ["Consumers", "Producers", "Decomposers", "Predators"],
+      "answer": 1,
+      "explanation": "Producers (autotrophs), like green plants, make their own food using sunlight, CO₂ and water through photosynthesis."
+    },
+    {
+      "id": 22,
+      "topic": "Ecology",
+      "difficulty": "Easy",
+      "question": "In a food chain: Grass → Grasshopper → Frog → Snake, the grasshopper is a:",
+      "options": ["Producer", "Primary consumer", "Secondary consumer", "Decomposer"],
+      "answer": 1,
+      "explanation": "The grasshopper eats the producer (grass), making it a primary consumer (herbivore/first-order consumer)."
+    },
+    {
+      "id": 23,
+      "topic": "Ecology",
+      "difficulty": "Medium",
+      "question": "The maximum number of organisms that an environment can support is called:",
+      "options": ["Population density", "Carrying capacity", "Biotic potential", "Ecological niche"],
+      "answer": 1,
+      "explanation": "Carrying capacity (K) is the maximum population size of a species that an environment can sustain given available resources."
+    },
+    {
+      "id": 24,
+      "topic": "Ecology",
+      "difficulty": "Medium",
+      "question": "Which of the following is a density-dependent factor affecting populations?",
+      "options": ["Flood", "Earthquake", "Disease", "Volcanic eruption"],
+      "answer": 2,
+      "explanation": "Disease is density-dependent because it spreads more easily when population density is high. Floods, earthquakes, and volcanic eruptions are density-independent."
+    },
+    {
+      "id": 25,
+      "topic": "Ecology",
+      "difficulty": "Hard",
+      "question": "In the nitrogen cycle, the conversion of nitrogen gas (N₂) to ammonia (NH₃) by bacteria is called:",
+      "options": ["Nitrification", "Denitrification", "Nitrogen fixation", "Ammonification"],
+      "answer": 2,
+      "explanation": "Nitrogen fixation converts atmospheric N₂ into ammonia (NH₃). Nitrification converts ammonia to nitrates; denitrification converts nitrates back to N₂."
+    }
+  ]
+}

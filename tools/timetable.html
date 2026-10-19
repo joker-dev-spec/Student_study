@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Study Timetable — SS2 Science BrainBox</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="topbar" id="topbar"></header>
+<main class="container">
+  <div class="page-header">
+    <h1>📅 Weekly Science Timetable</h1>
+    <p>Your SS2 Science class schedule — today's subjects are highlighted</p>
+  </div>
+
+  <div style="overflow-x:auto">
+    <table class="timetable" id="timetableTable"></table>
+  </div>
+
+  <div class="tip-box mt-3">
+    <span class="tip-label">Study Strategy</span>
+    Use the Pomodoro technique for each subject block: 25 minutes of focused study, then a 5-minute break. Review your weakest topics (shown on the dashboard) during free periods.
+  </div>
+
+  <div class="text-center mt-3">
+    <a href="index.html" class="btn btn-secondary">← Back to Tools</a>
+    <a href="pomodoro.html" class="btn btn-primary">⏱️ Start Pomodoro</a>
+  </div>
+</main>
+
+<footer class="footer" id="footer"></footer>
+<nav class="mobile-nav" id="mobileNav"></nav>
+<script src="../js/app.js"></script>
+<script src="../js/tools.js"></script>
+<script>initTimetable();</script>
+</body>
+</html>

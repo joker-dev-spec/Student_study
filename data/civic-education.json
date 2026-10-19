@@ -1,0 +1,305 @@
+{
+  "subject": "Civic Education",
+  "questions": [
+    {
+      "id": 1,
+      "topic": "Democracy",
+      "difficulty": "Easy",
+      "question": "The meaning of democracy is:",
+      "options": [
+        "Government by the military",
+        "Government of the people, by the people, for the people",
+        "Government by a single ruler",
+        "Government by the rich"
+      ],
+      "answer": 1,
+      "explanation": "Democracy is a system of government where power rests with the people, exercised either directly or through elected representatives."
+    },
+    {
+      "id": 2,
+      "topic": "Democracy",
+      "difficulty": "Easy",
+      "question": "In a democracy, sovereignty resides with:",
+      "options": ["The president", "The military", "The citizens", "The judiciary"],
+      "answer": 2,
+      "explanation": "Popular sovereignty means the ultimate authority and power belongs to the citizens/people of the nation."
+    },
+    {
+      "id": 3,
+      "topic": "Democracy",
+      "difficulty": "Medium",
+      "question": "The key feature of a federal system of government is:",
+      "options": [
+        "Centralization of power",
+        "Division of power between central and regional governments",
+        "Rule by one person",
+        "Military control of government"
+      ],
+      "answer": 1,
+      "explanation": "Federalism divides power between a central (federal) government and regional (state) governments, each with constitutionally guaranteed powers."
+    },
+    {
+      "id": 4,
+      "topic": "Human Rights",
+      "difficulty": "Easy",
+      "question": "Which of the following is a fundamental human right?",
+      "options": ["Right to drive a car", "Right to life", "Right to free electricity", "Right to a private jet"],
+      "answer": 1,
+      "explanation": "The right to life is a fundamental human right recognized by the UN Universal Declaration of Human Rights and the Nigerian Constitution."
+    },
+    {
+      "id": 5,
+      "topic": "Human Rights",
+      "difficulty": "Easy",
+      "question": "The right to vote and be voted for is called:",
+      "options": ["Civil right", "Political right", "Economic right", "Social right"],
+      "answer": 1,
+      "explanation": "Political rights include the right to participate in government through voting, standing for election, and forming political parties."
+    },
+    {
+      "id": 6,
+      "topic": "Human Rights",
+      "difficulty": "Medium",
+      "question": "Which document internationally guarantees human rights?",
+      "options": [
+        "The UN Charter of Human Rights",
+        "The Atlantic Charter",
+        "The Paris Accord",
+        "The Geneva Budget"
+      ],
+      "answer": 0,
+      "explanation": "The Universal Declaration of Human Rights (UDHR), adopted by the UN in 1948, sets out fundamental human rights for all people."
+    },
+    {
+      "id": 7,
+      "topic": "Human Rights",
+      "difficulty": "Medium",
+      "question": "A fundamental human right comes with:",
+      "options": [
+        "No responsibilities",
+        "Corresponding duties and responsibilities",
+        "Only financial benefits",
+        "Military obligations"
+      ],
+      "answer": 1,
+      "explanation": "Rights and responsibilities are inseparable. Enjoying rights requires respecting the rights of others and fulfilling civic duties."
+    },
+    {
+      "id": 8,
+      "topic": "Nigerian Government",
+      "difficulty": "Easy",
+      "question": "The three arms of government in Nigeria are:",
+      "options": [
+        "Army, Navy, Air Force",
+        "Executive, Legislature, Judiciary",
+        "President, Governor, Chairman",
+        "Senate, House, Assembly"
+      ],
+      "answer": 1,
+      "explanation": "The three arms are the Executive (implements laws), Legislature (makes laws), and Judiciary (interprets laws). This ensures separation of powers."
+    },
+    {
+      "id": 9,
+      "topic": "Nigerian Government",
+      "difficulty": "Easy",
+      "question": "The head of the Nigerian government is the:",
+      "options": ["Senate President", "Chief Justice", "President", "Speaker"],
+      "answer": 2,
+      "explanation": "The President is both the Head of State and Head of Government in Nigeria's presidential system."
+    },
+    {
+      "id": 10,
+      "topic": "Nigerian Government",
+      "difficulty": "Medium",
+      "question": "The Nigerian Constitution was last adopted in:",
+      "options": ["1960", "1979", "1999", "2010"],
+      "answer": 2,
+      "explanation": "The 1999 Constitution of the Federal Republic of Nigeria (as amended) is the current constitution, adopted on 5 May 1999."
+    },
+    {
+      "id": 11,
+      "topic": "Nigerian Government",
+      "difficulty": "Medium",
+      "question": "Nigeria's system of government is:",
+      "options": ["Parliamentary", "Presidential", "Monarchical", "Confederal"],
+      "answer": 1,
+      "explanation": "Nigeria practices a presidential system where the President is both Head of State and Head of Government, elected separately from the legislature."
+    },
+    {
+      "id": 12,
+      "topic": "Nigerian Government",
+      "difficulty": "Medium",
+      "question": "How many senators does Nigeria have at the National Assembly?",
+      "options": ["240", "300", "360", "109"],
+      "answer": 3,
+      "explanation": "The Nigerian Senate has 109 members: 3 from each of the 36 states plus 1 from the FCT."
+    },
+    {
+      "id": 13,
+      "topic": "Citizenship",
+      "difficulty": "Easy",
+      "question": "A citizen is a person who:",
+      "options": [
+        "Is visiting a country",
+        "Has legal membership and full rights in a country",
+        "Lives in a country temporarily",
+        "Works in a country"
+      ],
+      "answer": 1,
+      "explanation": "A citizen is a legal member of a country with full rights and responsibilities, as recognized by the country's constitution."
+    },
+    {
+      "id": 14,
+      "topic": "Citizenship",
+      "difficulty": "Medium",
+      "question": "Which of these is a civic responsibility?",
+      "options": ["Paying taxes", "Owning a car", "Living in a big house", "Having a phone"],
+      "answer": 0,
+      "explanation": "Paying taxes is a civic duty. Tax revenue funds public services like roads, schools, hospitals, and security."
+    },
+    {
+      "id": 15,
+      "topic": "Citizenship",
+      "difficulty": "Medium",
+      "question": "A good citizen should:",
+      "options": [
+        "Ignore elections",
+        "Participate in community development",
+        "Refuse to pay taxes",
+        "Cause social unrest"
+      ],
+      "answer": 1,
+      "explanation": "Good citizens actively participate in their community — voting, obeying laws, paying taxes, and contributing to development."
+    },
+    {
+      "id": 16,
+      "topic": "Rule of Law",
+      "difficulty": "Easy",
+      "question": "The 'rule of law' means:",
+      "options": [
+        "The president makes all laws",
+        "Everyone is subject to and protected by the law",
+        "Only the rich obey the law",
+        "The military controls the law"
+      ],
+      "answer": 1,
+      "explanation": "The rule of law means all persons, institutions, and entities are accountable to laws that are publicly promulgated, equally enforced, and independently adjudicated."
+    },
+    {
+      "id": 17,
+      "topic": "Rule of Law",
+      "difficulty": "Medium",
+      "question": "The principle of separation of powers ensures:",
+      "options": [
+        "One person rules the country",
+        "Checks and balances among the three arms of government",
+        "All government work is done by the military",
+        "Laws are made by the courts"
+      ],
+      "answer": 1,
+      "explanation": "Separation of powers divides government into three arms with distinct functions, providing checks and balances to prevent abuse of power."
+    },
+    {
+      "id": 18,
+      "topic": "Rule of Law",
+      "difficulty": "Hard",
+      "question": "Under the rule of law, no one is above the law. This means:",
+      "options": [
+        "Only ordinary citizens obey the law",
+        "Even the President and government officials must obey the law",
+        "Military personnel are exempt from the law",
+        "The law only applies during elections"
+      ],
+      "answer": 1,
+      "explanation": "A fundamental aspect of the rule of law is that all people, including leaders and government officials, are equally subject to the law."
+    },
+    {
+      "id": 19,
+      "topic": "Nigerian Government",
+      "difficulty": "Hard",
+      "question": "The Nigerian National Assembly consists of:",
+      "options": [
+        "Only the Senate",
+        "The Senate and House of Representatives",
+        "The House of Assembly and Senate",
+        "The Executive and Legislature"
+      ],
+      "answer": 1,
+      "explanation": "The National Assembly has two chambers: the Senate (109 members) and the House of Representatives (360 members)."
+    },
+    {
+      "id": 20,
+      "topic": "Patriotism",
+      "difficulty": "Easy",
+      "question": "Patriotism means:",
+      "options": [
+        "Loving one's country and being willing to defend it",
+        "Loving only oneself",
+        "Hating other countries",
+        "Living abroad permanently"
+      ],
+      "answer": 0,
+      "explanation": "Patriotism is love for and devotion to one's country, including willingness to defend and develop it."
+    },
+    {
+      "id": 21,
+      "topic": "Patriotism",
+      "difficulty": "Medium",
+      "question": "Which of these is an act of patriotism?",
+      "options": ["Littering the environment", "Paying taxes honestly", "Avoiding national service", "Speaking against the country at every opportunity"],
+      "answer": 1,
+      "explanation": "Paying taxes honestly supports national development. Other options are unpatriotic acts."
+    },
+    {
+      "id": 22,
+      "topic": "Human Rights",
+      "difficulty": "Hard",
+      "question": "Which of the following can limit a person's rights?",
+      "options": [
+        "The person's wealth",
+        "Rights of other citizens and national security",
+        "The person's education",
+        "The person's age"
+      ],
+      "answer": 1,
+      "explanation": "Rights can be limited when their exercise violates the rights of others or threatens national security and public order."
+    },
+    {
+      "id": 23,
+      "topic": "Democracy",
+      "difficulty": "Medium",
+      "question": "Free and fair elections are essential to democracy because they:",
+      "options": [
+        "Make politicians rich",
+        "Allow citizens to choose their leaders",
+        "Increase population",
+        "Reduce the cost of government"
+      ],
+      "answer": 1,
+      "explanation": "Free and fair elections are the mechanism through which citizens choose their representatives, ensuring government accountability."
+    },
+    {
+      "id": 24,
+      "topic": "Citizenship",
+      "difficulty": "Hard",
+      "question": "In Nigeria, a citizen by birth is one who:",
+      "options": [
+        "Was born in any country",
+        "Was born in Nigeria to Nigerian parents, or born abroad to at least one Nigerian parent",
+        "Has lived in Nigeria for 5 years",
+        "Has a Nigerian passport"
+      ],
+      "answer": 1,
+      "explanation": "Section 25 of the Nigerian Constitution defines citizenship by birth as being born in Nigeria with at least one Nigerian parent, or born abroad to Nigerian parents."
+    },
+    {
+      "id": 25,
+      "topic": "Rule of Law",
+      "difficulty": "Medium",
+      "question": "The judiciary in Nigeria is headed by the:",
+      "options": ["President", "Senate President", "Chief Justice of Nigeria", "Attorney General"],
+      "answer": 2,
+      "explanation": "The Chief Justice of Nigeria (CJN) heads the judiciary and is the highest judicial officer in the country."
+    }
+  ]
+}

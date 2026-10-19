@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pomodoro Timer — SS2 Science BrainBox</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="topbar" id="topbar"></header>
+<main class="container">
+  <div class="page-header text-center">
+    <h1>⏱️ Pomodoro Timer</h1>
+    <p>Focus for science. Stay consistent. Achieve more.</p>
+  </div>
+
+  <div class="pomodoro-wrap">
+    <div class="pomodoro-mode" id="pomMode">📚 Focus Time</div>
+    <div class="pomodoro-display" id="pomDisplay">25:00</div>
+
+    <div class="quiz-progress-bar" style="margin:0 auto 24px;max-width:340px">
+      <div class="fill" id="pomProgress" style="width:0%;background:var(--green)"></div>
+    </div>
+
+    <div class="pomodoro-controls">
+      <button class="btn btn-primary btn-lg" id="pomStart">▶ Start</button>
+      <button class="btn btn-secondary btn-lg" id="pomReset">↺ Reset</button>
+    </div>
+
+    <div class="pomodoro-presets">
+      <button class="preset-btn active" data-min="25" data-mode="work">25 min Focus</button>
+      <button class="preset-btn" data-min="5" data-mode="short">5 min Break</button>
+      <button class="preset-btn" data-min="15" data-mode="long">15 min Break</button>
+      <button class="preset-btn" data-min="50" data-mode="work">50 min Deep Work</button>
+    </div>
+
+    <div class="pomodoro-sessions" id="pomSessions"></div>
+  </div>
+
+  <div class="tip-box mt-3" style="max-width:500px;margin-left:auto;margin-right:auto">
+    <span class="tip-label">How it works</span>
+    Study for 25 minutes, then take a 5-minute break. After 4 focus sessions, take a longer 15-minute break. This keeps your brain fresh and improves retention of science concepts.
+  </div>
+
+  <div class="text-center mt-3">
+    <a href="index.html" class="btn btn-secondary">← Back to Tools</a>
+  </div>
+</main>
+
+<footer class="footer" id="footer"></footer>
+<nav class="mobile-nav" id="mobileNav"></nav>
+<script src="../js/app.js"></script>
+<script src="../js/tools.js"></script>
+<script>initPomodoro();</script>
+</body>
+</html>
