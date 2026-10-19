@@ -257,6 +257,9 @@ const App = {
         <a href="${b}quiz.html">Quiz</a>
         <a href="${b}lab/index.html">Lab Corner</a>
         <a href="${b}tools/index.html">Study Tools</a>
+      </div>
+      <div class="footer-copy" style="margin-top:10px;font-size:.8rem;opacity:.85">
+        Presented by KOLAWOLE ALABA WISDOM · © ${new Date().getFullYear()} All rights reserved.
       </div>`;
   },
 
