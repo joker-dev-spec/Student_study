@@ -64,6 +64,76 @@
     App.toast('⬇️ Data exported');
   });
 
+  // Import (merges into existing data)
+  document.getElementById('pfImport').addEventListener('click', () => {
+    document.getElementById('importFile').click();
+  });
+  document.getElementById('importFile').addEventListener('change', (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      let data;
+      try { data = JSON.parse(reader.result); } catch {
+        App.toast('⚠️ That file is not valid JSON.');
+        return;
+      }
+      if (!data || typeof data !== 'object') {
+        App.toast('⚠️ Unrecognised backup format.');
+        return;
+      }
+      if (!confirm('Import data from "' + file.name + '"? Existing data will be merged.')) return;
+
+      if (data.user && data.user.name) App.setUser(data.user);
+
+      if (data.progress && typeof data.progress === 'object') {
+        const prog = App.getProgress();
+        for (const id in data.progress) {
+          const incoming = data.progress[id];
+          if (!prog[id] || (incoming.best || 0) > (prog[id].best || 0)) prog[id] = incoming;
+        }
+        App.saveProgress(prog);
+      }
+
+      if (Array.isArray(data.history)) {
+        const h = App.getQuizHistory();
+        localStorage.setItem('sb_quiz_history', JSON.stringify(h.concat(data.history)));
+      }
+
+      if (Array.isArray(data.bookmarks)) {
+        const bms = App.getBookmarks();
+        data.bookmarks.forEach(bm => {
+          if (bm && bm.id && !bms.some(x => x.id === bm.id)) bms.push(bm);
+        });
+        localStorage.setItem('sb_bookmarks', JSON.stringify(bms));
+      }
+
+      if (Array.isArray(data.reminders)) {
+        const rms = App.getReminders();
+        data.reminders.forEach(r => {
+          if (r && r.id && !rms.some(x => x.id === r.id)) rms.push(r);
+        });
+        App.saveReminders(rms);
+      }
+
+      if (data.streak && typeof data.streak === 'object') {
+        const cur = App.getStreak();
+        localStorage.setItem('sb_streak', JSON.stringify({
+          count: Math.max(cur.count || 0, data.streak.count || 0),
+          best: Math.max(cur.best || 0, data.streak.best || 0),
+          last: data.streak.last || cur.last || null
+        }));
+      }
+
+      if (typeof data.examDate === 'string') App.setExamDate(data.examDate);
+
+      App.toast('✅ Data imported successfully');
+      setTimeout(() => window.location.reload(), 700);
+    };
+    reader.readAsText(file);
+    e.target.value = '';
+  });
+
   // Reset
   document.getElementById('pfReset').addEventListener('click', () => {
     if (confirm('This will erase all your quiz scores, bookmarks and streak. Continue?')) {
@@ -79,17 +149,3 @@
     window.location.href = 'index.html';
   });
 })();
-
-// Shared with dashboard: prompt-based exam date setter
-App.__setExam = function () {
-  const cur = App.getExamDate();
-  const val = prompt('Enter your exam date (YYYY-MM-DD). Leave blank to clear:', cur || '');
-  if (val === null) return;
-  const trimmed = val.trim();
-  if (trimmed && !/^\d{4}-\d{2}-\d{2}$/.test(trimmed)) {
-    alert('Please use the format YYYY-MM-DD, e.g. 2026-06-15');
-    return;
-  }
-  App.setExamDate(trimmed);
-  window.location.reload();
-};

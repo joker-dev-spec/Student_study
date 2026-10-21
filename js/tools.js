@@ -24,7 +24,7 @@ function initTimetable() {
     times.forEach(t => {
       html += `<tr><td style="font-weight:700;background:var(--bg-input)">${t}</td>`;
       days.forEach(d => {
-        const s = tt[t][d];
+        const s = tt[t][d.slice(0, 3)];
         const icon = subjectIcons[s] || '📘';
         const on = App.hasReminder(d, t, s);
         html += `<td class="subject-cell ${d === todayName ? 'today-col' : ''}">
@@ -91,8 +91,20 @@ function initPomodoro() {
   let remaining = totalSeconds;
   let isRunning = false;
   let interval = null;
-  let sessions = parseInt(localStorage.getItem('sb_pomodoro_sessions') || '0');
   let mode = 'work'; // work, short, long
+
+  // Daily session counter — stored as { date, count }, resets each day
+  function loadSessions() {
+    try {
+      const s = JSON.parse(localStorage.getItem('sb_pomodoro_sessions'));
+      if (s && s.date === new Date().toDateString()) return s.count || 0;
+    } catch { /* corrupted */ }
+    return 0;
+  }
+  function saveSessions(count) {
+    localStorage.setItem('sb_pomodoro_sessions', JSON.stringify({ date: new Date().toDateString(), count }));
+  }
+  let sessions = loadSessions();
 
   const display = document.getElementById('pomDisplay');
   const modeLabel = document.getElementById('pomMode');
@@ -121,7 +133,7 @@ function initPomodoro() {
         updateDisplay();
         if (mode === 'work') {
           sessions++;
-          localStorage.setItem('sb_pomodoro_sessions', sessions);
+          saveSessions(sessions);
           mode = sessions % 4 === 0 ? 'long' : 'short';
           totalSeconds = mode === 'long' ? 15 * 60 : 5 * 60;
           remaining = totalSeconds;
@@ -194,12 +206,121 @@ function initFlashcards() {
   let currentSet = 'All';
   let currentIdx = 0;
   let filtered = [...allCards];
+  let mode = 'browse'; // browse | srs
+  let srsQueue = [];
+  let srsReviewed = 0;
 
   const cardEl = document.getElementById('flashcard');
   const frontEl = document.getElementById('fcFront');
   const backEl = document.getElementById('fcBack');
   const counterEl = document.getElementById('fcCounter');
   const tabsEl = document.getElementById('fcTabs');
+  const srsBar = document.getElementById('srsBar');
+  const srsRating = document.getElementById('srsRating');
+
+  // ---- SRS storage (SM-2 lite) ----
+  function getSRS() {
+    try { return JSON.parse(localStorage.getItem('sb_srs')) || {}; } catch { return {}; }
+  }
+  function saveSRS(s) { localStorage.setItem('sb_srs', JSON.stringify(s)); }
+  function cardState(id) {
+    const s = getSRS();
+    return s[id] || { interval: 0, ease: 2.5, due: 0 };
+  }
+  function isDue(id) { return cardState(id).due <= Date.now(); }
+  function newCount(list) { return list.filter(c => !getSRS()[c.id]).length; }
+  function dueCount(list) { return list.filter(c => isDue(c.id)).length; }
+
+  function grade(id, quality) {
+    // quality: 0=again, 1=hard, 2=good, 3=easy
+    const s = getSRS();
+    const st = s[id] || { interval: 0, ease: 2.5, due: 0 };
+    const DAY = 86400000;
+    if (quality === 0) {
+      st.ease = Math.max(1.3, st.ease - 0.2);
+      st.interval = 0;
+      st.due = Date.now() + 10 * 60000; // relearn in 10 min
+    } else if (quality === 1) {
+      st.ease = Math.max(1.3, st.ease - 0.15);
+      st.interval = Math.max(1, st.interval * 1.2);
+      st.due = Date.now() + st.interval * DAY;
+    } else if (quality === 2) {
+      st.interval = st.interval <= 0 ? 1 : st.interval * st.ease;
+      st.due = Date.now() + st.interval * DAY;
+    } else {
+      st.ease += 0.15;
+      st.interval = st.interval <= 0 ? 4 : st.interval * st.ease * 1.3;
+      st.due = Date.now() + st.interval * DAY;
+    }
+    s[id] = st;
+    saveSRS(s);
+  }
+
+  // ---- Mode bar ----
+  function renderSrsBar() {
+    if (!srsBar) return;
+    if (mode === 'browse') {
+      srsBar.innerHTML = `
+        <button class="btn btn-secondary btn-sm active" data-mode="browse">📖 Browse</button>
+        <button class="btn btn-primary btn-sm" data-mode="srs">🎯 Study Mode</button>
+        <span class="srs-due">${dueCount(filtered)} due · ${newCount(filtered)} new</span>`;
+    } else {
+      srsBar.innerHTML = `
+        <button class="btn btn-secondary btn-sm" data-mode="browse">📖 Browse</button>
+        <button class="btn btn-primary btn-sm active" data-mode="srs">🎯 Study Mode</button>
+        <span class="srs-due">Reviewed this session: <strong>${srsReviewed}</strong> · Queue left: <strong>${srsQueue.length}</strong></span>`;
+    }
+    srsBar.querySelectorAll('[data-mode]').forEach(btn => {
+      btn.addEventListener('click', () => setMode(btn.dataset.mode));
+    });
+  }
+
+  function setMode(m) {
+    mode = m;
+    srsReviewed = 0;
+    cardEl.classList.remove('flipped');
+    if (m === 'srs') {
+      srsQueue = filtered.filter(c => isDue(c.id));
+      if (!srsQueue.length) {
+        App.toast('🎉 All cards are learned! Nothing due right now.');
+        mode = 'browse';
+      } else {
+        currentIdx = filtered.indexOf(srsQueue[0]);
+        if (srsRating) srsRating.classList.add('show');
+      }
+    } else if (srsRating) {
+      srsRating.classList.remove('show');
+    }
+    renderSrsBar();
+    renderCard();
+  }
+
+  function nextSRS() {
+    srsReviewed++;
+    if (!srsQueue.length) {
+      App.toast('🎉 Session complete! You reviewed ' + srsReviewed + ' card' + (srsReviewed === 1 ? '' : 's') + '.');
+      if (srsRating) srsRating.classList.remove('show');
+      mode = 'browse';
+      renderSrsBar();
+      return;
+    }
+    const card = srsQueue[0];
+    currentIdx = filtered.indexOf(card);
+    renderSrsBar();
+    renderCard();
+  }
+
+  if (srsRating) {
+    srsRating.querySelectorAll('[data-q]').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (mode !== 'srs' || !srsQueue.length) return;
+        const card = srsQueue.shift();
+        grade(card.id, parseInt(btn.dataset.q, 10));
+        nextSRS();
+      });
+    });
+  }
 
   const subjects = ['All', ...new Set(allCards.map(c => c.subject))];
   tabsEl.innerHTML = subjects.map(s =>
@@ -213,7 +334,14 @@ function initFlashcards() {
       currentSet = btn.dataset.subject;
       filtered = currentSet === 'All' ? [...allCards] : allCards.filter(c => c.subject === currentSet);
       currentIdx = 0;
+      srsQueue = filtered.filter(c => isDue(c.id));
+      srsReviewed = 0;
+      if (mode === 'srs') {
+        if (srsQueue.length) currentIdx = filtered.indexOf(srsQueue[0]);
+        else { mode = 'browse'; if (srsRating) srsRating.classList.remove('show'); }
+      }
       cardEl.classList.remove('flipped');
+      renderSrsBar();
       renderCard();
     });
   });
@@ -236,17 +364,20 @@ function initFlashcards() {
 
   document.getElementById('fcPrev').addEventListener('click', (e) => {
     e.stopPropagation();
+    if (mode === 'srs') return; // queue order is fixed in study mode
     if (currentIdx > 0) currentIdx--;
     else currentIdx = filtered.length - 1;
     renderCard();
   });
   document.getElementById('fcNext').addEventListener('click', (e) => {
     e.stopPropagation();
+    if (mode === 'srs') return;
     if (currentIdx < filtered.length - 1) currentIdx++;
     else currentIdx = 0;
     renderCard();
   });
 
+  renderSrsBar();
   renderCard();
 }
 
@@ -275,8 +406,12 @@ function initBookmarks() {
         </div>
         <div class="bm-actions">
           <a href="${b}${bm.link}" class="btn btn-sm btn-secondary">📖 Open</a>
-          <button class="btn btn-sm btn-danger" onclick="App.removeBookmark('${bm.id}');this.closest('.bookmark-item').remove()">🗑️</button>
+          <button class="btn btn-sm btn-danger" data-bm-id="${bm.id}">🗑️</button>
         </div>`;
+      div.querySelector('[data-bm-id]').addEventListener('click', () => {
+        App.removeBookmark(bm.id);
+        render();
+      });
       listEl.appendChild(div);
     });
   }

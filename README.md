@@ -58,7 +58,7 @@ Every topic includes **Definition**, **Formula**, **Diagram description**, **Wor
 - **Interactive Periodic Table** — click any element to see atomic number, mass, group, period, electron configuration and state
 
 ### 5. CBT Quiz Engine
-- **25 questions per subject** (225 total), WAEC standard
+- **25 questions per subject** (350 total across 14 subjects), WAEC standard
 - **Countdown timer** (45 s per question, auto-submits at zero)
 - **Score** with animated result ring
 - **Corrections** with a full explanation for every question

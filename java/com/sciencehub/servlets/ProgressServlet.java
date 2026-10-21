@@ -53,7 +53,7 @@ public class ProgressServlet extends HttpServlet {
             int best = 0, attempts = 0;
             if (score != null) {
                 best = score[1] > 0 ? (int) Math.round(score[0] * 100.0 / score[1]) : 0;
-                attempts = 1;
+                attempts = score.length > 2 ? score[2] : 0;
             }
             sb.append("{\"id\":\"").append(s.getId())
               .append("\",\"name\":\"").append(escape(s.getName()))
@@ -94,11 +94,12 @@ public class ProgressServlet extends HttpServlet {
 
         int[] record = progress.get(subject);
         if (record == null) {
-            record = new int[]{0, 0};
+            record = new int[]{0, 0, 0}; // totalCorrect, totalAnswered, attempts
             progress.put(subject, record);
         }
         record[0] += score;
         record[1] += total;
+        if (record.length > 2) record[2]++;
         session.setAttribute("progress", progress);
 
         double pct = (score * 100.0) / total;

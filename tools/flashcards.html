@@ -16,6 +16,8 @@
 
   <div class="fc-category-tabs" id="fcTabs"></div>
 
+  <div class="srs-bar" id="srsBar"></div>
+
   <div class="flashcard-wrap">
     <div class="flashcard" id="flashcard">
       <div class="flashcard-face flashcard-front" id="fcFront">
@@ -27,6 +29,13 @@
         <div class="fc-content">Loading...</div>
       </div>
     </div>
+  </div>
+
+  <div class="srs-rating" id="srsRating">
+    <button class="btn btn-danger" data-q="0">Again<small>10 min</small></button>
+    <button class="btn btn-secondary" data-q="1">Hard<small>1 day</small></button>
+    <button class="btn btn-primary" data-q="2">Good<small>schedule</small></button>
+    <button class="btn btn-green" data-q="3">Easy<small>longer</small></button>
   </div>
 
   <div class="flashcard-nav">
@@ -44,6 +53,7 @@
 <nav class="mobile-nav" id="mobileNav"></nav>
 <script src="../js/data.js"></script>
 <script src="../js/app.js"></script>
+<script src="../js/search.js"></script>
 <script src="../js/tools.js"></script>
 <script>initFlashcards();</script>
 </body>

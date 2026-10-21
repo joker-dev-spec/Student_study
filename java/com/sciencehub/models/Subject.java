@@ -1,11 +1,15 @@
 package com.sciencehub.models;
 
 /**
- * Subject model — one of the nine SS2 Science Department subjects.
+ * Subject model — all subjects supported by the app.
  *
- * Science subjects:
+ * Senior Science subjects:
  *  Mathematics, Further Mathematics, English, Physics, Chemistry,
  *  Biology, Computer Science, Geography, Civic Education.
+ *
+ * Junior Secondary subjects (v2):
+ *  Basic Science, Basic Technology, Business Studies,
+ *  Agricultural Science, Social Studies.
  */
 public class Subject {
 
@@ -39,9 +43,10 @@ public class Subject {
     public int getTotalTopics() { return totalTopics; }
     public void setTotalTopics(int totalTopics) { this.totalTopics = totalTopics; }
 
-    /** Static catalog of the SS2 Science Department subjects. */
+    /** Static catalog of every subject (senior science + junior secondary). */
     public static Subject[] catalog() {
         return new Subject[] {
+            // Senior Science
             new Subject("mathematics",          "Mathematics",          "\uD83D\uDCD0", 4),
             new Subject("further-mathematics",  "Further Mathematics",  "\uD83D\uDCCA", 5),
             new Subject("english",              "English",              "\uD83D\uDCD6", 3),
@@ -50,7 +55,13 @@ public class Subject {
             new Subject("biology",              "Biology",              "\uD83D\uDD2C", 5),
             new Subject("computer-science",     "Computer Science",     "\uD83D\uDCBB", 4),
             new Subject("geography",            "Geography",            "\uD83C\uDF0D", 4),
-            new Subject("civic-education",      "Civic Education",      "\uD83C\uDFDB", 4)
+            new Subject("civic-education",      "Civic Education",      "\uD83C\uDFDB", 4),
+            // Junior Secondary
+            new Subject("basic-science",        "Basic Science",        "\uD83D\uDD2C", 4),
+            new Subject("basic-technology",     "Basic Technology",     "⚙️", 4),
+            new Subject("business-studies",     "Business Studies",     "\uD83D\uDCBC", 3),
+            new Subject("agricultural-science", "Agricultural Science", "\uD83C\uDF3E", 4),
+            new Subject("social-studies",       "Social Studies",       "\uD83C\uDF0D", 4)
         };
     }
 

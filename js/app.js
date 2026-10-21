@@ -62,7 +62,8 @@ const App = {
     return this.getLevel() === 'junior' ? this.juniorSubjects : this.seniorSubjects;
   },
   getSubject(id) {
-    return this.seniorSubjects.find(s => s.id === id) ||
+    return this.getSubjects().find(s => s.id === id) ||
+           this.seniorSubjects.find(s => s.id === id) ||
            this.juniorSubjects.find(s => s.id === id);
   },
   // First subject for the user's level (used for "Notes" nav link)
@@ -142,14 +143,15 @@ const App = {
   },
 
   resetProgress() {
-    ['sb_progress', 'sb_quiz_history', 'sb_daily'].forEach(k => localStorage.removeItem(k));
+    ['sb_progress', 'sb_quiz_history', 'sb_daily', 'sb_bookmarks', 'sb_streak'].forEach(k => localStorage.removeItem(k));
   },
 
   // ---- STUDY STREAK ----
   touchStreak() {
     const today = new Date().toDateString();
-    const raw = localStorage.getItem('sb_streak');
-    let s = raw ? JSON.parse(raw) : { count: 0, last: null, best: 0 };
+    let s = null;
+    try { s = JSON.parse(localStorage.getItem('sb_streak')); } catch { s = null; }
+    if (!s || typeof s !== 'object') s = { count: 0, last: null, best: 0 };
     if (s.last === today) return s.count;
     const yesterday = new Date(Date.now() - 86400000).toDateString();
     s.count = (s.last === yesterday) ? s.count + 1 : 1;
@@ -159,9 +161,9 @@ const App = {
     return s.count;
   },
   getStreak() {
-    const raw = localStorage.getItem('sb_streak');
-    if (!raw) return { count: 0, best: 0 };
-    const s = JSON.parse(raw);
+    let s = null;
+    try { s = JSON.parse(localStorage.getItem('sb_streak')); } catch { s = null; }
+    if (!s || typeof s !== 'object') return { count: 0, best: 0 };
     const today = new Date().toDateString();
     const yesterday = new Date(Date.now() - 86400000).toDateString();
     if (s.last !== today && s.last !== yesterday) s.count = 0;
@@ -175,8 +177,26 @@ const App = {
     const d = this.getExamDate();
     if (!d) return null;
     const exam = new Date(d + 'T00:00:00');
+    if (isNaN(exam.getTime())) return null;
     const today = new Date(); today.setHours(0, 0, 0, 0);
     return Math.ceil((exam - today) / 86400000);
+  },
+
+  // Prompt-based exam date setter (used by dashboard + profile)
+  __setExam() {
+    const cur = this.getExamDate();
+    const val = prompt('Enter your exam date (YYYY-MM-DD). Leave blank to clear:', cur || '');
+    if (val === null) return;
+    const trimmed = val.trim();
+    if (trimmed) {
+      const ok = /^\d{4}-\d{2}-\d{2}$/.test(trimmed) && !isNaN(new Date(trimmed + 'T00:00:00').getTime());
+      if (!ok) {
+        alert('Please enter a valid date in YYYY-MM-DD format, e.g. 2026-06-15');
+        return;
+      }
+    }
+    this.setExamDate(trimmed);
+    window.location.reload();
   },
 
   // ---- MOTIVATION ----
@@ -259,7 +279,7 @@ const App = {
     for (const slot of Object.keys(tt)) {
       const { h, m } = this.slotTo24(slot);
       const start = h * 60 + m;
-      if (start >= nowMin) return { subject: tt[slot][day], slot: slot, day: day };
+      if (start >= nowMin) return { subject: tt[slot][day.slice(0, 3)], slot: slot, day: day };
     }
     return null;
   },
@@ -343,8 +363,10 @@ const App = {
     const today = new Date().toDateString();
     const saved = localStorage.getItem('sb_daily');
     if (saved) {
-      const d = JSON.parse(saved);
-      if (d.date === today) return d;
+      try {
+        const d = JSON.parse(saved);
+        if (d && d.date === today && d.question) return d;
+      } catch { /* corrupted — regenerate */ }
     }
     const allQs = [];
     const data = window.SCIENCE_DATA || {};
@@ -449,6 +471,7 @@ const App = {
           <li><a href="${b}profile.html" class="${activePage === 'profile' ? 'active' : ''}">Profile</a></li>
         </ul>
         <div style="display:flex;align-items:center;gap:8px">
+          <button class="theme-toggle" id="searchOpen" title="Search questions, notes and formulas">🔍</button>
           <button class="theme-toggle" id="themeToggle" title="Toggle dark mode">🌙</button>
           ${user ? `<button class="btn btn-secondary btn-sm" onclick="App.clearUser();window.location.href='${b}index.html'" title="Logout">🚪</button>` : ''}
           <button class="hamburger" id="hamburger">☰</button>
@@ -501,6 +524,27 @@ const App = {
     this.checkReminders();
     if (!this._reminderInterval) {
       this._reminderInterval = setInterval(() => this.checkReminders(), 30000);
+    }
+    this.initPWA();
+  },
+
+  // ---- PWA (manifest + service worker) ----
+  initPWA() {
+    const b = this.basePrefix();
+    if (!document.querySelector('link[rel="manifest"]')) {
+      const link = document.createElement('link');
+      link.rel = 'manifest';
+      link.href = b + 'manifest.json';
+      document.head.appendChild(link);
+    }
+    if (!document.querySelector('meta[name="theme-color"]')) {
+      const meta = document.createElement('meta');
+      meta.name = 'theme-color';
+      meta.content = '#1a73e8';
+      document.head.appendChild(meta);
+    }
+    if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+      navigator.serviceWorker.register(b + 'sw.js').catch(() => { /* ignore */ });
     }
   }
 };

@@ -22,9 +22,9 @@ import java.util.Random;
  * GET  /quiz?subject=physics&id=3     → returns a single question
  * POST /quiz                          → grades submitted answers
  *
- * The full 225-question bank lives in /data/*.json for the GitHub Pages build.
- * This servlet holds a representative sample in an ArrayList to demonstrate
- * the same design server-side.
+ * The full 350-question bank (14 subjects x 25 questions) lives in /data/*.json
+ * for the GitHub Pages build. This servlet holds a representative sample in an
+ * ArrayList to demonstrate the same design server-side.
  */
 @WebServlet(name = "QuizServlet", urlPatterns = {"/quiz"})
 public class QuizServlet extends HttpServlet {
@@ -162,7 +162,7 @@ public class QuizServlet extends HttpServlet {
         int limit = Math.min(25, selected.size());
 
         StringBuilder sb = new StringBuilder();
-        sb.append("{\"subject\":\"").append(subject == null ? "All" : subject)
+        sb.append("{\"subject\":\"").append(subject == null ? "All" : escape(subject))
           .append("\",\"count\":").append(limit).append(",\"questions\":[");
         for (int i = 0; i < limit; i++) {
             if (i > 0) sb.append(",");

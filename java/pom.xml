@@ -26,22 +26,27 @@
   </properties>
 
   <dependencies>
-    <!-- Jakarta Servlet API (provided by the servlet container, e.g. Tomcat 10+) -->
+    <!-- Jakarta Servlet API (provided by the servlet container, e.g. Jetty 11 / Tomcat 10+) -->
     <dependency>
       <groupId>jakarta.servlet</groupId>
       <artifactId>jakarta.servlet-api</artifactId>
-      <version>6.0.0</version>
+      <version>5.0.0</version>
       <scope>provided</scope>
     </dependency>
   </dependencies>
 
   <build>
     <finalName>sciencebrainbox</finalName>
+    <!-- Sources live at java/com/... rather than the Maven default src/main/java -->
+    <sourceDirectory>com</sourceDirectory>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-war-plugin</artifactId>
         <version>3.4.0</version>
+        <configuration>
+          <warSourceDirectory>webapp</warSourceDirectory>
+        </configuration>
       </plugin>
       <plugin>
         <groupId>org.eclipse.jetty</groupId>

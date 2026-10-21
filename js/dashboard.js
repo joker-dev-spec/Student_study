@@ -118,17 +118,3 @@
     });
   }
 })();
-
-// Exam date setter (prompt-based, exposed globally for the inline buttons)
-App.__setExam = function () {
-  const cur = App.getExamDate();
-  const val = prompt('Enter your exam date (YYYY-MM-DD). Leave blank to clear:', cur || '');
-  if (val === null) return;
-  const trimmed = val.trim();
-  if (trimmed && !/^\d{4}-\d{2}-\d{2}$/.test(trimmed)) {
-    alert('Please use the format YYYY-MM-DD, e.g. 2026-06-15');
-    return;
-  }
-  App.setExamDate(trimmed);
-  window.location.reload();
-};

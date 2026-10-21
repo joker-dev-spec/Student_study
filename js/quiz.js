@@ -18,8 +18,19 @@
   let selectedAnswers = [];
   let timer = null;
   let timeLeft = 0;
+  let lastSubject = null;
+  let lastDiff = 'All';
   const TIME_PER_Q = 45; // seconds per question
   const LETTERS = ['A', 'B', 'C', 'D'];
+
+  function shuffle(arr) {
+    const a = [...arr];
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
 
   // ---- START SCREEN (subject selection) ----
   if (!subjectId) {
@@ -90,10 +101,15 @@
     if (!data || !data.questions) return;
     let pool = [...data.questions];
     if (diff && diff !== 'All') {
-      const filtered = pool.filter(q => q.difficulty === diff);
-      if (filtered.length) pool = filtered;
+      pool = pool.filter(q => q.difficulty === diff);
+      if (pool.length === 0) {
+        App.toast('⚠️ No ' + diff + ' questions available for this subject.');
+        return;
+      }
     }
-    questions = pool.sort(() => Math.random() - 0.5).slice(0, 25);
+    lastSubject = subId;
+    lastDiff = diff || 'All';
+    questions = shuffle(pool).slice(0, 25);
     if (questions.length === 0) return;
     currentQ = 0;
     selectedAnswers = new Array(questions.length).fill(null);
@@ -130,11 +146,10 @@
 
   function renderQuestion() {
     const q = questions[currentQ];
-    const sub = App.getSubject(subjectId);
     const answered = selectedAnswers[currentQ];
 
     document.getElementById('qCounter').textContent = (currentQ + 1) + '/' + questions.length;
-    document.getElementById('progressFill').style.width = ((currentQ) / questions.length * 100) + '%';
+    document.getElementById('progressFill').style.width = ((currentQ + 1) / questions.length * 100) + '%';
 
     let html = `
       <div class="question-card">
@@ -260,7 +275,7 @@
           <div class="rs rs-time"><div class="rs-val">${App.formatTime(timeUsed)}</div><div class="rs-lbl">Time Used</div></div>
         </div>
         <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-          <button class="btn btn-primary" onclick="window.__startQuiz('${subjectId}')">🔄 Retry Quiz</button>
+          <button class="btn btn-primary" onclick="window.__startQuiz('${lastSubject}','${lastDiff}')">🔄 Retry Quiz</button>
           <a href="dashboard.html" class="btn btn-secondary">🏠 Dashboard</a>
           <a href="quiz.html" class="btn btn-secondary">📝 Other Subjects</a>
         </div>
