@@ -15,9 +15,10 @@
   </div>
 
   <!-- EXPERIMENT 1 -->
-  <div class="note-topic">
+  <div class="note-topic" id="starch-leaf">
     <h2>🔬 Experiment 1: Test for Starch in a Leaf</h2>
     <p><strong>Aim:</strong> To show that photosynthesis produces starch in a green leaf.</p>
+    <div data-lab-video="starch-leaf"></div>
     <h3>Apparatus</h3>
     <ul>
       <li>A green leaf from a plant exposed to sunlight</li>
@@ -36,9 +37,10 @@
   </div>
 
   <!-- EXPERIMENT 2 -->
-  <div class="note-topic">
+  <div class="note-topic" id="test-water">
     <h2>🧪 Experiment 2: Test for Water using Copper(II) Sulphate</h2>
     <p><strong>Aim:</strong> To detect the presence of water in a substance.</p>
+    <div data-lab-video="test-water"></div>
     <h3>Apparatus</h3>
     <ul>
       <li>Anhydrous copper(II) sulphate (white powder)</li>
@@ -53,9 +55,10 @@
   </div>
 
   <!-- EXPERIMENT 3 -->
-  <div class="note-topic">
+  <div class="note-topic" id="hookes-law">
     <h2>⚛️ Experiment 3: Verification of Hooke's Law</h2>
     <p><strong>Aim:</strong> To verify that the extension of a spring is proportional to the applied force.</p>
+    <div data-lab-video="hookes-law"></div>
     <h3>Apparatus</h3>
     <ul>
       <li>A spring suspended from a clamp and stand</li>
@@ -74,9 +77,10 @@
   </div>
 
   <!-- EXPERIMENT 4 -->
-  <div class="note-topic">
+  <div class="note-topic" id="moments">
     <h2>📐 Experiment 4: Verification of the Principle of Moments</h2>
     <p><strong>Aim:</strong> To verify that clockwise moments equal anticlockwise moments for a body in equilibrium.</p>
+    <div data-lab-video="moments"></div>
     <h3>Apparatus</h3>
     <ul>
       <li>A uniform metre rule, knife-edge (pivot)</li>
@@ -91,6 +95,10 @@
     <p>The two moment totals are equal, confirming the principle of moments.</p>
   </div>
 
+  <h2 class="section-title">🎬 More Practical Videos</h2>
+  <p style="color:var(--text-light);margin-bottom:6px">Click a card to play it right here. Videos open from YouTube in an embedded player.</p>
+  <div class="video-grid" id="moreVideos"></div>
+
   <div class="text-center mt-3">
     <a href="index.html" class="btn btn-secondary">← Back to Lab Corner</a>
     <a href="formula-sheet.html" class="btn btn-primary">📋 Formula Sheet</a>
@@ -102,6 +110,11 @@
 <script src="../js/data.js"></script>
 <script src="../js/app.js"></script>
 <script src="../js/search.js"></script>
-<script>App.initPage('lab');</script>
+<script src="../js/lab-videos.js"></script>
+<script>
+  App.initPage('lab');
+  LabVideos.renderInline();
+  LabVideos.renderGrid('moreVideos');
+</script>
 </body>
 </html>

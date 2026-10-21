@@ -1,0 +1,76 @@
+{
+  "videos": [
+    {
+      "id": "starch-leaf",
+      "title": "Test for Starch in a Leaf",
+      "subject": "Biology",
+      "icon": "🔥",
+      "duration": "Practical demo",
+      "youtube": "E9CSyXS3pXc",
+      "description": "Boil, decolourise and add iodine to a leaf to prove photosynthesis produces starch."
+    },
+    {
+      "id": "test-water",
+      "title": "Test for Water (Anhydrous Copper(II) Sulphate)",
+      "subject": "Chemistry",
+      "icon": "💧",
+      "duration": "Practical demo",
+      "youtube": "JWmCLooRtG4",
+      "description": "White anhydrous copper(II) sulphate turns blue in the presence of water."
+    },
+    {
+      "id": "hookes-law",
+      "title": "Verification of Hooke's Law",
+      "subject": "Physics",
+      "icon": "🧲",
+      "duration": "Practical demo",
+      "youtube": "QQCJeAqBumE",
+      "description": "Add masses to a spring and measure extension to confirm F = ke."
+    },
+    {
+      "id": "moments",
+      "title": "Verification of the Principle of Moments",
+      "subject": "Physics",
+      "icon": "📐",
+      "duration": "Practical demo",
+      "youtube": "R8A-R-fm7iY",
+      "description": "Balance known masses on a metre rule to show clockwise moments equal anticlockwise moments."
+    },
+    {
+      "id": "food-tests",
+      "title": "Food Tests (Starch, Sugar, Protein, Fat)",
+      "subject": "Biology",
+      "icon": "🍞",
+      "duration": "Revision demo",
+      "youtube": "D3Hls9N4lsQ",
+      "description": "Iodine, Benedict's, Biuret's and emulsion tests for the main food nutrients."
+    },
+    {
+      "id": "iodine-starch",
+      "title": "Iodine Starch Test",
+      "subject": "Chemistry",
+      "icon": "🟤",
+      "duration": "Short demo",
+      "youtube": "dlpfgDNiGDI",
+      "description": "A quick close-up of the iodine test on a starch sample turning blue-black."
+    },
+    {
+      "id": "gas-water-displacement",
+      "title": "Gas Collection by Water Displacement",
+      "subject": "Chemistry",
+      "icon": "🫧",
+      "duration": "Practical demo",
+      "youtube": "Jx21klxFwn4",
+      "description": "How to collect a gas over water using a trough and inverted test tube."
+    },
+    {
+      "id": "oxygen-collection",
+      "title": "Collecting Oxygen Over Water",
+      "subject": "Chemistry",
+      "icon": "🫗",
+      "duration": "Lab demo",
+      "youtube": "NaKSbfSNJDg",
+      "description": "Collecting oxygen gas by the downward displacement of water."
+    }
+  ]
+}
