@@ -1,5 +1,5 @@
 /* Science BrainBox — Service Worker (offline-first) */
-const CACHE = 'brainbox-v1';
+const CACHE = 'brainbox-v2';
 
 const CORE = [
   './',
@@ -17,6 +17,8 @@ const CORE = [
   './js/profile.js',
   './js/data.js',
   './js/search.js',
+  './js/lab-videos.js',
+  './data/lab-videos.json',
   './manifest.json'
 ];
 
