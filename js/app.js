@@ -359,6 +359,21 @@ const App = {
   },
 
   // ---- DAILY CHALLENGE ----
+  _allQuestionsCache: null,
+  _buildQuestionCache() {
+    if (this._allQuestionsCache) return this._allQuestionsCache;
+    const allQs = [];
+    const data = window.SCIENCE_DATA || {};
+    for (const key in data) {
+      if (!data[key] || !data[key].questions) continue;
+      const subj = data[key].subject || key;
+      for (let i = 0; i < data[key].questions.length; i++) {
+        allQs.push({ ...data[key].questions[i], subject: subj, _subjId: key });
+      }
+    }
+    this._allQuestionsCache = allQs;
+    return allQs;
+  },
   getDailyChallenge() {
     const today = new Date().toDateString();
     const saved = localStorage.getItem('sb_daily');
@@ -368,25 +383,15 @@ const App = {
         if (d && d.date === today && d.question) return d;
       } catch { /* corrupted — regenerate */ }
     }
-    const allQs = [];
-    const data = window.SCIENCE_DATA || {};
-    const myIds = this.getSubjects().map(s => s.id);
-    for (const key in data) {
-      if (!data[key] || !data[key].questions) continue;
-      if (myIds.length && !myIds.includes(key)) continue;
-      data[key].questions.forEach(q => allQs.push({ ...q, subject: data[key].subject || key }));
-    }
-    if (allQs.length === 0) {
-      for (const key in data) {
-        if (data[key] && data[key].questions) {
-          data[key].questions.forEach(q => allQs.push({ ...q, subject: data[key].subject || key }));
-        }
-      }
-    }
+    const allQs = this._buildQuestionCache();
     if (allQs.length === 0) return null;
-    const idx = Math.floor(Date.now() / 86400000) % allQs.length;
-    const challenge = { date: today, question: allQs[idx] };
-    localStorage.setItem('sb_daily', JSON.stringify(challenge));
+    const myIds = this.getSubjects().map(s => s.id);
+    let pool = myIds.length ? allQs.filter(q => myIds.includes(q._subjId)) : allQs;
+    if (pool.length === 0) pool = allQs;
+    const idx = Math.floor(Date.now() / 86400000) % pool.length;
+    const q = pool[idx];
+    const challenge = { date: today, question: { id: q.id, topic: q.topic, difficulty: q.difficulty, question: q.question, options: q.options, answer: q.answer, explanation: q.explanation, subject: q.subject } };
+    try { localStorage.setItem('sb_daily', JSON.stringify(challenge)); } catch (e) {}
     return challenge;
   },
 
